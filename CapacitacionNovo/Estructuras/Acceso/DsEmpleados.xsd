@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsEmpleados" targetNamespace="http://tempuri.org/DsEmpleados.xsd" xmlns:mstns="http://tempuri.org/DsEmpleados.xsd" xmlns="http://tempuri.org/DsEmpleados.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Estructuras.My.MySettings.GlobalReference.Default.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsEmpleados" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsEmpleados" msprop:Generator_UserDSName="DsEmpleados">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TBLEMPLEADOS" msprop:Generator_TableClassName="TBLEMPLEADOSDataTable" msprop:Generator_TableVarName="tableTBLEMPLEADOS" msprop:Generator_RowChangedName="TBLEMPLEADOSRowChanged" msprop:Generator_TablePropName="TBLEMPLEADOS" msprop:Generator_RowDeletingName="TBLEMPLEADOSRowDeleting" msprop:Generator_RowChangingName="TBLEMPLEADOSRowChanging" msprop:Generator_RowEvHandlerName="TBLEMPLEADOSRowChangeEventHandler" msprop:Generator_RowDeletedName="TBLEMPLEADOSRowDeleted" msprop:Generator_RowClassName="TBLEMPLEADOSRow" msprop:Generator_UserTableName="TBLEMPLEADOS" msprop:Generator_RowEvArgName="TBLEMPLEADOSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CVE_EMPLEADOS_VAR" msprop:Generator_ColumnVarNameInTable="columnCVE_EMPLEADOS_VAR" msprop:Generator_ColumnPropNameInRow="CVE_EMPLEADOS_VAR" msprop:Generator_ColumnPropNameInTable="CVE_EMPLEADOS_VARColumn" msprop:Generator_UserColumnName="CVE_EMPLEADOS_VAR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOMBRE_VAR" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_VAR" msprop:Generator_ColumnPropNameInRow="NOMBRE_VAR" msprop:Generator_ColumnPropNameInTable="NOMBRE_VARColumn" msprop:Generator_UserColumnName="NOMBRE_VAR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ACTIVO_BIT" msprop:Generator_ColumnVarNameInTable="columnACTIVO_BIT" msprop:Generator_ColumnPropNameInRow="ACTIVO_BIT" msprop:Generator_ColumnPropNameInTable="ACTIVO_BITColumn" msprop:Generator_UserColumnName="ACTIVO_BIT" type="xs:boolean" />
+              <xs:element name="FECHA_ALTA_DATE" msprop:Generator_ColumnVarNameInTable="columnFECHA_ALTA_DATE" msprop:Generator_ColumnPropNameInRow="FECHA_ALTA_DATE" msprop:Generator_ColumnPropNameInTable="FECHA_ALTA_DATEColumn" msprop:Generator_UserColumnName="FECHA_ALTA_DATE" type="xs:dateTime" />
+              <xs:element name="FECHA_MOD_DATE" msprop:Generator_ColumnVarNameInTable="columnFECHA_MOD_DATE" msprop:Generator_ColumnPropNameInRow="FECHA_MOD_DATE" msprop:Generator_ColumnPropNameInTable="FECHA_MOD_DATEColumn" msprop:Generator_UserColumnName="FECHA_MOD_DATE" type="xs:dateTime" />
+              <xs:element name="CVE_EMPLEADO_VAR" msprop:Generator_ColumnVarNameInTable="columnCVE_EMPLEADO_VAR" msprop:Generator_ColumnPropNameInRow="CVE_EMPLEADO_VAR" msprop:Generator_ColumnPropNameInTable="CVE_EMPLEADO_VARColumn" msprop:Generator_UserColumnName="CVE_EMPLEADO_VAR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CVE_EMPLEADO_MOD_VAR" msprop:Generator_ColumnVarNameInTable="columnCVE_EMPLEADO_MOD_VAR" msprop:Generator_ColumnPropNameInRow="CVE_EMPLEADO_MOD_VAR" msprop:Generator_ColumnPropNameInTable="CVE_EMPLEADO_MOD_VARColumn" msprop:Generator_UserColumnName="CVE_EMPLEADO_MOD_VAR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CVE_ROL_INT" msprop:Generator_ColumnVarNameInTable="columnCVE_ROL_INT" msprop:Generator_ColumnPropNameInRow="CVE_ROL_INT" msprop:Generator_ColumnPropNameInTable="CVE_ROL_INTColumn" msprop:Generator_UserColumnName="CVE_ROL_INT" type="xs:int" />
+              <xs:element name="PASSWORD_VAR" msprop:Generator_ColumnVarNameInTable="columnPASSWORD_VAR" msprop:Generator_ColumnPropNameInRow="PASSWORD_VAR" msprop:Generator_ColumnPropNameInTable="PASSWORD_VARColumn" msprop:Generator_UserColumnName="PASSWORD_VAR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TBLEMPLEADOS" />
+      <xs:field xpath="mstns:CVE_EMPLEADOS_VAR" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

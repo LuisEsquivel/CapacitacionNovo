@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSPermisos" targetNamespace="http://tempuri.org/DSPermisos.xsd" xmlns:mstns="http://tempuri.org/DSPermisos.xsd" xmlns="http://tempuri.org/DSPermisos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="BITACORAConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BITACORAConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Componentes.My.MySettings.GlobalReference.Default.BITACORAConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSPermisos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DSPermisos" msprop:Generator_UserDSName="DSPermisos" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TBLPROCESOS" msprop:Generator_UserTableName="TBLPROCESOS" msprop:Generator_RowDeletedName="TBLPROCESOSRowDeleted" msprop:Generator_TableClassName="TBLPROCESOSDataTable" msprop:Generator_RowChangedName="TBLPROCESOSRowChanged" msprop:Generator_RowClassName="TBLPROCESOSRow" msprop:Generator_RowChangingName="TBLPROCESOSRowChanging" msprop:Generator_RowEvArgName="TBLPROCESOSRowChangeEvent" msprop:Generator_RowEvHandlerName="TBLPROCESOSRowChangeEventHandler" msprop:Generator_TablePropName="TBLPROCESOS" msprop:Generator_TableVarName="tableTBLPROCESOS" msprop:Generator_RowDeletingName="TBLPROCESOSRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CVE_PROCESO_INT" msprop:Generator_UserColumnName="CVE_PROCESO_INT" msprop:Generator_ColumnPropNameInRow="CVE_PROCESO_INT" msprop:Generator_ColumnVarNameInTable="columnCVE_PROCESO_INT" msprop:Generator_ColumnPropNameInTable="CVE_PROCESO_INTColumn" type="xs:int" />
+              <xs:element name="DESC_PROCESO" msprop:Generator_UserColumnName="DESC_PROCESO" msprop:Generator_ColumnPropNameInRow="DESC_PROCESO" msprop:Generator_ColumnVarNameInTable="columnDESC_PROCESO" msprop:Generator_ColumnPropNameInTable="DESC_PROCESOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CVE_MODULO_INT" msprop:Generator_UserColumnName="CVE_MODULO_INT" msprop:Generator_ColumnPropNameInRow="CVE_MODULO_INT" msprop:Generator_ColumnVarNameInTable="columnCVE_MODULO_INT" msprop:Generator_ColumnPropNameInTable="CVE_MODULO_INTColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CVE_EMPLEADO_VAR" msprop:Generator_UserColumnName="CVE_EMPLEADO_VAR" msprop:Generator_ColumnPropNameInRow="CVE_EMPLEADO_VAR" msprop:Generator_ColumnVarNameInTable="columnCVE_EMPLEADO_VAR" msprop:Generator_ColumnPropNameInTable="CVE_EMPLEADO_VARColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CVE_EMPLEADO_MOD_VAR" msprop:Generator_UserColumnName="CVE_EMPLEADO_MOD_VAR" msprop:Generator_ColumnPropNameInRow="CVE_EMPLEADO_MOD_VAR" msprop:Generator_ColumnVarNameInTable="columnCVE_EMPLEADO_MOD_VAR" msprop:Generator_ColumnPropNameInTable="CVE_EMPLEADO_MOD_VARColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHA_ALTA_DATE" msprop:Generator_UserColumnName="FECHA_ALTA_DATE" msprop:Generator_ColumnPropNameInRow="FECHA_ALTA_DATE" msprop:Generator_ColumnVarNameInTable="columnFECHA_ALTA_DATE" msprop:Generator_ColumnPropNameInTable="FECHA_ALTA_DATEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHA_MOD_DATE" msprop:Generator_UserColumnName="FECHA_MOD_DATE" msprop:Generator_ColumnPropNameInRow="FECHA_MOD_DATE" msprop:Generator_ColumnVarNameInTable="columnFECHA_MOD_DATE" msprop:Generator_ColumnPropNameInTable="FECHA_MOD_DATEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="REFERENCIA_INT" msprop:Generator_UserColumnName="REFERENCIA_INT" msprop:Generator_ColumnPropNameInRow="REFERENCIA_INT" msprop:Generator_ColumnVarNameInTable="columnREFERENCIA_INT" msprop:Generator_ColumnPropNameInTable="REFERENCIA_INTColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="AVISO_DEL_SISTEMA_BIT" msprop:Generator_UserColumnName="AVISO_DEL_SISTEMA_BIT" msprop:Generator_ColumnPropNameInRow="AVISO_DEL_SISTEMA_BIT" msprop:Generator_ColumnVarNameInTable="columnAVISO_DEL_SISTEMA_BIT" msprop:Generator_ColumnPropNameInTable="AVISO_DEL_SISTEMA_BITColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CVE_PUESTO_INT" msprop:Generator_UserColumnName="CVE_PUESTO_INT" msprop:Generator_ColumnPropNameInRow="CVE_PUESTO_INT" msprop:Generator_ColumnVarNameInTable="columnCVE_PUESTO_INT" msprop:Generator_ColumnPropNameInTable="CVE_PUESTO_INTColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="CANTIDAD_DEC" msprop:Generator_UserColumnName="CANTIDAD_DEC" msprop:Generator_ColumnPropNameInRow="CANTIDAD_DEC" msprop:Generator_ColumnVarNameInTable="columnCANTIDAD_DEC" msprop:Generator_ColumnPropNameInTable="CANTIDAD_DECColumn" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TBLPROCESOS" />
+      <xs:field xpath="mstns:CVE_PROCESO_INT" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
