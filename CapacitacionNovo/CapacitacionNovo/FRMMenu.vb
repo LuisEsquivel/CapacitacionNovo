@@ -148,7 +148,9 @@
     End Sub
 
 
-    Private Sub EmpleadosDelSistemaToolStripMenuItem_Click(sender As Object, e As EventArgs)
+
+
+    Private Sub EmpleadosDelSistemaToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles EmpleadosDelSistemaToolStripMenuItem.Click
         If Not FormularioActivo(FRMEmpleados) Then
             FRMEmpleados = New FRMEmpleados
         End If

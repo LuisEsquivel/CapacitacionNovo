@@ -30,12 +30,6 @@ Partial Class FRMMenu
         Me.PermisosDelSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CatalogosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ActivosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuFormaDeAdquisición = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuEstadoDelActivo = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuTipoProducto = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuUbicaciones = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TipoSalidaDeActivosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AlmacénToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CentroDeCostosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -97,47 +91,9 @@ Partial Class FRMMenu
         '
         'CatalogosToolStripMenuItem
         '
-        Me.CatalogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ActivosToolStripMenuItem1})
         Me.CatalogosToolStripMenuItem.Name = "CatalogosToolStripMenuItem"
         Me.CatalogosToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
         Me.CatalogosToolStripMenuItem.Text = "Catálogos"
-        '
-        'ActivosToolStripMenuItem1
-        '
-        Me.ActivosToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuFormaDeAdquisición, Me.MenuEstadoDelActivo, Me.MenuTipoProducto, Me.MenuUbicaciones, Me.TipoSalidaDeActivosToolStripMenuItem})
-        Me.ActivosToolStripMenuItem1.Name = "ActivosToolStripMenuItem1"
-        Me.ActivosToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
-        Me.ActivosToolStripMenuItem1.Text = "Productos/Activos"
-        '
-        'MenuFormaDeAdquisición
-        '
-        Me.MenuFormaDeAdquisición.Name = "MenuFormaDeAdquisición"
-        Me.MenuFormaDeAdquisición.Size = New System.Drawing.Size(190, 22)
-        Me.MenuFormaDeAdquisición.Text = "Forma de Adquisición"
-        '
-        'MenuEstadoDelActivo
-        '
-        Me.MenuEstadoDelActivo.Name = "MenuEstadoDelActivo"
-        Me.MenuEstadoDelActivo.Size = New System.Drawing.Size(190, 22)
-        Me.MenuEstadoDelActivo.Text = "Estado del Activo"
-        '
-        'MenuTipoProducto
-        '
-        Me.MenuTipoProducto.Name = "MenuTipoProducto"
-        Me.MenuTipoProducto.Size = New System.Drawing.Size(190, 22)
-        Me.MenuTipoProducto.Text = "Tipo Producto"
-        '
-        'MenuUbicaciones
-        '
-        Me.MenuUbicaciones.Name = "MenuUbicaciones"
-        Me.MenuUbicaciones.Size = New System.Drawing.Size(190, 22)
-        Me.MenuUbicaciones.Text = "Ubicaciones"
-        '
-        'TipoSalidaDeActivosToolStripMenuItem
-        '
-        Me.TipoSalidaDeActivosToolStripMenuItem.Name = "TipoSalidaDeActivosToolStripMenuItem"
-        Me.TipoSalidaDeActivosToolStripMenuItem.Size = New System.Drawing.Size(190, 22)
-        Me.TipoSalidaDeActivosToolStripMenuItem.Text = "Tipo Salida de Activos"
         '
         'ReportesToolStripMenuItem
         '
@@ -215,18 +171,12 @@ Partial Class FRMMenu
     Friend WithEvents SistemaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CatalogosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ActivosToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MenuFormaDeAdquisición As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MenuEstadoDelActivo As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MenuTipoProducto As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MenuUbicaciones As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SalirToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CambioDeUsuarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AlmacénToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents CentroDeCostosToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ActivosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TipoSalidaDeActivosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistroDeSalidasDeActivosToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents EmpleadosDelSistemaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RolesToolStripMenuItem As ToolStripMenuItem
