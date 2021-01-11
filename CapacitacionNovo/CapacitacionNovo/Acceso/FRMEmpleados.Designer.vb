@@ -27,6 +27,8 @@ Partial Class FRMEmpleados
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.BtnModificar = New System.Windows.Forms.Button()
+        Me.DgvEmpleados = New System.Windows.Forms.DataGridView()
+        CType(Me.DgvEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnSalir
@@ -74,11 +76,20 @@ Partial Class FRMEmpleados
         Me.BtnModificar.Text = "Modificar"
         Me.BtnModificar.UseVisualStyleBackColor = True
         '
+        'DgvEmpleados
+        '
+        Me.DgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvEmpleados.Location = New System.Drawing.Point(24, 233)
+        Me.DgvEmpleados.Name = "DgvEmpleados"
+        Me.DgvEmpleados.Size = New System.Drawing.Size(701, 331)
+        Me.DgvEmpleados.TabIndex = 6
+        '
         'FRMEmpleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(759, 576)
+        Me.Controls.Add(Me.DgvEmpleados)
         Me.Controls.Add(Me.BtnNuevo)
         Me.Controls.Add(Me.BtnModificar)
         Me.Controls.Add(Me.BtnGuardar)
@@ -86,6 +97,7 @@ Partial Class FRMEmpleados
         Me.Controls.Add(Me.BtnSalir)
         Me.Name = "FRMEmpleados"
         Me.Text = "Empleados"
+        CType(Me.DgvEmpleados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -95,4 +107,5 @@ Partial Class FRMEmpleados
     Friend WithEvents BtnGuardar As Button
     Friend WithEvents BtnNuevo As Button
     Friend WithEvents BtnModificar As Button
+    Friend WithEvents DgvEmpleados As DataGridView
 End Class
