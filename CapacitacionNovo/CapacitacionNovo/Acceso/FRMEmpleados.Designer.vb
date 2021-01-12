@@ -27,27 +27,31 @@ Partial Class FRMEmpleados
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.BtnModificar = New System.Windows.Forms.Button()
-        Me.DgvEmpleados = New System.Windows.Forms.DataGridView()
-        Me.CVEEMPLEADOSVARDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NOMBREVARDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ACTIVOBITDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.FECHAALTADATEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CVEEMPLEADOVARDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PASSWORDVARDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpleadosBL = New Negocios.EmpleadosBL()
         Me.Nombre = New System.Windows.Forms.Label()
         Me.Clave = New System.Windows.Forms.Label()
         Me.Password = New System.Windows.Forms.Label()
-        Me.tbxNombre = New System.Windows.Forms.TextBox()
-        Me.tbxClave = New System.Windows.Forms.TextBox()
-        Me.tbxPassword = New System.Windows.Forms.TextBox()
+        Me.TxtNombre = New System.Windows.Forms.TextBox()
+        Me.TxtClave = New System.Windows.Forms.TextBox()
+        Me.TxtPassword = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.DtpFechaAlta = New System.Windows.Forms.DateTimePicker()
+        Me.ChkActivo = New System.Windows.Forms.CheckBox()
+        Me.DgvEmpleados = New System.Windows.Forms.DataGridView()
+        Me.CVE_EMPLEADOS_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NOMBRE_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ACTIVO_BIT = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.FECHA_ALTA_DATE = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CVE_EMPLEADO_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PASSWORD_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpleadosBL = New Negocios.EmpleadosBL()
+        Me.GroupBox1.SuspendLayout()
         CType(Me.DgvEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadosBL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnSalir
         '
-        Me.BtnSalir.Location = New System.Drawing.Point(650, 30)
+        Me.BtnSalir.Location = New System.Drawing.Point(520, 12)
         Me.BtnSalir.Name = "BtnSalir"
         Me.BtnSalir.Size = New System.Drawing.Size(75, 83)
         Me.BtnSalir.TabIndex = 0
@@ -56,7 +60,7 @@ Partial Class FRMEmpleados
         '
         'BtnCancelar
         '
-        Me.BtnCancelar.Location = New System.Drawing.Point(575, 30)
+        Me.BtnCancelar.Location = New System.Drawing.Point(445, 12)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(75, 83)
         Me.BtnCancelar.TabIndex = 1
@@ -65,7 +69,7 @@ Partial Class FRMEmpleados
         '
         'BtnGuardar
         '
-        Me.BtnGuardar.Location = New System.Drawing.Point(500, 30)
+        Me.BtnGuardar.Location = New System.Drawing.Point(370, 12)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(75, 83)
         Me.BtnGuardar.TabIndex = 3
@@ -74,7 +78,7 @@ Partial Class FRMEmpleados
         '
         'BtnNuevo
         '
-        Me.BtnNuevo.Location = New System.Drawing.Point(349, 30)
+        Me.BtnNuevo.Location = New System.Drawing.Point(219, 12)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(75, 83)
         Me.BtnNuevo.TabIndex = 5
@@ -83,78 +87,17 @@ Partial Class FRMEmpleados
         '
         'BtnModificar
         '
-        Me.BtnModificar.Location = New System.Drawing.Point(424, 30)
+        Me.BtnModificar.Location = New System.Drawing.Point(294, 12)
         Me.BtnModificar.Name = "BtnModificar"
         Me.BtnModificar.Size = New System.Drawing.Size(75, 83)
         Me.BtnModificar.TabIndex = 4
         Me.BtnModificar.Text = "Modificar"
         Me.BtnModificar.UseVisualStyleBackColor = True
         '
-        'DgvEmpleados
-        '
-        Me.DgvEmpleados.AllowUserToAddRows = False
-        Me.DgvEmpleados.AllowUserToDeleteRows = False
-        Me.DgvEmpleados.AutoGenerateColumns = False
-        Me.DgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvEmpleados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CVEEMPLEADOSVARDataGridViewTextBoxColumn, Me.NOMBREVARDataGridViewTextBoxColumn, Me.ACTIVOBITDataGridViewCheckBoxColumn, Me.FECHAALTADATEDataGridViewTextBoxColumn, Me.CVEEMPLEADOVARDataGridViewTextBoxColumn, Me.PASSWORDVARDataGridViewTextBoxColumn})
-        Me.DgvEmpleados.DataSource = Me.EmpleadosBL.TBLEMPLEADOS
-        Me.DgvEmpleados.Location = New System.Drawing.Point(24, 233)
-        Me.DgvEmpleados.Name = "DgvEmpleados"
-        Me.DgvEmpleados.ReadOnly = True
-        Me.DgvEmpleados.Size = New System.Drawing.Size(701, 331)
-        Me.DgvEmpleados.TabIndex = 6
-        '
-        'CVEEMPLEADOSVARDataGridViewTextBoxColumn
-        '
-        Me.CVEEMPLEADOSVARDataGridViewTextBoxColumn.DataPropertyName = "CVE_EMPLEADOS_VAR"
-        Me.CVEEMPLEADOSVARDataGridViewTextBoxColumn.HeaderText = "CVE_EMPLEADOS_VAR"
-        Me.CVEEMPLEADOSVARDataGridViewTextBoxColumn.Name = "CVEEMPLEADOSVARDataGridViewTextBoxColumn"
-        Me.CVEEMPLEADOSVARDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NOMBREVARDataGridViewTextBoxColumn
-        '
-        Me.NOMBREVARDataGridViewTextBoxColumn.DataPropertyName = "NOMBRE_VAR"
-        Me.NOMBREVARDataGridViewTextBoxColumn.HeaderText = "NOMBRE_VAR"
-        Me.NOMBREVARDataGridViewTextBoxColumn.Name = "NOMBREVARDataGridViewTextBoxColumn"
-        Me.NOMBREVARDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ACTIVOBITDataGridViewCheckBoxColumn
-        '
-        Me.ACTIVOBITDataGridViewCheckBoxColumn.DataPropertyName = "ACTIVO_BIT"
-        Me.ACTIVOBITDataGridViewCheckBoxColumn.HeaderText = "ACTIVO_BIT"
-        Me.ACTIVOBITDataGridViewCheckBoxColumn.Name = "ACTIVOBITDataGridViewCheckBoxColumn"
-        Me.ACTIVOBITDataGridViewCheckBoxColumn.ReadOnly = True
-        '
-        'FECHAALTADATEDataGridViewTextBoxColumn
-        '
-        Me.FECHAALTADATEDataGridViewTextBoxColumn.DataPropertyName = "FECHA_ALTA_DATE"
-        Me.FECHAALTADATEDataGridViewTextBoxColumn.HeaderText = "FECHA_ALTA_DATE"
-        Me.FECHAALTADATEDataGridViewTextBoxColumn.Name = "FECHAALTADATEDataGridViewTextBoxColumn"
-        Me.FECHAALTADATEDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CVEEMPLEADOVARDataGridViewTextBoxColumn
-        '
-        Me.CVEEMPLEADOVARDataGridViewTextBoxColumn.DataPropertyName = "CVE_EMPLEADO_VAR"
-        Me.CVEEMPLEADOVARDataGridViewTextBoxColumn.HeaderText = "CVE_EMPLEADO_VAR"
-        Me.CVEEMPLEADOVARDataGridViewTextBoxColumn.Name = "CVEEMPLEADOVARDataGridViewTextBoxColumn"
-        Me.CVEEMPLEADOVARDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'PASSWORDVARDataGridViewTextBoxColumn
-        '
-        Me.PASSWORDVARDataGridViewTextBoxColumn.DataPropertyName = "PASSWORD_VAR"
-        Me.PASSWORDVARDataGridViewTextBoxColumn.HeaderText = "PASSWORD_VAR"
-        Me.PASSWORDVARDataGridViewTextBoxColumn.Name = "PASSWORDVARDataGridViewTextBoxColumn"
-        Me.PASSWORDVARDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EmpleadosBL
-        '
-        Me.EmpleadosBL.DataSetName = "DsEmpleados"
-        Me.EmpleadosBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Nombre
         '
         Me.Nombre.AutoSize = True
-        Me.Nombre.Location = New System.Drawing.Point(15, 31)
+        Me.Nombre.Location = New System.Drawing.Point(176, 16)
         Me.Nombre.Name = "Nombre"
         Me.Nombre.Size = New System.Drawing.Size(47, 13)
         Me.Nombre.TabIndex = 8
@@ -163,7 +106,7 @@ Partial Class FRMEmpleados
         'Clave
         '
         Me.Clave.AutoSize = True
-        Me.Clave.Location = New System.Drawing.Point(15, 65)
+        Me.Clave.Location = New System.Drawing.Point(16, 16)
         Me.Clave.Name = "Clave"
         Me.Clave.Size = New System.Drawing.Size(34, 13)
         Me.Clave.TabIndex = 9
@@ -172,44 +115,142 @@ Partial Class FRMEmpleados
         'Password
         '
         Me.Password.AutoSize = True
-        Me.Password.Location = New System.Drawing.Point(15, 98)
+        Me.Password.Location = New System.Drawing.Point(402, 16)
         Me.Password.Name = "Password"
         Me.Password.Size = New System.Drawing.Size(53, 13)
         Me.Password.TabIndex = 12
         Me.Password.Text = "Password"
         '
-        'tbxNombre
+        'TxtNombre
         '
-        Me.tbxNombre.Location = New System.Drawing.Point(96, 23)
-        Me.tbxNombre.Name = "tbxNombre"
-        Me.tbxNombre.Size = New System.Drawing.Size(100, 20)
-        Me.tbxNombre.TabIndex = 13
+        Me.TxtNombre.Enabled = False
+        Me.TxtNombre.Location = New System.Drawing.Point(179, 32)
+        Me.TxtNombre.MaxLength = 50
+        Me.TxtNombre.Name = "TxtNombre"
+        Me.TxtNombre.Size = New System.Drawing.Size(220, 20)
+        Me.TxtNombre.TabIndex = 15
         '
-        'tbxClave
+        'TxtClave
         '
-        Me.tbxClave.Location = New System.Drawing.Point(96, 65)
-        Me.tbxClave.Name = "tbxClave"
-        Me.tbxClave.Size = New System.Drawing.Size(100, 20)
-        Me.tbxClave.TabIndex = 14
+        Me.TxtClave.Enabled = False
+        Me.TxtClave.Location = New System.Drawing.Point(19, 32)
+        Me.TxtClave.MaxLength = 15
+        Me.TxtClave.Name = "TxtClave"
+        Me.TxtClave.Size = New System.Drawing.Size(154, 20)
+        Me.TxtClave.TabIndex = 14
         '
-        'tbxPassword
+        'TxtPassword
         '
-        Me.tbxPassword.Location = New System.Drawing.Point(96, 98)
-        Me.tbxPassword.Name = "tbxPassword"
-        Me.tbxPassword.Size = New System.Drawing.Size(100, 20)
-        Me.tbxPassword.TabIndex = 15
+        Me.TxtPassword.Enabled = False
+        Me.TxtPassword.Location = New System.Drawing.Point(405, 32)
+        Me.TxtPassword.MaxLength = 10
+        Me.TxtPassword.Name = "TxtPassword"
+        Me.TxtPassword.Size = New System.Drawing.Size(152, 20)
+        Me.TxtPassword.TabIndex = 16
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.TxtPassword)
+        Me.GroupBox1.Controls.Add(Me.Nombre)
+        Me.GroupBox1.Controls.Add(Me.TxtClave)
+        Me.GroupBox1.Controls.Add(Me.Clave)
+        Me.GroupBox1.Controls.Add(Me.TxtNombre)
+        Me.GroupBox1.Controls.Add(Me.Password)
+        Me.GroupBox1.Location = New System.Drawing.Point(18, 136)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(577, 67)
+        Me.GroupBox1.TabIndex = 16
+        Me.GroupBox1.TabStop = False
+        '
+        'DtpFechaAlta
+        '
+        Me.DtpFechaAlta.Enabled = False
+        Me.DtpFechaAlta.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFechaAlta.Location = New System.Drawing.Point(497, 110)
+        Me.DtpFechaAlta.Name = "DtpFechaAlta"
+        Me.DtpFechaAlta.Size = New System.Drawing.Size(98, 20)
+        Me.DtpFechaAlta.TabIndex = 17
+        '
+        'ChkActivo
+        '
+        Me.ChkActivo.AutoSize = True
+        Me.ChkActivo.Location = New System.Drawing.Point(219, 110)
+        Me.ChkActivo.Name = "ChkActivo"
+        Me.ChkActivo.Size = New System.Drawing.Size(56, 17)
+        Me.ChkActivo.TabIndex = 18
+        Me.ChkActivo.Text = "Activo"
+        Me.ChkActivo.UseVisualStyleBackColor = True
+        '
+        'DgvEmpleados
+        '
+        Me.DgvEmpleados.AllowUserToAddRows = False
+        Me.DgvEmpleados.AllowUserToDeleteRows = False
+        Me.DgvEmpleados.AutoGenerateColumns = False
+        Me.DgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvEmpleados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CVE_EMPLEADOS_VAR, Me.NOMBRE_VAR, Me.ACTIVO_BIT, Me.FECHA_ALTA_DATE, Me.CVE_EMPLEADO_VAR, Me.PASSWORD_VAR})
+        Me.DgvEmpleados.DataSource = Me.EmpleadosBL.TBLEMPLEADOS
+        Me.DgvEmpleados.Location = New System.Drawing.Point(24, 217)
+        Me.DgvEmpleados.Name = "DgvEmpleados"
+        Me.DgvEmpleados.ReadOnly = True
+        Me.DgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgvEmpleados.Size = New System.Drawing.Size(571, 254)
+        Me.DgvEmpleados.TabIndex = 6
+        '
+        'CVE_EMPLEADOS_VAR
+        '
+        Me.CVE_EMPLEADOS_VAR.DataPropertyName = "CVE_EMPLEADOS_VAR"
+        Me.CVE_EMPLEADOS_VAR.HeaderText = "CVE_EMPLEADOS_VAR"
+        Me.CVE_EMPLEADOS_VAR.Name = "CVE_EMPLEADOS_VAR"
+        Me.CVE_EMPLEADOS_VAR.ReadOnly = True
+        '
+        'NOMBRE_VAR
+        '
+        Me.NOMBRE_VAR.DataPropertyName = "NOMBRE_VAR"
+        Me.NOMBRE_VAR.HeaderText = "NOMBRE_VAR"
+        Me.NOMBRE_VAR.Name = "NOMBRE_VAR"
+        Me.NOMBRE_VAR.ReadOnly = True
+        '
+        'ACTIVO_BIT
+        '
+        Me.ACTIVO_BIT.DataPropertyName = "ACTIVO_BIT"
+        Me.ACTIVO_BIT.HeaderText = "ACTIVO_BIT"
+        Me.ACTIVO_BIT.Name = "ACTIVO_BIT"
+        Me.ACTIVO_BIT.ReadOnly = True
+        '
+        'FECHA_ALTA_DATE
+        '
+        Me.FECHA_ALTA_DATE.DataPropertyName = "FECHA_ALTA_DATE"
+        Me.FECHA_ALTA_DATE.HeaderText = "FECHA_ALTA_DATE"
+        Me.FECHA_ALTA_DATE.Name = "FECHA_ALTA_DATE"
+        Me.FECHA_ALTA_DATE.ReadOnly = True
+        '
+        'CVE_EMPLEADO_VAR
+        '
+        Me.CVE_EMPLEADO_VAR.DataPropertyName = "CVE_EMPLEADO_VAR"
+        Me.CVE_EMPLEADO_VAR.HeaderText = "CVE_EMPLEADO_VAR"
+        Me.CVE_EMPLEADO_VAR.Name = "CVE_EMPLEADO_VAR"
+        Me.CVE_EMPLEADO_VAR.ReadOnly = True
+        '
+        'PASSWORD_VAR
+        '
+        Me.PASSWORD_VAR.DataPropertyName = "PASSWORD_VAR"
+        Me.PASSWORD_VAR.HeaderText = "PASSWORD_VAR"
+        Me.PASSWORD_VAR.Name = "PASSWORD_VAR"
+        Me.PASSWORD_VAR.ReadOnly = True
+        '
+        'EmpleadosBL
+        '
+        Me.EmpleadosBL.DataSetName = "DsEmpleados"
+        Me.EmpleadosBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'FRMEmpleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(759, 576)
-        Me.Controls.Add(Me.tbxPassword)
-        Me.Controls.Add(Me.tbxClave)
-        Me.Controls.Add(Me.tbxNombre)
-        Me.Controls.Add(Me.Password)
-        Me.Controls.Add(Me.Clave)
-        Me.Controls.Add(Me.Nombre)
+        Me.ClientSize = New System.Drawing.Size(616, 485)
+        Me.Controls.Add(Me.ChkActivo)
+        Me.Controls.Add(Me.DtpFechaAlta)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.DgvEmpleados)
         Me.Controls.Add(Me.BtnNuevo)
         Me.Controls.Add(Me.BtnModificar)
@@ -218,6 +259,8 @@ Partial Class FRMEmpleados
         Me.Controls.Add(Me.BtnSalir)
         Me.Name = "FRMEmpleados"
         Me.Text = "Empleados"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         CType(Me.DgvEmpleados, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadosBL, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -234,14 +277,17 @@ Partial Class FRMEmpleados
     Friend WithEvents Nombre As Label
     Friend WithEvents Clave As Label
     Friend WithEvents Password As Label
-    Friend WithEvents tbxNombre As TextBox
-    Friend WithEvents tbxClave As TextBox
-    Friend WithEvents tbxPassword As TextBox
+    Friend WithEvents TxtNombre As TextBox
+    Friend WithEvents TxtClave As TextBox
+    Friend WithEvents TxtPassword As TextBox
     Friend WithEvents EmpleadosBL As Negocios.EmpleadosBL
-    Friend WithEvents CVEEMPLEADOSVARDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NOMBREVARDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ACTIVOBITDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
-    Friend WithEvents FECHAALTADATEDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents CVEEMPLEADOVARDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PASSWORDVARDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents DtpFechaAlta As DateTimePicker
+    Friend WithEvents ChkActivo As CheckBox
+    Friend WithEvents CVE_EMPLEADOS_VAR As DataGridViewTextBoxColumn
+    Friend WithEvents NOMBRE_VAR As DataGridViewTextBoxColumn
+    Friend WithEvents ACTIVO_BIT As DataGridViewCheckBoxColumn
+    Friend WithEvents FECHA_ALTA_DATE As DataGridViewTextBoxColumn
+    Friend WithEvents CVE_EMPLEADO_VAR As DataGridViewTextBoxColumn
+    Friend WithEvents PASSWORD_VAR As DataGridViewTextBoxColumn
 End Class
