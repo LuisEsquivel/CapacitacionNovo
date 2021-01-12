@@ -7,7 +7,7 @@
     Public Sub Cargar(Optional ByVal CVE_EMPLEADOS_VAR As String = "")
 
         DAL = New Datos.EmpleadosDAL
-        DAL.Cargar(TBLEMPLEADOS)
+        DAL.Cargar(TBLEMPLEADOS, CVE_EMPLEADOS_VAR)
 
     End Sub
 
