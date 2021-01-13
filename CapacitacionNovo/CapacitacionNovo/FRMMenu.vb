@@ -46,7 +46,7 @@
 #Region "VariabesPantallas"
 
     Private FRMEmpleados As FRMEmpleados
-
+    Private FRMRoles As FRMRoles
 
 #End Region
 
@@ -155,6 +155,13 @@
             FRMEmpleados = New FRMEmpleados
         End If
         ActivarFormulario(FRMEmpleados)
+    End Sub
+
+    Private Sub RolesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RolesToolStripMenuItem.Click
+        If Not FormularioActivo(FRMRoles) Then
+            FRMRoles = New FRMRoles
+        End If
+        ActivarFormulario(FRMRoles)
     End Sub
 
 

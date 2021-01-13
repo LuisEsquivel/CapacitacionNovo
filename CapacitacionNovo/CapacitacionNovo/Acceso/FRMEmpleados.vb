@@ -201,5 +201,7 @@
 
     End Sub
 
+    Private Sub DgvEmpleados_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvEmpleados.CellContentClick
 
+    End Sub
 End Class

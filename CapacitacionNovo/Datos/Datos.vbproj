@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acceso\EmpleadosDAL.vb" />
+    <Compile Include="Acceso\RolesDAL.vb" />
     <Compile Include="Globales\Globales.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

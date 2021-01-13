@@ -79,6 +79,12 @@
     <Compile Include="Acceso\FRMEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Acceso\FRMRoles.Designer.vb">
+      <DependentUpon>FRMRoles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Acceso\FRMRoles.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FRMMenu.designer.vb">
       <DependentUpon>FRMMenu.vb</DependentUpon>
     </Compile>
@@ -105,6 +111,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Acceso\FRMEmpleados.resx">
       <DependentUpon>FRMEmpleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Acceso\FRMRoles.resx">
+      <DependentUpon>FRMRoles.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRMMenu.resx">
       <DependentUpon>FRMMenu.vb</DependentUpon>
