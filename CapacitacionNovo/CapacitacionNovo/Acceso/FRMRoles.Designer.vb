@@ -31,15 +31,15 @@ Partial Class FRMRoles
         Me.clave = New System.Windows.Forms.Label()
         Me.tbxClave = New System.Windows.Forms.TextBox()
         Me.tbxDescrip = New System.Windows.Forms.TextBox()
-        Me.DGVRoles = New System.Windows.Forms.DataGridView()
-        Me.RolesBL = New Negocios.RolesBL()
         Me.dtpRoles = New System.Windows.Forms.DateTimePicker()
         Me.ckbRoles = New System.Windows.Forms.CheckBox()
+        Me.DGVRoles = New System.Windows.Forms.DataGridView()
+        Me.RolesBL = New Negocios.RolesBL()
         Me.CVE_ROL_INT = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DESCROLVARDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DESC_ROL_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FECHAALTADATEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CVEUSUARIOALTAVARDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ACTIVOBITDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ACTIVO_BIT = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         CType(Me.DGVRoles, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolesBL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -122,25 +122,6 @@ Partial Class FRMRoles
         Me.tbxDescrip.Size = New System.Drawing.Size(151, 20)
         Me.tbxDescrip.TabIndex = 10
         '
-        'DGVRoles
-        '
-        Me.DGVRoles.AllowUserToAddRows = False
-        Me.DGVRoles.AllowUserToDeleteRows = False
-        Me.DGVRoles.AutoGenerateColumns = False
-        Me.DGVRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVRoles.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CVE_ROL_INT, Me.DESCROLVARDataGridViewTextBoxColumn, Me.FECHAALTADATEDataGridViewTextBoxColumn, Me.CVEUSUARIOALTAVARDataGridViewTextBoxColumn, Me.ACTIVOBITDataGridViewCheckBoxColumn})
-        Me.DGVRoles.DataSource = Me.RolesBL.TBLROLES
-        Me.DGVRoles.Location = New System.Drawing.Point(78, 172)
-        Me.DGVRoles.Name = "DGVRoles"
-        Me.DGVRoles.ReadOnly = True
-        Me.DGVRoles.Size = New System.Drawing.Size(710, 266)
-        Me.DGVRoles.TabIndex = 11
-        '
-        'RolesBL
-        '
-        Me.RolesBL.DataSetName = "DsRoles"
-        Me.RolesBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'dtpRoles
         '
         Me.dtpRoles.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
@@ -159,6 +140,25 @@ Partial Class FRMRoles
         Me.ckbRoles.Text = "Activo"
         Me.ckbRoles.UseVisualStyleBackColor = True
         '
+        'DGVRoles
+        '
+        Me.DGVRoles.AllowUserToAddRows = False
+        Me.DGVRoles.AllowUserToDeleteRows = False
+        Me.DGVRoles.AutoGenerateColumns = False
+        Me.DGVRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVRoles.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CVE_ROL_INT, Me.DESC_ROL_VAR, Me.FECHAALTADATEDataGridViewTextBoxColumn, Me.CVEUSUARIOALTAVARDataGridViewTextBoxColumn, Me.ACTIVO_BIT})
+        Me.DGVRoles.DataSource = Me.RolesBL.TBLROLES
+        Me.DGVRoles.Location = New System.Drawing.Point(78, 172)
+        Me.DGVRoles.Name = "DGVRoles"
+        Me.DGVRoles.ReadOnly = True
+        Me.DGVRoles.Size = New System.Drawing.Size(710, 266)
+        Me.DGVRoles.TabIndex = 11
+        '
+        'RolesBL
+        '
+        Me.RolesBL.DataSetName = "DsRoles"
+        Me.RolesBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'CVE_ROL_INT
         '
         Me.CVE_ROL_INT.DataPropertyName = "CVE_ROL_INT"
@@ -166,12 +166,12 @@ Partial Class FRMRoles
         Me.CVE_ROL_INT.Name = "CVE_ROL_INT"
         Me.CVE_ROL_INT.ReadOnly = True
         '
-        'DESCROLVARDataGridViewTextBoxColumn
+        'DESC_ROL_VAR
         '
-        Me.DESCROLVARDataGridViewTextBoxColumn.DataPropertyName = "DESC_ROL_VAR"
-        Me.DESCROLVARDataGridViewTextBoxColumn.HeaderText = "DESC_ROL_VAR"
-        Me.DESCROLVARDataGridViewTextBoxColumn.Name = "DESCROLVARDataGridViewTextBoxColumn"
-        Me.DESCROLVARDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DESC_ROL_VAR.DataPropertyName = "DESC_ROL_VAR"
+        Me.DESC_ROL_VAR.HeaderText = "DESC_ROL_VAR"
+        Me.DESC_ROL_VAR.Name = "DESC_ROL_VAR"
+        Me.DESC_ROL_VAR.ReadOnly = True
         '
         'FECHAALTADATEDataGridViewTextBoxColumn
         '
@@ -187,12 +187,12 @@ Partial Class FRMRoles
         Me.CVEUSUARIOALTAVARDataGridViewTextBoxColumn.Name = "CVEUSUARIOALTAVARDataGridViewTextBoxColumn"
         Me.CVEUSUARIOALTAVARDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'ACTIVOBITDataGridViewCheckBoxColumn
+        'ACTIVO_BIT
         '
-        Me.ACTIVOBITDataGridViewCheckBoxColumn.DataPropertyName = "ACTIVO_BIT"
-        Me.ACTIVOBITDataGridViewCheckBoxColumn.HeaderText = "ACTIVO_BIT"
-        Me.ACTIVOBITDataGridViewCheckBoxColumn.Name = "ACTIVOBITDataGridViewCheckBoxColumn"
-        Me.ACTIVOBITDataGridViewCheckBoxColumn.ReadOnly = True
+        Me.ACTIVO_BIT.DataPropertyName = "ACTIVO_BIT"
+        Me.ACTIVO_BIT.HeaderText = "ACTIVO_BIT"
+        Me.ACTIVO_BIT.Name = "ACTIVO_BIT"
+        Me.ACTIVO_BIT.ReadOnly = True
         '
         'FRMRoles
         '
@@ -234,8 +234,8 @@ Partial Class FRMRoles
     Friend WithEvents ckbRoles As CheckBox
     Friend WithEvents RolesBL As Negocios.RolesBL
     Friend WithEvents CVE_ROL_INT As DataGridViewTextBoxColumn
-    Friend WithEvents DESCROLVARDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DESC_ROL_VAR As DataGridViewTextBoxColumn
     Friend WithEvents FECHAALTADATEDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CVEUSUARIOALTAVARDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ACTIVOBITDataGridViewCheckBoxColumn As DataGridViewCheckBoxColumn
+    Friend WithEvents ACTIVO_BIT As DataGridViewCheckBoxColumn
 End Class

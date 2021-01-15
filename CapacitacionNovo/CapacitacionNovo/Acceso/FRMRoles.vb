@@ -3,7 +3,7 @@
 Public Class FRMRoles
 
 #Region "Variables"
-    Dim v_estadobotones As String = "inicial"
+    Dim v_estadobotones As String = "Inicial"
     Dim v_error As String = ""
 
 #End Region
@@ -31,6 +31,7 @@ Public Class FRMRoles
     End Sub
 
 
+
     Sub limpiar()
         tbxClave.Clear()
         tbxDescrip.Clear()
@@ -40,7 +41,6 @@ Public Class FRMRoles
 
 
     Sub Habilitar()
-        tbxClave.Enabled = True
         tbxDescrip.Enabled = True
         ckbRoles.Enabled = True
     End Sub
@@ -55,8 +55,7 @@ Public Class FRMRoles
 
     Sub Guadar()
 
-        If CamposVasios() Then
-
+        If CamposVaciosoYaExiste() = True Then
             MsgBox(v_error, MsgBoxStyle.Information, Generales.MENSAJE_MSGBOX)
             Exit Sub
         End If
@@ -86,6 +85,7 @@ Public Class FRMRoles
 
             If v_estadobotones = modificar.Name Then
 
+                .CVE_ROL_INT = tbxClave.Text
                 .FECHA_MOD_DATE = DateTime.Now
                 .CVE_USUARIO_MOD_VAR = "Uriel"
 
@@ -102,31 +102,36 @@ Public Class FRMRoles
     End Sub
 #End Region
 #Region "FUNCIONES"
-    Function CamposVasios()
+    Function CamposVaciosoYaExiste()
         v_error = ""
 
-        If clave.Text.Trim.Length = 0 Then
-            v_error = "Clave"
+        If tbxDescrip.Text.Trim.Length = 0 Then
+            v_error = "Descripción"
 
         Else
             Dim YaExiste As Int32 = 0
             If v_estadobotones = nuevo.Name Then
                 YaExiste = (From e As Negocios.RolesBL.TBLROLESRow In Me.RolesBL.TBLROLES.Rows
-                            Where e.CVE_USUARIO_ALTA_VAR = clave.Text
+                            Where e.DESC_ROL_VAR = tbxDescrip.Text
                             Select e).Count
+            End If
 
-
+            If v_estadobotones = modificar.Name Then
+                YaExiste = (From e As Negocios.RolesBL.TBLROLESRow In Me.RolesBL.TBLROLES.Rows
+                            Where e.DESC_ROL_VAR = tbxDescrip.Text And e.CVE_ROL_INT <> tbxClave.Text
+                            Select e
+                           ).Count
             End If
 
             If YaExiste > 0 Then
-                v_error = "Ya existe la clave : " & clave.Text & vbNewLine & "Verifique"
+                v_error = "Ya existe la descripción : " & tbxDescrip.Text & vbNewLine & "Verifique"
                 Return True
             End If
 
         End If
 
-        If tbxDescrip.Text.Trim.Length = 0 Then
-            v_error = "Campos Oboligatorios:" & vbNewLine & v_error
+        If v_error <> "" Then
+            v_error = "Campo Oboligatorio:" & vbNewLine & v_error
             Return True
         Else
             Return False
@@ -137,9 +142,8 @@ Public Class FRMRoles
     Private Sub FRMRoles_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         RolesBL.Cargar()
         Estadobotones(v_estadobotones)
-    End Sub
+        DesHabilitar()
 
-    Private Sub FRMRoles_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
@@ -151,7 +155,7 @@ Public Class FRMRoles
         v_estadobotones = "Inicial"
         Estadobotones(v_estadobotones)
         limpiar()
-        Habilitar()
+        DesHabilitar()
     End Sub
 
     Private Sub salir_Click(sender As Object, e As EventArgs) Handles salir.Click
@@ -179,17 +183,21 @@ Public Class FRMRoles
         ckbRoles.Checked = True
     End Sub
 
-    Private Sub DGVRoles_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVRoles.CellContentClick
 
+    Private Sub DGVRoles_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVRoles.CellClick
 
         If DGVRoles.SelectedRows.Count > 0 And v_estadobotones <> nuevo.Name Then
 
             With DGVRoles.SelectedRows(0)
-                tbxClave.Text = .Cells("CVE_USUARIO_ALTA_VAR").Value
-                tbxDescrip.Text = .Cells("DESC_ROL_INT").Value
-                dtpRoles.Value = .Cells("FECHA_ALTA_DATE").Value
+                tbxClave.Text = .Cells("CVE_ROL_INT").Value
+                tbxDescrip.Text = .Cells("DESC_ROL_VAR").Value
                 ckbRoles.Checked = .Cells("ACTIVO_BIT").Value
             End With
+
+            If v_estadobotones <> modificar.Name Then
+                modificar.Enabled = True
+            End If
+
         End If
     End Sub
 End Class

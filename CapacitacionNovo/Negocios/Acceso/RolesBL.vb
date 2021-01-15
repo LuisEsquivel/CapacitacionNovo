@@ -26,16 +26,16 @@ Public Class RolesBL
 
         DAL = New Datos.RolesDAL
         If DAL.Modificar(Roles) Then
-            TBLROLES.FindByCVE_ROL_INT(Roles.CVE_ROL_INT).CVE_ROL_INT = Roles.CVE_ROL_INT
+            'TBLROLES.FindByCVE_ROL_INT(Roles.CVE_ROL_INT).CVE_ROL_INT = Roles.CVE_ROL_INT
             TBLROLES.FindByCVE_ROL_INT(Roles.CVE_ROL_INT).DESC_ROL_VAR = Roles.DESC_ROL_VAR
             TBLROLES.FindByCVE_ROL_INT(Roles.CVE_ROL_INT).FECHA_MOD_DATE = Roles.FECHA_MOD_DATE
             TBLROLES.FindByCVE_ROL_INT(Roles.CVE_ROL_INT).FECHA_ALTA_DATE = Roles.FECHA_ALTA_DATE
             TBLROLES.FindByCVE_ROL_INT(Roles.CVE_ROL_INT).CVE_USUARIO_MOD_VAR = Roles.CVE_USUARIO_MOD_VAR
             TBLROLES.FindByCVE_ROL_INT(Roles.CVE_ROL_INT).CVE_USUARIO_ALTA_VAR = Roles.CVE_USUARIO_ALTA_VAR
             TBLROLES.FindByCVE_ROL_INT(Roles.CVE_ROL_INT).ACTIVO_BIT = Roles.ACTIVO_BIT
-            Return False
-        Else
             Return True
+        Else
+            Return False
         End If
 
     End Function

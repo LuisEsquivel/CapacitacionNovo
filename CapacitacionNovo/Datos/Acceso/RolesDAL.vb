@@ -25,6 +25,8 @@
 
         Try
 
+            SQL.FillDt(tabla)
+
         Catch ex As Exception
             MsgBox("Error al cargar roles" & ex.Message)
         End Try
@@ -63,14 +65,13 @@
         SQL.cmdType = CommandType.StoredProcedure
 
         SQL.AddParam("@CVE_ROL_INT", Roles.CVE_ROL_INT, SqlDbType.Int)
-        SQL.AddParam("@DEAC_ROL_VAR", Roles.DESC_ROL_VAR, SqlDbType.VarChar)
+        SQL.AddParam("@DESC_ROL_VAR", Roles.DESC_ROL_VAR, SqlDbType.VarChar)
         SQL.AddParam("@FECHA_MOD_DATE", Roles.FECHA_MOD_DATE, SqlDbType.DateTime)
-        SQL.AddParam("@FECHA_ALTA_DATE", Roles.FECHA_ALTA_DATE, SqlDbType.DateTime)
-        SQL.AddParam("@CVE_USUARIO_ALTA_VAR", Roles.CVE_USUARIO_ALTA_VAR, SqlDbType.VarChar)
         SQL.AddParam("@CVE_USUARIO_MOD_VAR", Roles.CVE_USUARIO_MOD_VAR, SqlDbType.VarChar)
-        SQL.AddParam("@ACTIVO_BIT", Accion.Modificar, SqlDbType.Bit)
+        SQL.AddParam("@ACTIVO_BIT", Roles.ACTIVO_BIT, SqlDbType.Bit)
+        SQL.AddParam("@Accion", Accion.Modificar, SqlDbType.Int)
 
-        SQL.cmdText = "PROC_Roles"
+        SQL.cmdText = "PROC_TBLROLES"
 
         Try
             dt = New Estructuras.DsRoles.TBLROLESDataTable
@@ -80,7 +81,7 @@
                 Return True
             End If
         Catch ex As Exception
-            MsgBox("Error al modificar Roles")
+            MsgBox("Error al modificar Roles" + ex.ToString)
 
         End Try
 
