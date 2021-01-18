@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="Acceso\EmpleadosDAL.vb" />
     <Compile Include="Acceso\RolesDAL.vb" />
+    <Compile Include="Catalogos\ColoresDAL.vb" />
     <Compile Include="Globales\Globales.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -115,5 +116,6 @@
       <Name>SqlConn</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

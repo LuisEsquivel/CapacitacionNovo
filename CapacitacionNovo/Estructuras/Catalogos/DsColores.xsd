@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsColores" targetNamespace="http://tempuri.org/DsColores.xsd" xmlns:mstns="http://tempuri.org/DsColores.xsd" xmlns="http://tempuri.org/DsColores.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CapacitacionNovoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CapacitacionNovoConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Estructuras.My.MySettings.GlobalReference.Default.CapacitacionNovoConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsColores" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsColores" msprop:Generator_UserDSName="DsColores">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TBLCOLORES" msprop:Generator_TableClassName="TBLCOLORESDataTable" msprop:Generator_TableVarName="tableTBLCOLORES" msprop:Generator_TablePropName="TBLCOLORES" msprop:Generator_RowDeletingName="TBLCOLORESRowDeleting" msprop:Generator_RowChangingName="TBLCOLORESRowChanging" msprop:Generator_RowEvHandlerName="TBLCOLORESRowChangeEventHandler" msprop:Generator_RowDeletedName="TBLCOLORESRowDeleted" msprop:Generator_UserTableName="TBLCOLORES" msprop:Generator_RowChangedName="TBLCOLORESRowChanged" msprop:Generator_RowEvArgName="TBLCOLORESRowChangeEvent" msprop:Generator_RowClassName="TBLCOLORESRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CVE_COLOR_INT" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCVE_COLOR_INT" msprop:Generator_ColumnPropNameInRow="CVE_COLOR_INT" msprop:Generator_ColumnPropNameInTable="CVE_COLOR_INTColumn" msprop:Generator_UserColumnName="CVE_COLOR_INT" type="xs:int" />
+              <xs:element name="NOMBRE_VAR" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_VAR" msprop:Generator_ColumnPropNameInRow="NOMBRE_VAR" msprop:Generator_ColumnPropNameInTable="NOMBRE_VARColumn" msprop:Generator_UserColumnName="NOMBRE_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHA_ALTA_DATE" msprop:Generator_ColumnVarNameInTable="columnFECHA_ALTA_DATE" msprop:Generator_ColumnPropNameInRow="FECHA_ALTA_DATE" msprop:Generator_ColumnPropNameInTable="FECHA_ALTA_DATEColumn" msprop:Generator_UserColumnName="FECHA_ALTA_DATE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHA_MOD_DATE" msprop:Generator_ColumnVarNameInTable="columnFECHA_MOD_DATE" msprop:Generator_ColumnPropNameInRow="FECHA_MOD_DATE" msprop:Generator_ColumnPropNameInTable="FECHA_MOD_DATEColumn" msprop:Generator_UserColumnName="FECHA_MOD_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CVE_USUARIO_ALTA_VAR" msprop:Generator_ColumnVarNameInTable="columnCVE_USUARIO_ALTA_VAR" msprop:Generator_ColumnPropNameInRow="CVE_USUARIO_ALTA_VAR" msprop:Generator_ColumnPropNameInTable="CVE_USUARIO_ALTA_VARColumn" msprop:Generator_UserColumnName="CVE_USUARIO_ALTA_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CVE_USUARIO_MOD_VAR" msprop:Generator_ColumnVarNameInTable="columnCVE_USUARIO_MOD_VAR" msprop:Generator_ColumnPropNameInRow="CVE_USUARIO_MOD_VAR" msprop:Generator_ColumnPropNameInTable="CVE_USUARIO_MOD_VARColumn" msprop:Generator_UserColumnName="CVE_USUARIO_MOD_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ACTIVO_BIT" msprop:Generator_ColumnVarNameInTable="columnACTIVO_BIT" msprop:Generator_ColumnPropNameInRow="ACTIVO_BIT" msprop:Generator_ColumnPropNameInTable="ACTIVO_BITColumn" msprop:Generator_UserColumnName="ACTIVO_BIT" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TBLCOLORES" />
+      <xs:field xpath="mstns:CVE_COLOR_INT" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

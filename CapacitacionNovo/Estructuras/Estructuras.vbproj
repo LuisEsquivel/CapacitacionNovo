@@ -80,6 +80,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DsRoles.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\DsColores.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsColores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\DsColores.vb">
+      <DependentUpon>DsColores.xsd</DependentUpon>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -139,6 +147,17 @@
       <DependentUpon>DsRoles.xsd</DependentUpon>
     </None>
     <None Include="app.config" />
+    <None Include="Catalogos\DsColores.xsc">
+      <DependentUpon>DsColores.xsd</DependentUpon>
+    </None>
+    <None Include="Catalogos\DsColores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsColores.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Catalogos\DsColores.xss">
+      <DependentUpon>DsColores.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

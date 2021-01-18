@@ -39,7 +39,7 @@
 
         SQL.AddParam("@DESC_ROL_VAR", Roles.DESC_ROL_VAR, SqlDbType.VarChar)
         SQL.AddParam("@FECHA_ALTA_DATE", Roles.FECHA_ALTA_DATE, SqlDbType.DateTime)
-        SQL.AddParam("@CVE_USUARIO_VAR", Roles.CVE_USUARIO_ALTA_VAR, SqlDbType.VarChar)
+        SQL.AddParam("@CVE_USUARIO_ALTA_VAR", Roles.CVE_USUARIO_ALTA_VAR, SqlDbType.VarChar)
         SQL.AddParam("@ACTIVO_BIT", Roles.ACTIVO_BIT, SqlDbType.Bit)
         SQL.AddParam("@Accion", Accion.Agregar, SqlDbType.Int)
 

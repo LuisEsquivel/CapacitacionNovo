@@ -164,6 +164,13 @@
         ActivarFormulario(FRMRoles)
     End Sub
 
+    Private Sub ColoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ColoresToolStripMenuItem.Click
+        If Not FormularioActivo(FRMColores) Then
+            FRMColores = New FRMColores
+        End If
+        ActivarFormulario(FRMColores)
+    End Sub
+
 
     'Private Sub CambioDeUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CambioDeUsuarioToolStripMenuItem.Click
     '    If Not Generales.Buscar_Formularios_Activos(Me) Then
