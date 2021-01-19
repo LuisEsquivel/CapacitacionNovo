@@ -32,9 +32,6 @@ Partial Class FRMColores
         Me.tbxClave = New System.Windows.Forms.TextBox()
         Me.tbxColor = New System.Windows.Forms.TextBox()
         Me.DGVColores = New System.Windows.Forms.DataGridView()
-        Me.ColoresBL = New Negocios.ColoresBL()
-        Me.DTPColores = New System.Windows.Forms.DateTimePicker()
-        Me.ChbActivo = New System.Windows.Forms.CheckBox()
         Me.CVE_COLOR_INT = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NOMBRE_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FECHA_ALTA_DATE = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,6 +39,9 @@ Partial Class FRMColores
         Me.CVE_USUARIO_ALTA_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CVE_USUARIO_MOD_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ACTIVO_BIT = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ColoresBL = New Negocios.ColoresBL()
+        Me.DTPColores = New System.Windows.Forms.DateTimePicker()
+        Me.ChbActivo = New System.Windows.Forms.CheckBox()
         CType(Me.DGVColores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ColoresBL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -137,29 +137,6 @@ Partial Class FRMColores
         Me.DGVColores.Size = New System.Drawing.Size(543, 225)
         Me.DGVColores.TabIndex = 9
         '
-        'ColoresBL
-        '
-        Me.ColoresBL.DataSetName = "DsColores"
-        Me.ColoresBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DTPColores
-        '
-        Me.DTPColores.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTPColores.Location = New System.Drawing.Point(688, 95)
-        Me.DTPColores.Name = "DTPColores"
-        Me.DTPColores.Size = New System.Drawing.Size(100, 20)
-        Me.DTPColores.TabIndex = 10
-        '
-        'ChbActivo
-        '
-        Me.ChbActivo.AutoSize = True
-        Me.ChbActivo.Location = New System.Drawing.Point(179, 95)
-        Me.ChbActivo.Name = "ChbActivo"
-        Me.ChbActivo.Size = New System.Drawing.Size(56, 17)
-        Me.ChbActivo.TabIndex = 11
-        Me.ChbActivo.Text = "Activo"
-        Me.ChbActivo.UseVisualStyleBackColor = True
-        '
         'CVE_COLOR_INT
         '
         Me.CVE_COLOR_INT.DataPropertyName = "CVE_COLOR_INT"
@@ -208,6 +185,29 @@ Partial Class FRMColores
         Me.ACTIVO_BIT.HeaderText = "ACTIVO_BIT"
         Me.ACTIVO_BIT.Name = "ACTIVO_BIT"
         Me.ACTIVO_BIT.ReadOnly = True
+        '
+        'ColoresBL
+        '
+        Me.ColoresBL.DataSetName = "DsColores"
+        Me.ColoresBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DTPColores
+        '
+        Me.DTPColores.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTPColores.Location = New System.Drawing.Point(688, 95)
+        Me.DTPColores.Name = "DTPColores"
+        Me.DTPColores.Size = New System.Drawing.Size(100, 20)
+        Me.DTPColores.TabIndex = 10
+        '
+        'ChbActivo
+        '
+        Me.ChbActivo.AutoSize = True
+        Me.ChbActivo.Location = New System.Drawing.Point(179, 95)
+        Me.ChbActivo.Name = "ChbActivo"
+        Me.ChbActivo.Size = New System.Drawing.Size(56, 17)
+        Me.ChbActivo.TabIndex = 11
+        Me.ChbActivo.Text = "Activo"
+        Me.ChbActivo.UseVisualStyleBackColor = True
         '
         'FRMColores
         '
