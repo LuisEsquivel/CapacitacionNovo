@@ -34,17 +34,27 @@ Partial Class FRMEmpleados
         Me.TxtClave = New System.Windows.Forms.TextBox()
         Me.TxtPassword = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.CmbColores = New System.Windows.Forms.ComboBox()
+        Me.ColoresBL = New Negocios.ColoresBL()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.CmbRol = New System.Windows.Forms.ComboBox()
+        Me.RolesBL1 = New Negocios.RolesBL()
         Me.DtpFechaAlta = New System.Windows.Forms.DateTimePicker()
         Me.ChkActivo = New System.Windows.Forms.CheckBox()
         Me.DgvEmpleados = New System.Windows.Forms.DataGridView()
+        Me.EmpleadosBL = New Negocios.EmpleadosBL()
         Me.CVE_EMPLEADOS_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CVE_COLOR_INT = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CVE_ROL_INT = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NOMBRE_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ACTIVO_BIT = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.FECHA_ALTA_DATE = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CVE_EMPLEADO_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PASSWORD_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmpleadosBL = New Negocios.EmpleadosBL()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.ColoresBL, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RolesBL1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgvEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadosBL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -150,17 +160,73 @@ Partial Class FRMEmpleados
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.CmbColores)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.CmbRol)
         Me.GroupBox1.Controls.Add(Me.TxtPassword)
         Me.GroupBox1.Controls.Add(Me.Nombre)
         Me.GroupBox1.Controls.Add(Me.TxtClave)
         Me.GroupBox1.Controls.Add(Me.Clave)
         Me.GroupBox1.Controls.Add(Me.TxtNombre)
         Me.GroupBox1.Controls.Add(Me.Password)
-        Me.GroupBox1.Location = New System.Drawing.Point(18, 136)
+        Me.GroupBox1.Location = New System.Drawing.Point(24, 136)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(577, 67)
+        Me.GroupBox1.Size = New System.Drawing.Size(571, 107)
         Me.GroupBox1.TabIndex = 16
         Me.GroupBox1.TabStop = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(220, 61)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(31, 13)
+        Me.Label2.TabIndex = 22
+        Me.Label2.Text = "Color"
+        '
+        'CmbColores
+        '
+        Me.CmbColores.DataSource = Me.ColoresBL
+        Me.CmbColores.DisplayMember = "TBLCOLORES.NOMBRE_VAR"
+        Me.CmbColores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbColores.FormattingEnabled = True
+        Me.CmbColores.Location = New System.Drawing.Point(219, 80)
+        Me.CmbColores.Name = "CmbColores"
+        Me.CmbColores.Size = New System.Drawing.Size(134, 21)
+        Me.CmbColores.TabIndex = 21
+        Me.CmbColores.ValueMember = "TBLCOLORES.CVE_COLOR_INT"
+        '
+        'ColoresBL
+        '
+        Me.ColoresBL.DataSetName = "DsColores"
+        Me.ColoresBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(19, 61)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(23, 13)
+        Me.Label1.TabIndex = 20
+        Me.Label1.Text = "Rol"
+        '
+        'CmbRol
+        '
+        Me.CmbRol.DataSource = Me.RolesBL1
+        Me.CmbRol.DisplayMember = "TBLROLES.DESC_ROL_VAR"
+        Me.CmbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CmbRol.FormattingEnabled = True
+        Me.CmbRol.Location = New System.Drawing.Point(19, 80)
+        Me.CmbRol.Name = "CmbRol"
+        Me.CmbRol.Size = New System.Drawing.Size(154, 21)
+        Me.CmbRol.TabIndex = 19
+        Me.CmbRol.ValueMember = "TBLROLES.CVE_ROL_INT"
+        '
+        'RolesBL1
+        '
+        Me.RolesBL1.DataSetName = "DsRoles"
+        Me.RolesBL1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'DtpFechaAlta
         '
@@ -187,14 +253,19 @@ Partial Class FRMEmpleados
         Me.DgvEmpleados.AllowUserToDeleteRows = False
         Me.DgvEmpleados.AutoGenerateColumns = False
         Me.DgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvEmpleados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CVE_EMPLEADOS_VAR, Me.NOMBRE_VAR, Me.ACTIVO_BIT, Me.FECHA_ALTA_DATE, Me.CVE_EMPLEADO_VAR, Me.PASSWORD_VAR})
+        Me.DgvEmpleados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CVE_EMPLEADOS_VAR, Me.CVE_COLOR_INT, Me.CVE_ROL_INT, Me.NOMBRE_VAR, Me.ACTIVO_BIT, Me.FECHA_ALTA_DATE, Me.CVE_EMPLEADO_VAR, Me.PASSWORD_VAR})
         Me.DgvEmpleados.DataSource = Me.EmpleadosBL.TBLEMPLEADOS
-        Me.DgvEmpleados.Location = New System.Drawing.Point(24, 217)
+        Me.DgvEmpleados.Location = New System.Drawing.Point(24, 267)
         Me.DgvEmpleados.Name = "DgvEmpleados"
         Me.DgvEmpleados.ReadOnly = True
         Me.DgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvEmpleados.Size = New System.Drawing.Size(571, 254)
         Me.DgvEmpleados.TabIndex = 6
+        '
+        'EmpleadosBL
+        '
+        Me.EmpleadosBL.DataSetName = "DsEmpleados"
+        Me.EmpleadosBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'CVE_EMPLEADOS_VAR
         '
@@ -202,6 +273,20 @@ Partial Class FRMEmpleados
         Me.CVE_EMPLEADOS_VAR.HeaderText = "CVE_EMPLEADOS_VAR"
         Me.CVE_EMPLEADOS_VAR.Name = "CVE_EMPLEADOS_VAR"
         Me.CVE_EMPLEADOS_VAR.ReadOnly = True
+        '
+        'CVE_COLOR_INT
+        '
+        Me.CVE_COLOR_INT.DataPropertyName = "CVE_COLOR_INT"
+        Me.CVE_COLOR_INT.HeaderText = "CVE_COLOR_INT"
+        Me.CVE_COLOR_INT.Name = "CVE_COLOR_INT"
+        Me.CVE_COLOR_INT.ReadOnly = True
+        '
+        'CVE_ROL_INT
+        '
+        Me.CVE_ROL_INT.DataPropertyName = "CVE_ROL_INT"
+        Me.CVE_ROL_INT.HeaderText = "CVE_ROL_INT"
+        Me.CVE_ROL_INT.Name = "CVE_ROL_INT"
+        Me.CVE_ROL_INT.ReadOnly = True
         '
         'NOMBRE_VAR
         '
@@ -238,16 +323,11 @@ Partial Class FRMEmpleados
         Me.PASSWORD_VAR.Name = "PASSWORD_VAR"
         Me.PASSWORD_VAR.ReadOnly = True
         '
-        'EmpleadosBL
-        '
-        Me.EmpleadosBL.DataSetName = "DsEmpleados"
-        Me.EmpleadosBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'FRMEmpleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(616, 485)
+        Me.ClientSize = New System.Drawing.Size(616, 533)
         Me.Controls.Add(Me.ChkActivo)
         Me.Controls.Add(Me.DtpFechaAlta)
         Me.Controls.Add(Me.GroupBox1)
@@ -261,6 +341,8 @@ Partial Class FRMEmpleados
         Me.Text = "Empleados"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.ColoresBL, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RolesBL1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgvEmpleados, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadosBL, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -284,7 +366,15 @@ Partial Class FRMEmpleados
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents DtpFechaAlta As DateTimePicker
     Friend WithEvents ChkActivo As CheckBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents CmbRol As ComboBox
+    Friend WithEvents RolesBL1 As Negocios.RolesBL
+    Friend WithEvents Label2 As Label
+    Friend WithEvents CmbColores As ComboBox
+    Friend WithEvents ColoresBL As Negocios.ColoresBL
     Friend WithEvents CVE_EMPLEADOS_VAR As DataGridViewTextBoxColumn
+    Friend WithEvents CVE_COLOR_INT As DataGridViewTextBoxColumn
+    Friend WithEvents CVE_ROL_INT As DataGridViewTextBoxColumn
     Friend WithEvents NOMBRE_VAR As DataGridViewTextBoxColumn
     Friend WithEvents ACTIVO_BIT As DataGridViewCheckBoxColumn
     Friend WithEvents FECHA_ALTA_DATE As DataGridViewTextBoxColumn

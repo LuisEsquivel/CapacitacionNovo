@@ -10,10 +10,11 @@
 
     End Sub
 
-    Public Function agregar(ByVal fila As TBLCOLORESRow) As Boolean
+    Public Function agregar(ByVal colores As TBLCOLORESRow) As Boolean
 
         DAL = New Datos.ColoresDAL
-        If DAL.Agregar(fila) Then
+        If DAL.Agregar(colores) Then
+            TBLCOLORES.Rows.Add(colores)
             Return True
         Else
             Return False
@@ -36,4 +37,6 @@
             Return False
         End If
     End Function
+
+
 End Class

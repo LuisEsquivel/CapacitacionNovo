@@ -6,6 +6,56 @@
 #End Region
 
 #Region "PROCEDIMIENTOS o MÉTODOS"
+
+    Sub LlenarCombos()
+
+        RolesBL1.Cargar()
+        ColoresBL.Cargar()
+
+        Dim row As Negocios.RolesBL.TBLROLESRow
+        row = RolesBL1.TBLROLES.NewTBLROLESRow
+
+        With row
+
+            .CVE_ROL_INT = 0
+            .DESC_ROL_VAR = "--SELECCIONE--"
+            .FECHA_ALTA_DATE = Now
+            .FECHA_MOD_DATE = Now
+            .CVE_USUARIO_ALTA_VAR = ""
+            .CVE_USUARIO_MOD_VAR = ""
+            .ACTIVO_BIT = True
+
+        End With
+        RolesBL1.TBLROLES.Rows.Add(row)
+        CmbRol.SelectedValue = 0
+
+
+
+
+
+        Dim filaColor As Negocios.ColoresBL.TBLCOLORESRow
+        filaColor = ColoresBL.TBLCOLORES.NewTBLCOLORESRow
+
+        With filaColor
+
+            .CVE_COLOR_INT = 0
+            .NOMBRE_VAR = "--SELECCIONE--"
+            .FECHA_ALTA_DATE = Now
+            .FECHA_MOD_DATE = Now
+            .CVE_USUARIO_ALTA_VAR = ""
+            .CVE_USUARIO_MOD_VAR = ""
+            .ACTIVO_BIT = True
+
+        End With
+        ColoresBL.TBLCOLORES.Rows.Add(filaColor)
+        CmbColores.SelectedValue = 0
+
+
+
+
+    End Sub
+
+
     Sub EstadoBotones(ByVal estado)
 
         If estado = "Inicial" Then
@@ -31,6 +81,8 @@
         TxtClave.Clear()
         TxtNombre.Clear()
         TxtPassword.Clear()
+        CmbRol.SelectedValue = 0
+        CmbColores.SelectedValue = 0
         ChkActivo.Checked = False
     End Sub
 
@@ -39,6 +91,8 @@
         TxtNombre.Enabled = True
         TxtPassword.Enabled = True
         ChkActivo.Enabled = True
+        CmbColores.Enabled = True
+        CmbRol.Enabled = True
     End Sub
 
 
@@ -47,10 +101,13 @@
         TxtNombre.Enabled = False
         TxtPassword.Enabled = False
         ChkActivo.Enabled = False
+        CmbColores.Enabled = False
+        CmbRol.Enabled = False
     End Sub
 
 
     Sub Guardar()
+
 
         If CamposVacios() Then
             MsgBox(v_error, MsgBoxStyle.Information, Generales.MENSAJE_MSGBOX)
@@ -66,7 +123,8 @@
             .NOMBRE_VAR = TxtNombre.Text
             .PASSWORD_VAR = TxtPassword.Text
             .ACTIVO_BIT = ChkActivo.Checked
-            .CVE_ROL_INT = 1
+            .CVE_ROL_INT = CmbRol.SelectedValue
+            .CVE_COLOR_INT = CmbColores.SelectedValue
 
 
             If v_estadoBotones = BtnNuevo.Name Then
@@ -131,6 +189,13 @@
             v_error += vbNewLine & "Password"
         End If
 
+        If CmbRol.SelectedValue = 0 Then
+            v_error = v_error + vbNewLine + "Rol"
+        End If
+
+        If CmbColores.SelectedValue = 0 Then
+            v_error = v_error + vbNewLine + "color"
+        End If
 
         If v_error <> "" Then
             v_error = "Campos Obligatorios:" & vbNewLine & v_error
@@ -147,7 +212,9 @@
 
     Private Sub FRMEmpleados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         EmpleadosBL.Cargar()
+        LlenarCombos()
         EstadoBotones(v_estadoBotones)
+        DesHabilitar()
     End Sub
 
     Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
@@ -190,6 +257,8 @@
                 TxtPassword.Text = .Cells("PASSWORD_VAR").Value
                 DtpFechaAlta.Value = .Cells("FECHA_ALTA_DATE").Value
                 ChkActivo.Checked = .Cells("ACTIVO_BIT").Value
+                CmbColores.SelectedValue = .Cells("CVE_COLOR_INT").Value
+                CmbRol.SelectedValue = .Cells("CVE_ROL_INT").Value
             End With
 
             If v_estadoBotones <> BtnModificar.Name Then
@@ -202,4 +271,12 @@
     End Sub
 
 
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbColores.SelectedIndexChanged
+        Dim value = CmbColores.SelectedValue
+    End Sub
+
+    Private Sub DgvEmpleados_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvEmpleados.CellContentClick
+
+    End Sub
 End Class

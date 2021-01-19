@@ -30,7 +30,7 @@ Partial Public Class DsEmpleados
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Sub New()
         MyBase.New
         Me.BeginInit
@@ -42,7 +42,7 @@ Partial Public Class DsEmpleados
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
         MyBase.New(info, context, false)
         If (Me.IsBinarySerialized(info, context) = true) Then
@@ -77,7 +77,7 @@ Partial Public Class DsEmpleados
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
     Public ReadOnly Property TBLEMPLEADOS() As TBLEMPLEADOSDataTable
@@ -87,7 +87,7 @@ Partial Public Class DsEmpleados
     End Property
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
      Global.System.ComponentModel.BrowsableAttribute(true),  _
      Global.System.ComponentModel.DesignerSerializationVisibilityAttribute(Global.System.ComponentModel.DesignerSerializationVisibility.Visible)>  _
     Public Overrides Property SchemaSerializationMode() As Global.System.Data.SchemaSerializationMode
@@ -100,7 +100,7 @@ Partial Public Class DsEmpleados
     End Property
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
      Global.System.ComponentModel.DesignerSerializationVisibilityAttribute(Global.System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
     Public Shadows ReadOnly Property Tables() As Global.System.Data.DataTableCollection
         Get
@@ -109,7 +109,7 @@ Partial Public Class DsEmpleados
     End Property
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
      Global.System.ComponentModel.DesignerSerializationVisibilityAttribute(Global.System.ComponentModel.DesignerSerializationVisibility.Hidden)>  _
     Public Shadows ReadOnly Property Relations() As Global.System.Data.DataRelationCollection
         Get
@@ -118,7 +118,7 @@ Partial Public Class DsEmpleados
     End Property
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Protected Overrides Sub InitializeDerivedDataSet()
         Me.BeginInit
         Me.InitClass
@@ -126,7 +126,7 @@ Partial Public Class DsEmpleados
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Overrides Function Clone() As Global.System.Data.DataSet
         Dim cln As DsEmpleados = CType(MyBase.Clone,DsEmpleados)
         cln.InitVars
@@ -135,19 +135,19 @@ Partial Public Class DsEmpleados
     End Function
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Protected Overrides Function ShouldSerializeTables() As Boolean
         Return false
     End Function
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Protected Overrides Function ShouldSerializeRelations() As Boolean
         Return false
     End Function
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Protected Overrides Sub ReadXmlSerializable(ByVal reader As Global.System.Xml.XmlReader)
         If (Me.DetermineSchemaSerializationMode(reader) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Me.Reset
@@ -171,7 +171,7 @@ Partial Public Class DsEmpleados
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Protected Overrides Function GetSchemaSerializable() As Global.System.Xml.Schema.XmlSchema
         Dim stream As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
         Me.WriteXmlSchema(New Global.System.Xml.XmlTextWriter(stream, Nothing))
@@ -180,13 +180,13 @@ Partial Public Class DsEmpleados
     End Function
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Friend Overloads Sub InitVars()
         Me.InitVars(true)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
         Me.tableTBLEMPLEADOS = CType(MyBase.Tables("TBLEMPLEADOS"),TBLEMPLEADOSDataTable)
         If (initTable = true) Then
@@ -197,7 +197,7 @@ Partial Public Class DsEmpleados
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Private Sub InitClass()
         Me.DataSetName = "DsEmpleados"
         Me.Prefix = ""
@@ -209,13 +209,13 @@ Partial Public Class DsEmpleados
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Private Function ShouldSerializeTBLEMPLEADOS() As Boolean
         Return false
     End Function
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Private Sub SchemaChanged(ByVal sender As Object, ByVal e As Global.System.ComponentModel.CollectionChangeEventArgs)
         If (e.Action = Global.System.ComponentModel.CollectionChangeAction.Remove) Then
             Me.InitVars
@@ -223,7 +223,7 @@ Partial Public Class DsEmpleados
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Shared Function GetTypedDataSetSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
         Dim ds As DsEmpleados = New DsEmpleados()
         Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
@@ -272,7 +272,7 @@ Partial Public Class DsEmpleados
         Return type
     End Function
     
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Delegate Sub TBLEMPLEADOSRowChangeEventHandler(ByVal sender As Object, ByVal e As TBLEMPLEADOSRowChangeEvent)
     
     '''<summary>
@@ -301,8 +301,10 @@ Partial Public Class DsEmpleados
         
         Private columnPASSWORD_VAR As Global.System.Data.DataColumn
         
+        Private columnCVE_COLOR_INT As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
             MyBase.New
             Me.TableName = "TBLEMPLEADOS"
@@ -312,7 +314,7 @@ Partial Public Class DsEmpleados
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub New(ByVal table As Global.System.Data.DataTable)
             MyBase.New
             Me.TableName = table.TableName
@@ -330,14 +332,14 @@ Partial Public Class DsEmpleados
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
             MyBase.New(info, context)
             Me.InitVars
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property CVE_EMPLEADOS_VARColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnCVE_EMPLEADOS_VAR
@@ -345,7 +347,7 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property NOMBRE_VARColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnNOMBRE_VAR
@@ -353,7 +355,7 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property ACTIVO_BITColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnACTIVO_BIT
@@ -361,7 +363,7 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property FECHA_ALTA_DATEColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnFECHA_ALTA_DATE
@@ -369,7 +371,7 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property FECHA_MOD_DATEColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnFECHA_MOD_DATE
@@ -377,7 +379,7 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property CVE_EMPLEADO_VARColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnCVE_EMPLEADO_VAR
@@ -385,7 +387,7 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property CVE_EMPLEADO_MOD_VARColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnCVE_EMPLEADO_MOD_VAR
@@ -393,7 +395,7 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property CVE_ROL_INTColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnCVE_ROL_INT
@@ -401,7 +403,7 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property PASSWORD_VARColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnPASSWORD_VAR
@@ -409,7 +411,15 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property CVE_COLOR_INTColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCVE_COLOR_INT
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
             Get
@@ -418,49 +428,49 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Default ReadOnly Property Item(ByVal index As Integer) As TBLEMPLEADOSRow
             Get
                 Return CType(Me.Rows(index),TBLEMPLEADOSRow)
             End Get
         End Property
         
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Event TBLEMPLEADOSRowChanging As TBLEMPLEADOSRowChangeEventHandler
         
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Event TBLEMPLEADOSRowChanged As TBLEMPLEADOSRowChangeEventHandler
         
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Event TBLEMPLEADOSRowDeleting As TBLEMPLEADOSRowChangeEventHandler
         
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Event TBLEMPLEADOSRowDeleted As TBLEMPLEADOSRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Overloads Sub AddTBLEMPLEADOSRow(ByVal row As TBLEMPLEADOSRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddTBLEMPLEADOSRow(ByVal CVE_EMPLEADOS_VAR As String, ByVal NOMBRE_VAR As String, ByVal ACTIVO_BIT As Boolean, ByVal FECHA_ALTA_DATE As Date, ByVal FECHA_MOD_DATE As Date, ByVal CVE_EMPLEADO_VAR As String, ByVal CVE_EMPLEADO_MOD_VAR As String, ByVal CVE_ROL_INT As Integer, ByVal PASSWORD_VAR As String) As TBLEMPLEADOSRow
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Overloads Function AddTBLEMPLEADOSRow(ByVal CVE_EMPLEADOS_VAR As String, ByVal NOMBRE_VAR As String, ByVal ACTIVO_BIT As Boolean, ByVal FECHA_ALTA_DATE As Date, ByVal FECHA_MOD_DATE As Date, ByVal CVE_EMPLEADO_VAR As String, ByVal CVE_EMPLEADO_MOD_VAR As String, ByVal CVE_ROL_INT As Integer, ByVal PASSWORD_VAR As String, ByVal CVE_COLOR_INT As Integer) As TBLEMPLEADOSRow
             Dim rowTBLEMPLEADOSRow As TBLEMPLEADOSRow = CType(Me.NewRow,TBLEMPLEADOSRow)
-            Dim columnValuesArray() As Object = New Object() {CVE_EMPLEADOS_VAR, NOMBRE_VAR, ACTIVO_BIT, FECHA_ALTA_DATE, FECHA_MOD_DATE, CVE_EMPLEADO_VAR, CVE_EMPLEADO_MOD_VAR, CVE_ROL_INT, PASSWORD_VAR}
+            Dim columnValuesArray() As Object = New Object() {CVE_EMPLEADOS_VAR, NOMBRE_VAR, ACTIVO_BIT, FECHA_ALTA_DATE, FECHA_MOD_DATE, CVE_EMPLEADO_VAR, CVE_EMPLEADO_MOD_VAR, CVE_ROL_INT, PASSWORD_VAR, CVE_COLOR_INT}
             rowTBLEMPLEADOSRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowTBLEMPLEADOSRow)
             Return rowTBLEMPLEADOSRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function FindByCVE_EMPLEADOS_VAR(ByVal CVE_EMPLEADOS_VAR As String) As TBLEMPLEADOSRow
             Return CType(Me.Rows.Find(New Object() {CVE_EMPLEADOS_VAR}),TBLEMPLEADOSRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
             Dim cln As TBLEMPLEADOSDataTable = CType(MyBase.Clone,TBLEMPLEADOSDataTable)
             cln.InitVars
@@ -468,13 +478,13 @@ Partial Public Class DsEmpleados
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
             Return New TBLEMPLEADOSDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub InitVars()
             Me.columnCVE_EMPLEADOS_VAR = MyBase.Columns("CVE_EMPLEADOS_VAR")
             Me.columnNOMBRE_VAR = MyBase.Columns("NOMBRE_VAR")
@@ -485,10 +495,11 @@ Partial Public Class DsEmpleados
             Me.columnCVE_EMPLEADO_MOD_VAR = MyBase.Columns("CVE_EMPLEADO_MOD_VAR")
             Me.columnCVE_ROL_INT = MyBase.Columns("CVE_ROL_INT")
             Me.columnPASSWORD_VAR = MyBase.Columns("PASSWORD_VAR")
+            Me.columnCVE_COLOR_INT = MyBase.Columns("CVE_COLOR_INT")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Private Sub InitClass()
             Me.columnCVE_EMPLEADOS_VAR = New Global.System.Data.DataColumn("CVE_EMPLEADOS_VAR", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCVE_EMPLEADOS_VAR)
@@ -508,6 +519,8 @@ Partial Public Class DsEmpleados
             MyBase.Columns.Add(Me.columnCVE_ROL_INT)
             Me.columnPASSWORD_VAR = New Global.System.Data.DataColumn("PASSWORD_VAR", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPASSWORD_VAR)
+            Me.columnCVE_COLOR_INT = New Global.System.Data.DataColumn("CVE_COLOR_INT", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCVE_COLOR_INT)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnCVE_EMPLEADOS_VAR}, true))
             Me.columnCVE_EMPLEADOS_VAR.AllowDBNull = false
             Me.columnCVE_EMPLEADOS_VAR.Unique = true
@@ -527,25 +540,25 @@ Partial Public Class DsEmpleados
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function NewTBLEMPLEADOSRow() As TBLEMPLEADOSRow
             Return CType(Me.NewRow,TBLEMPLEADOSRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
             Return New TBLEMPLEADOSRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
             Return GetType(TBLEMPLEADOSRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
             If (Not (Me.TBLEMPLEADOSRowChangedEvent) Is Nothing) Then
@@ -554,7 +567,7 @@ Partial Public Class DsEmpleados
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
             If (Not (Me.TBLEMPLEADOSRowChangingEvent) Is Nothing) Then
@@ -563,7 +576,7 @@ Partial Public Class DsEmpleados
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
             If (Not (Me.TBLEMPLEADOSRowDeletedEvent) Is Nothing) Then
@@ -572,7 +585,7 @@ Partial Public Class DsEmpleados
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
             If (Not (Me.TBLEMPLEADOSRowDeletingEvent) Is Nothing) Then
@@ -581,13 +594,13 @@ Partial Public Class DsEmpleados
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub RemoveTBLEMPLEADOSRow(ByVal row As TBLEMPLEADOSRow)
             Me.Rows.Remove(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
             Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
             Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
@@ -662,14 +675,14 @@ Partial Public Class DsEmpleados
         Private tableTBLEMPLEADOS As TBLEMPLEADOSDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
             Me.tableTBLEMPLEADOS = CType(Me.Table,TBLEMPLEADOSDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property CVE_EMPLEADOS_VAR() As String
             Get
                 Return CType(Me(Me.tableTBLEMPLEADOS.CVE_EMPLEADOS_VARColumn),String)
@@ -680,7 +693,7 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property NOMBRE_VAR() As String
             Get
                 Return CType(Me(Me.tableTBLEMPLEADOS.NOMBRE_VARColumn),String)
@@ -691,7 +704,7 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property ACTIVO_BIT() As Boolean
             Get
                 Return CType(Me(Me.tableTBLEMPLEADOS.ACTIVO_BITColumn),Boolean)
@@ -702,7 +715,7 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property FECHA_ALTA_DATE() As Date
             Get
                 Return CType(Me(Me.tableTBLEMPLEADOS.FECHA_ALTA_DATEColumn),Date)
@@ -713,7 +726,7 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property FECHA_MOD_DATE() As Date
             Get
                 Return CType(Me(Me.tableTBLEMPLEADOS.FECHA_MOD_DATEColumn),Date)
@@ -724,7 +737,7 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property CVE_EMPLEADO_VAR() As String
             Get
                 Return CType(Me(Me.tableTBLEMPLEADOS.CVE_EMPLEADO_VARColumn),String)
@@ -735,7 +748,7 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property CVE_EMPLEADO_MOD_VAR() As String
             Get
                 Return CType(Me(Me.tableTBLEMPLEADOS.CVE_EMPLEADO_MOD_VARColumn),String)
@@ -746,7 +759,7 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property CVE_ROL_INT() As Integer
             Get
                 Return CType(Me(Me.tableTBLEMPLEADOS.CVE_ROL_INTColumn),Integer)
@@ -757,7 +770,7 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Property PASSWORD_VAR() As String
             Get
                 Return CType(Me(Me.tableTBLEMPLEADOS.PASSWORD_VARColumn),String)
@@ -766,12 +779,39 @@ Partial Public Class DsEmpleados
                 Me(Me.tableTBLEMPLEADOS.PASSWORD_VARColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property CVE_COLOR_INT() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableTBLEMPLEADOS.CVE_COLOR_INTColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CVE_COLOR_INT' de la tabla 'TBLEMPLEADOS' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableTBLEMPLEADOS.CVE_COLOR_INTColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsCVE_COLOR_INTNull() As Boolean
+            Return Me.IsNull(Me.tableTBLEMPLEADOS.CVE_COLOR_INTColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetCVE_COLOR_INTNull()
+            Me(Me.tableTBLEMPLEADOS.CVE_COLOR_INTColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
     '''Row event argument class
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
     Public Class TBLEMPLEADOSRowChangeEvent
         Inherits Global.System.EventArgs
         
@@ -780,7 +820,7 @@ Partial Public Class DsEmpleados
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New(ByVal row As TBLEMPLEADOSRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
@@ -788,7 +828,7 @@ Partial Public Class DsEmpleados
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property Row() As TBLEMPLEADOSRow
             Get
                 Return Me.eventRow
@@ -796,7 +836,7 @@ Partial Public Class DsEmpleados
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public ReadOnly Property Action() As Global.System.Data.DataRowAction
             Get
                 Return Me.eventAction

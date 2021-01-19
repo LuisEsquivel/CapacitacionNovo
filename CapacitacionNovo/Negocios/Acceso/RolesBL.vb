@@ -16,6 +16,7 @@ Public Class RolesBL
 
         DAL = New Datos.RolesDAL
         If DAL.Agregar(fila) Then
+            TBLROLES.Rows.Add(fila)
             Return True
         Else
             Return False
