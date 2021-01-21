@@ -165,10 +165,10 @@
     End Sub
 
     Private Sub ColoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ColoresToolStripMenuItem.Click
-        If Not FormularioActivo(FRMColores) Then
-            FRMColores = New FRMColores
+        If Not FormularioActivo(FrmColores) Then
+            FrmColores = New FrmColores
         End If
-        ActivarFormulario(FRMColores)
+        ActivarFormulario(FrmColores)
     End Sub
 
 

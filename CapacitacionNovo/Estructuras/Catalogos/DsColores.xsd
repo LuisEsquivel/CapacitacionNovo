@@ -48,6 +48,13 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="ACTIVO_BIT" msprop:Generator_ColumnVarNameInTable="columnACTIVO_BIT" msprop:Generator_ColumnPropNameInRow="ACTIVO_BIT" msprop:Generator_ColumnPropNameInTable="ACTIVO_BITColumn" msprop:Generator_UserColumnName="ACTIVO_BIT" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CODIGO_COLOR_VAR" msprop:Generator_ColumnVarNameInTable="columnCODIGO_COLOR_VAR" msprop:Generator_ColumnPropNameInRow="CODIGO_COLOR_VAR" msprop:Generator_ColumnPropNameInTable="CODIGO_COLOR_VARColumn" msprop:Generator_UserColumnName="CODIGO_COLOR_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -3,14 +3,15 @@
     Dim SQL As SQLconn.ADONet.SQLConn
     Dim dt As Estructuras.DsColores.TBLCOLORESDataTable
 
-    Private Sub Llenar(ByVal renglon As DataRow, ByRef Roles As Estructuras.DsColores.TBLCOLORESRow)
-        Roles.CVE_COLOR_INT = renglon.Item("CVE_COLOR_INT")
-        Roles.NOMBRE_VAR = renglon.Item("NOMBRE_VAR")
-        Roles.CVE_USUARIO_ALTA_VAR = renglon.Item("CVE_USUARIO_ALTA_VAR")
-        Roles.CVE_USUARIO_MOD_VAR = renglon.Item("CVE_USUARIO_MOD_VAR")
-        Roles.FECHA_ALTA_DATE = renglon.Item("FECHA_ALTA_DATE")
-        Roles.FECHA_MOD_DATE = renglon.Item("FECHA_MOD_DATE")
-        Roles.ACTIVO_BIT = renglon.Item("ACTIVO_BIT")
+    Private Sub Llenar(ByVal renglon As DataRow, ByRef COLORES As Estructuras.DsColores.TBLCOLORESRow)
+        COLORES.CVE_COLOR_INT = renglon.Item("CVE_COLOR_INT")
+        COLORES.NOMBRE_VAR = renglon.Item("NOMBRE_VAR")
+        COLORES.CVE_USUARIO_ALTA_VAR = renglon.Item("CVE_USUARIO_ALTA_VAR")
+        COLORES.CVE_USUARIO_MOD_VAR = renglon.Item("CVE_USUARIO_MOD_VAR")
+        COLORES.CODIGO_COLOR_VAR = renglon.Item("CODIGO_COLOR_VAR")
+        COLORES.FECHA_ALTA_DATE = renglon.Item("FECHA_ALTA_DATE")
+        COLORES.FECHA_MOD_DATE = renglon.Item("FECHA_MOD_DATE")
+        COLORES.ACTIVO_BIT = renglon.Item("ACTIVO_BIT")
     End Sub
 
     Public Sub cargar(ByVal tabla As DataTable, Optional ByVal CVE_COLOR_INT As Int32 = 0)
@@ -39,6 +40,7 @@
         SQL.AddParam("@NOMBRE_VAR", COLORES.NOMBRE_VAR, SqlDbType.VarChar)
         SQL.AddParam("@FECHA_ALTA_DATE", COLORES.FECHA_ALTA_DATE, SqlDbType.DateTime)
         SQL.AddParam("@CVE_USUARIO_ALTA_VAR", COLORES.CVE_USUARIO_ALTA_VAR, SqlDbType.VarChar)
+        SQL.AddParam("@CODIGO_COLOR_VAR", COLORES.CODIGO_COLOR_VAR, SqlDbType.VarChar)
         SQL.AddParam("@ACTIVO_BIT", COLORES.ACTIVO_BIT, SqlDbType.Bit)
         SQL.AddParam("@Accion", Accion.Agregar, SqlDbType.Int)
 
@@ -68,6 +70,7 @@
         SQL.AddParam("@NOMBRE_VAR", COLORES.NOMBRE_VAR, SqlDbType.VarChar)
         SQL.AddParam("@FECHA_MOD_DATE", COLORES.FECHA_MOD_DATE, SqlDbType.DateTime)
         SQL.AddParam("@CVE_USUARIO_MOD_VAR", COLORES.CVE_USUARIO_MOD_VAR, SqlDbType.VarChar)
+        SQL.AddParam("@CODIGO_COLOR_VAR", COLORES.CODIGO_COLOR_VAR, SqlDbType.VarChar)
         SQL.AddParam("@ACTIVO_BIT", COLORES.ACTIVO_BIT, SqlDbType.Bit)
         SQL.AddParam("@Accion", Accion.Modificar, SqlDbType.Int)
 

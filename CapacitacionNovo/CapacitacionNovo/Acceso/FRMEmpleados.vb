@@ -7,6 +7,21 @@
 
 #Region "PROCEDIMIENTOS o MÉTODOS"
 
+    Sub LlenarCeldas()
+
+        For Each row As DataGridViewRow In DgvEmpleados.Rows
+
+            With row
+                .Cells("NOMBRE_COLOR_VAR").Value = ColoresBL.TBLCOLORES.FindByCVE_COLOR_INT(.Cells("CVE_COLOR_INT").Value).NOMBRE_VAR
+                .Cells("DESC_ROL_VAR").Value = RolesBL1.TBLROLES.FindByCVE_ROL_INT(.Cells("CVE_ROL_INT").Value).DESC_ROL_VAR
+                .Cells("COLOR_REAL").Style.BackColor = Color.Green
+            End With
+
+        Next
+
+
+    End Sub
+
     Sub LlenarCombos()
 
         RolesBL1.Cargar()
@@ -153,6 +168,8 @@
 
         End With
 
+        LlenarCeldas()
+
     End Sub
 
 #End Region
@@ -215,6 +232,7 @@
         LlenarCombos()
         EstadoBotones(v_estadoBotones)
         DesHabilitar()
+        LlenarCeldas()
     End Sub
 
     Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click

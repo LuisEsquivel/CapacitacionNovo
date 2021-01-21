@@ -1,6 +1,6 @@
 ﻿
 
-Public Class FRMColores
+Public Class FrmColores
 
 #Region "Variavles"
 
@@ -10,6 +10,28 @@ Public Class FRMColores
 #End Region
 
 #Region "PROCEDIMIENTOS O MÉTODOS"
+
+
+    Sub LlenarCeldas()
+
+        For Each row As DataGridViewRow In DGVColores.Rows
+            With row
+                If .Cells("CODIGO_COLOR_VAR").Value IsNot Nothing And .Cells("CODIGO_COLOR_VAR").Value.ToString <> String.Empty Then
+
+                    If .Cells("CODIGO_COLOR_VAR").Value.ToString.Trim.Length > 0 Then
+                        Dim COLOR = "#" + .Cells("CODIGO_COLOR_VAR").Value.ToString
+                        .Cells("COLOR").Style.BackColor = ColorTranslator.FromHtml(COLOR)
+                    End If
+
+                End If
+
+            End With
+        Next
+
+
+    End Sub
+
+
     Sub Estadobotones(ByVal estado)
 
         If estado = "Inicial" Then
@@ -36,6 +58,7 @@ Public Class FRMColores
     Sub limpiar()
         tbxClave.Clear()
         tbxColor.Clear()
+        tbxCod.Clear()
         ChbActivo.Checked = False
 
     End Sub
@@ -43,6 +66,7 @@ Public Class FRMColores
 
     Sub Habilitar()
         tbxColor.Enabled = True
+        BtnElegirColor.Enabled = True
         ChbActivo.Enabled = True
     End Sub
 
@@ -50,6 +74,8 @@ Public Class FRMColores
     Sub DesHabilitar()
         tbxClave.Enabled = False
         tbxColor.Enabled = False
+        tbxCod.Enabled = False
+        BtnElegirColor.Enabled = False
         ChbActivo.Enabled = False
     End Sub
 
@@ -67,6 +93,7 @@ Public Class FRMColores
         With fila
 
             .NOMBRE_VAR = tbxColor.Text
+            .CODIGO_COLOR_VAR = tbxCod.Text
             .ACTIVO_BIT = ChbActivo.Checked
 
 
@@ -144,6 +171,7 @@ Public Class FRMColores
         ColoresBL.Cargar()
         Estadobotones(v_estadobotones)
         DesHabilitar()
+        LlenarCeldas()
     End Sub
     Private Sub tbxDescrip_TextChanged(sender As Object, e As EventArgs) Handles tbxClave.TextChanged
 
@@ -189,6 +217,7 @@ Public Class FRMColores
             With DGVColores.SelectedRows(0)
                 tbxClave.Text = .Cells("CVE_COLOR_INT").Value
                 tbxColor.Text = .Cells("NOMBRE_VAR").Value
+                tbxCod.Text = .Cells("CODIGO_COLOR_VAR").Value
                 ChbActivo.Checked = .Cells("ACTIVO_BIT").Value
             End With
 
@@ -199,5 +228,17 @@ Public Class FRMColores
         End If
     End Sub
 
+    Private Sub BtnElegirColor_Click(sender As Object, e As EventArgs) Handles BtnElegirColor.Click
+        Dim VentanaColores As New ColorDialog
 
+        If VentanaColores.ShowDialog Then
+
+            With VentanaColores
+                tbxCod.Text = Hex(.Color.ToArgb.ToString).Substring(2, 6)
+            End With
+
+
+
+        End If
+    End Sub
 End Class

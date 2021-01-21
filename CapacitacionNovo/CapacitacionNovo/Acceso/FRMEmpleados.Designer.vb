@@ -43,15 +43,18 @@ Partial Class FRMEmpleados
         Me.DtpFechaAlta = New System.Windows.Forms.DateTimePicker()
         Me.ChkActivo = New System.Windows.Forms.CheckBox()
         Me.DgvEmpleados = New System.Windows.Forms.DataGridView()
-        Me.EmpleadosBL = New Negocios.EmpleadosBL()
         Me.CVE_EMPLEADOS_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CVE_COLOR_INT = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CVE_ROL_INT = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DESC_ROL_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CVE_COLOR_INT = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NOMBRE_COLOR_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.COLOR_REAL = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NOMBRE_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ACTIVO_BIT = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.FECHA_ALTA_DATE = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CVE_EMPLEADO_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PASSWORD_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpleadosBL = New Negocios.EmpleadosBL()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ColoresBL, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolesBL1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -253,7 +256,7 @@ Partial Class FRMEmpleados
         Me.DgvEmpleados.AllowUserToDeleteRows = False
         Me.DgvEmpleados.AutoGenerateColumns = False
         Me.DgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvEmpleados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CVE_EMPLEADOS_VAR, Me.CVE_COLOR_INT, Me.CVE_ROL_INT, Me.NOMBRE_VAR, Me.ACTIVO_BIT, Me.FECHA_ALTA_DATE, Me.CVE_EMPLEADO_VAR, Me.PASSWORD_VAR})
+        Me.DgvEmpleados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CVE_EMPLEADOS_VAR, Me.CVE_ROL_INT, Me.DESC_ROL_VAR, Me.CVE_COLOR_INT, Me.NOMBRE_COLOR_VAR, Me.COLOR_REAL, Me.NOMBRE_VAR, Me.ACTIVO_BIT, Me.FECHA_ALTA_DATE, Me.CVE_EMPLEADO_VAR, Me.PASSWORD_VAR})
         Me.DgvEmpleados.DataSource = Me.EmpleadosBL.TBLEMPLEADOS
         Me.DgvEmpleados.Location = New System.Drawing.Point(24, 267)
         Me.DgvEmpleados.Name = "DgvEmpleados"
@@ -262,11 +265,6 @@ Partial Class FRMEmpleados
         Me.DgvEmpleados.Size = New System.Drawing.Size(571, 254)
         Me.DgvEmpleados.TabIndex = 6
         '
-        'EmpleadosBL
-        '
-        Me.EmpleadosBL.DataSetName = "DsEmpleados"
-        Me.EmpleadosBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'CVE_EMPLEADOS_VAR
         '
         Me.CVE_EMPLEADOS_VAR.DataPropertyName = "CVE_EMPLEADOS_VAR"
@@ -274,19 +272,39 @@ Partial Class FRMEmpleados
         Me.CVE_EMPLEADOS_VAR.Name = "CVE_EMPLEADOS_VAR"
         Me.CVE_EMPLEADOS_VAR.ReadOnly = True
         '
-        'CVE_COLOR_INT
-        '
-        Me.CVE_COLOR_INT.DataPropertyName = "CVE_COLOR_INT"
-        Me.CVE_COLOR_INT.HeaderText = "CVE_COLOR_INT"
-        Me.CVE_COLOR_INT.Name = "CVE_COLOR_INT"
-        Me.CVE_COLOR_INT.ReadOnly = True
-        '
         'CVE_ROL_INT
         '
         Me.CVE_ROL_INT.DataPropertyName = "CVE_ROL_INT"
         Me.CVE_ROL_INT.HeaderText = "CVE_ROL_INT"
         Me.CVE_ROL_INT.Name = "CVE_ROL_INT"
         Me.CVE_ROL_INT.ReadOnly = True
+        Me.CVE_ROL_INT.Visible = False
+        '
+        'DESC_ROL_VAR
+        '
+        Me.DESC_ROL_VAR.HeaderText = "ROL"
+        Me.DESC_ROL_VAR.Name = "DESC_ROL_VAR"
+        Me.DESC_ROL_VAR.ReadOnly = True
+        '
+        'CVE_COLOR_INT
+        '
+        Me.CVE_COLOR_INT.DataPropertyName = "CVE_COLOR_INT"
+        Me.CVE_COLOR_INT.HeaderText = "CVE_COLOR_INT"
+        Me.CVE_COLOR_INT.Name = "CVE_COLOR_INT"
+        Me.CVE_COLOR_INT.ReadOnly = True
+        Me.CVE_COLOR_INT.Visible = False
+        '
+        'NOMBRE_COLOR_VAR
+        '
+        Me.NOMBRE_COLOR_VAR.HeaderText = "Color"
+        Me.NOMBRE_COLOR_VAR.Name = "NOMBRE_COLOR_VAR"
+        Me.NOMBRE_COLOR_VAR.ReadOnly = True
+        '
+        'COLOR_REAL
+        '
+        Me.COLOR_REAL.HeaderText = "COLOR REAL"
+        Me.COLOR_REAL.Name = "COLOR_REAL"
+        Me.COLOR_REAL.ReadOnly = True
         '
         'NOMBRE_VAR
         '
@@ -322,6 +340,11 @@ Partial Class FRMEmpleados
         Me.PASSWORD_VAR.HeaderText = "PASSWORD_VAR"
         Me.PASSWORD_VAR.Name = "PASSWORD_VAR"
         Me.PASSWORD_VAR.ReadOnly = True
+        '
+        'EmpleadosBL
+        '
+        Me.EmpleadosBL.DataSetName = "DsEmpleados"
+        Me.EmpleadosBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'FRMEmpleados
         '
@@ -373,8 +396,11 @@ Partial Class FRMEmpleados
     Friend WithEvents CmbColores As ComboBox
     Friend WithEvents ColoresBL As Negocios.ColoresBL
     Friend WithEvents CVE_EMPLEADOS_VAR As DataGridViewTextBoxColumn
-    Friend WithEvents CVE_COLOR_INT As DataGridViewTextBoxColumn
     Friend WithEvents CVE_ROL_INT As DataGridViewTextBoxColumn
+    Friend WithEvents DESC_ROL_VAR As DataGridViewTextBoxColumn
+    Friend WithEvents CVE_COLOR_INT As DataGridViewTextBoxColumn
+    Friend WithEvents NOMBRE_COLOR_VAR As DataGridViewTextBoxColumn
+    Friend WithEvents COLOR_REAL As DataGridViewTextBoxColumn
     Friend WithEvents NOMBRE_VAR As DataGridViewTextBoxColumn
     Friend WithEvents ACTIVO_BIT As DataGridViewCheckBoxColumn
     Friend WithEvents FECHA_ALTA_DATE As DataGridViewTextBoxColumn

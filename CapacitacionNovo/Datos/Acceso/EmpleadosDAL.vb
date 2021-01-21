@@ -44,6 +44,7 @@
         SQL.AddParam("@FECHA_ALTA_DATE", empleados.FECHA_ALTA_DATE, SqlDbType.DateTime)
         SQL.AddParam("@CVE_EMPLEADO_VAR", empleados.CVE_EMPLEADO_VAR, SqlDbType.VarChar)
         SQL.AddParam("@CVE_ROL_INT", empleados.CVE_ROL_INT, SqlDbType.Int)
+        SQL.AddParam("@CVE_COLOR_INT", empleados.CVE_COLOR_INT, SqlDbType.Int)
         SQL.AddParam("@PASSWORD_VAR", empleados.PASSWORD_VAR, SqlDbType.VarChar)
         SQL.AddParam("@Accion", Accion.Agregar, SqlDbType.Int)
 
@@ -75,6 +76,7 @@
         SQL.AddParam("@FECHA_MOD_DATE", empleados.FECHA_MOD_DATE, SqlDbType.DateTime)
         SQL.AddParam("@CVE_EMPLEADO_MOD_VAR", empleados.CVE_EMPLEADO_MOD_VAR, SqlDbType.VarChar)
         SQL.AddParam("@CVE_ROL_INT", empleados.CVE_ROL_INT, SqlDbType.Int)
+        SQL.AddParam("@CVE_COLOR_INT", empleados.CVE_COLOR_INT, SqlDbType.Int)
         SQL.AddParam("@PASSWORD_VAR", empleados.PASSWORD_VAR, SqlDbType.VarChar)
         SQL.AddParam("@Accion", Accion.Modificar, SqlDbType.Int)
 

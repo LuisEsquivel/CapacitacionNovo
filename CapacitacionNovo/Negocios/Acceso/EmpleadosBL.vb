@@ -35,6 +35,9 @@
             TBLEMPLEADOS.FindByCVE_EMPLEADOS_VAR(empleados.CVE_EMPLEADOS_VAR).CVE_EMPLEADO_MOD_VAR = empleados.CVE_EMPLEADO_MOD_VAR
             TBLEMPLEADOS.FindByCVE_EMPLEADOS_VAR(empleados.CVE_EMPLEADOS_VAR).CVE_ROL_INT = empleados.CVE_ROL_INT
             TBLEMPLEADOS.FindByCVE_EMPLEADOS_VAR(empleados.CVE_EMPLEADOS_VAR).PASSWORD_VAR = empleados.PASSWORD_VAR
+            TBLEMPLEADOS.FindByCVE_EMPLEADOS_VAR(empleados.CVE_EMPLEADOS_VAR).CVE_COLOR_INT = empleados.CVE_COLOR_INT
+
+
             Return True
         Else
             Return False

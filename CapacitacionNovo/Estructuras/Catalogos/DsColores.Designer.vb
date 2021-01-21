@@ -297,6 +297,8 @@ Partial Public Class DsColores
         
         Private columnACTIVO_BIT As Global.System.Data.DataColumn
         
+        Private columnCODIGO_COLOR_VAR As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub New()
@@ -389,6 +391,14 @@ Partial Public Class DsColores
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public ReadOnly Property CODIGO_COLOR_VARColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCODIGO_COLOR_VAR
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -425,9 +435,9 @@ Partial Public Class DsColores
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
-        Public Overloads Function AddTBLCOLORESRow(ByVal NOMBRE_VAR As String, ByVal FECHA_ALTA_DATE As String, ByVal FECHA_MOD_DATE As Date, ByVal CVE_USUARIO_ALTA_VAR As String, ByVal CVE_USUARIO_MOD_VAR As String, ByVal ACTIVO_BIT As Boolean) As TBLCOLORESRow
+        Public Overloads Function AddTBLCOLORESRow(ByVal NOMBRE_VAR As String, ByVal FECHA_ALTA_DATE As String, ByVal FECHA_MOD_DATE As Date, ByVal CVE_USUARIO_ALTA_VAR As String, ByVal CVE_USUARIO_MOD_VAR As String, ByVal ACTIVO_BIT As Boolean, ByVal CODIGO_COLOR_VAR As String) As TBLCOLORESRow
             Dim rowTBLCOLORESRow As TBLCOLORESRow = CType(Me.NewRow,TBLCOLORESRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, NOMBRE_VAR, FECHA_ALTA_DATE, FECHA_MOD_DATE, CVE_USUARIO_ALTA_VAR, CVE_USUARIO_MOD_VAR, ACTIVO_BIT}
+            Dim columnValuesArray() As Object = New Object() {Nothing, NOMBRE_VAR, FECHA_ALTA_DATE, FECHA_MOD_DATE, CVE_USUARIO_ALTA_VAR, CVE_USUARIO_MOD_VAR, ACTIVO_BIT, CODIGO_COLOR_VAR}
             rowTBLCOLORESRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowTBLCOLORESRow)
             Return rowTBLCOLORESRow
@@ -463,6 +473,7 @@ Partial Public Class DsColores
             Me.columnCVE_USUARIO_ALTA_VAR = MyBase.Columns("CVE_USUARIO_ALTA_VAR")
             Me.columnCVE_USUARIO_MOD_VAR = MyBase.Columns("CVE_USUARIO_MOD_VAR")
             Me.columnACTIVO_BIT = MyBase.Columns("ACTIVO_BIT")
+            Me.columnCODIGO_COLOR_VAR = MyBase.Columns("CODIGO_COLOR_VAR")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -482,6 +493,8 @@ Partial Public Class DsColores
             MyBase.Columns.Add(Me.columnCVE_USUARIO_MOD_VAR)
             Me.columnACTIVO_BIT = New Global.System.Data.DataColumn("ACTIVO_BIT", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnACTIVO_BIT)
+            Me.columnCODIGO_COLOR_VAR = New Global.System.Data.DataColumn("CODIGO_COLOR_VAR", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCODIGO_COLOR_VAR)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnCVE_COLOR_INT}, true))
             Me.columnCVE_COLOR_INT.AutoIncrement = true
             Me.columnCVE_COLOR_INT.AutoIncrementSeed = -1
@@ -493,6 +506,7 @@ Partial Public Class DsColores
             Me.columnFECHA_ALTA_DATE.MaxLength = 50
             Me.columnCVE_USUARIO_ALTA_VAR.MaxLength = 50
             Me.columnCVE_USUARIO_MOD_VAR.MaxLength = 50
+            Me.columnCODIGO_COLOR_VAR.MaxLength = 10
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -741,6 +755,21 @@ Partial Public Class DsColores
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Property CODIGO_COLOR_VAR() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableTBLCOLORES.CODIGO_COLOR_VARColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'CODIGO_COLOR_VAR' de la tabla 'TBLCOLORES' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableTBLCOLORES.CODIGO_COLOR_VARColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Function IsNOMBRE_VARNull() As Boolean
             Return Me.IsNull(Me.tableTBLCOLORES.NOMBRE_VARColumn)
         End Function
@@ -809,6 +838,18 @@ Partial Public Class DsColores
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
         Public Sub SetACTIVO_BITNull()
             Me(Me.tableTBLCOLORES.ACTIVO_BITColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Function IsCODIGO_COLOR_VARNull() As Boolean
+            Return Me.IsNull(Me.tableTBLCOLORES.CODIGO_COLOR_VARColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")>  _
+        Public Sub SetCODIGO_COLOR_VARNull()
+            Me(Me.tableTBLCOLORES.CODIGO_COLOR_VARColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
