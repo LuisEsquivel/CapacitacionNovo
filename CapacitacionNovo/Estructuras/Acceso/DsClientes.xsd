@@ -98,7 +98,7 @@ SELECT CVE_EMPLEADOS_VAR, NOMBRE_VAR, ACTIVO_BIT, FECHA_ALTA_DATE, FECHA_MOD_DAT
   <xs:element name="DsClientes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsClientes" msprop:Generator_UserDSName="DsClientes">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="TBLEMPLEADOS" msprop:Generator_TableClassName="TBLEMPLEADOSDataTable" msprop:Generator_TableVarName="tableTBLEMPLEADOS" msprop:Generator_TablePropName="TBLEMPLEADOS" msprop:Generator_RowDeletingName="TBLEMPLEADOSRowDeleting" msprop:Generator_RowChangingName="TBLEMPLEADOSRowChanging" msprop:Generator_RowEvHandlerName="TBLEMPLEADOSRowChangeEventHandler" msprop:Generator_RowDeletedName="TBLEMPLEADOSRowDeleted" msprop:Generator_UserTableName="TBLEMPLEADOS" msprop:Generator_RowChangedName="TBLEMPLEADOSRowChanged" msprop:Generator_RowEvArgName="TBLEMPLEADOSRowChangeEvent" msprop:Generator_RowClassName="TBLEMPLEADOSRow">
+        <xs:element name="TBLEMPLEADOS" msprop:Generator_TableClassName="TBLEMPLEADOSDataTable" msprop:Generator_TableVarName="tableTBLEMPLEADOS" msprop:Generator_RowChangedName="TBLEMPLEADOSRowChanged" msprop:Generator_TablePropName="TBLEMPLEADOS" msprop:Generator_RowDeletingName="TBLEMPLEADOSRowDeleting" msprop:Generator_RowChangingName="TBLEMPLEADOSRowChanging" msprop:Generator_RowEvHandlerName="TBLEMPLEADOSRowChangeEventHandler" msprop:Generator_RowDeletedName="TBLEMPLEADOSRowDeleted" msprop:Generator_RowClassName="TBLEMPLEADOSRow" msprop:Generator_UserTableName="TBLEMPLEADOS" msprop:Generator_RowEvArgName="TBLEMPLEADOSRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CVE_EMPLEADOS_VAR" msprop:Generator_ColumnVarNameInTable="columnCVE_EMPLEADOS_VAR" msprop:Generator_ColumnPropNameInRow="CVE_EMPLEADOS_VAR" msprop:Generator_ColumnPropNameInTable="CVE_EMPLEADOS_VARColumn" msprop:Generator_UserColumnName="CVE_EMPLEADOS_VAR">
@@ -143,11 +143,44 @@ SELECT CVE_EMPLEADOS_VAR, NOMBRE_VAR, ACTIVO_BIT, FECHA_ALTA_DATE, FECHA_MOD_DAT
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="TBLCLIENTES" msprop:Generator_TableClassName="TBLCLIENTESDataTable" msprop:Generator_TableVarName="tableTBLCLIENTES" msprop:Generator_TablePropName="TBLCLIENTES" msprop:Generator_RowDeletingName="TBLCLIENTESRowDeleting" msprop:Generator_RowChangingName="TBLCLIENTESRowChanging" msprop:Generator_RowEvHandlerName="TBLCLIENTESRowChangeEventHandler" msprop:Generator_RowDeletedName="TBLCLIENTESRowDeleted" msprop:Generator_UserTableName="TBLCLIENTES" msprop:Generator_RowChangedName="TBLCLIENTESRowChanged" msprop:Generator_RowEvArgName="TBLCLIENTESRowChangeEvent" msprop:Generator_RowClassName="TBLCLIENTESRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMBRE_VAR" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_VAR" msprop:Generator_ColumnPropNameInRow="NOMBRE_VAR" msprop:Generator_ColumnPropNameInTable="NOMBRE_VARColumn" msprop:Generator_UserColumnName="NOMBRE_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CVE_USUARIO_ALTA_VAR" msprop:Generator_ColumnVarNameInTable="columnCVE_USUARIO_ALTA_VAR" msprop:Generator_ColumnPropNameInRow="CVE_USUARIO_ALTA_VAR" msprop:Generator_ColumnPropNameInTable="CVE_USUARIO_ALTA_VARColumn" msprop:Generator_UserColumnName="CVE_USUARIO_ALTA_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CVE_USUARIO_MOD_VAR" msprop:Generator_ColumnVarNameInTable="columnCVE_USUARIO_MOD_VAR" msprop:Generator_ColumnPropNameInRow="CVE_USUARIO_MOD_VAR" msprop:Generator_ColumnPropNameInTable="CVE_USUARIO_MOD_VARColumn" msprop:Generator_UserColumnName="CVE_USUARIO_MOD_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ACTIVO_BIT" msprop:Generator_ColumnVarNameInTable="columnACTIVO_BIT" msprop:Generator_ColumnPropNameInRow="ACTIVO_BIT" msprop:Generator_ColumnPropNameInTable="ACTIVO_BITColumn" msprop:Generator_UserColumnName="ACTIVO_BIT" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CVE_CLIENTE_INT" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCVE_CLIENTE_INT" msprop:Generator_ColumnPropNameInRow="CVE_CLIENTE_INT" msprop:Generator_ColumnPropNameInTable="CVE_CLIENTE_INTColumn" msprop:Generator_UserColumnName="CVE_CLIENTE_INT" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:TBLEMPLEADOS" />
       <xs:field xpath="mstns:CVE_EMPLEADOS_VAR" />
+    </xs:unique>
+    <xs:unique name="TBLCLIENTES_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TBLCLIENTES" />
+      <xs:field xpath="mstns:CVE_CLIENTE_INT" />
     </xs:unique>
   </xs:element>
 </xs:schema>

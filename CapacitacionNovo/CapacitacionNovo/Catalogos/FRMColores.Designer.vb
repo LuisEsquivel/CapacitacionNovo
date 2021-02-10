@@ -33,11 +33,10 @@ Partial Class FrmColores
         Me.tbxColor = New System.Windows.Forms.TextBox()
         Me.DTPColores = New System.Windows.Forms.DateTimePicker()
         Me.ChbActivo = New System.Windows.Forms.CheckBox()
-        Me.DGVColores = New System.Windows.Forms.DataGridView()
-        Me.ColoresBL = New Negocios.ColoresBL()
         Me.Codigo = New System.Windows.Forms.Label()
         Me.tbxCod = New Componentes.TextBoxEx()
         Me.BtnElegirColor = New System.Windows.Forms.Button()
+        Me.DGVColores = New System.Windows.Forms.DataGridView()
         Me.CVE_COLOR_INT = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CODIGO_COLOR_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.COLOR = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -47,6 +46,7 @@ Partial Class FrmColores
         Me.CVE_USUARIO_ALTA_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CVE_USUARIO_MOD_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ACTIVO_BIT = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ColoresBL = New Negocios.ColoresBL()
         CType(Me.DGVColores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ColoresBL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -146,25 +146,6 @@ Partial Class FrmColores
         Me.ChbActivo.Text = "Activo"
         Me.ChbActivo.UseVisualStyleBackColor = True
         '
-        'DGVColores
-        '
-        Me.DGVColores.AllowUserToAddRows = False
-        Me.DGVColores.AllowUserToDeleteRows = False
-        Me.DGVColores.AutoGenerateColumns = False
-        Me.DGVColores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVColores.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CVE_COLOR_INT, Me.CODIGO_COLOR_VAR, Me.COLOR, Me.NOMBRE_VAR, Me.FECHA_ALTA_DATE, Me.FECHA_MOD_DATE, Me.CVE_USUARIO_ALTA_VAR, Me.CVE_USUARIO_MOD_VAR, Me.ACTIVO_BIT})
-        Me.DGVColores.DataSource = Me.ColoresBL.TBLCOLORES
-        Me.DGVColores.Location = New System.Drawing.Point(224, 200)
-        Me.DGVColores.Name = "DGVColores"
-        Me.DGVColores.ReadOnly = True
-        Me.DGVColores.Size = New System.Drawing.Size(543, 225)
-        Me.DGVColores.TabIndex = 9
-        '
-        'ColoresBL
-        '
-        Me.ColoresBL.DataSetName = "DsColores"
-        Me.ColoresBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Codigo
         '
         Me.Codigo.AutoSize = True
@@ -192,6 +173,20 @@ Partial Class FrmColores
         Me.BtnElegirColor.Text = "..."
         Me.BtnElegirColor.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.BtnElegirColor.UseVisualStyleBackColor = True
+        '
+        'DGVColores
+        '
+        Me.DGVColores.AllowUserToAddRows = False
+        Me.DGVColores.AllowUserToDeleteRows = False
+        Me.DGVColores.AutoGenerateColumns = False
+        Me.DGVColores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVColores.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CVE_COLOR_INT, Me.CODIGO_COLOR_VAR, Me.COLOR, Me.NOMBRE_VAR, Me.FECHA_ALTA_DATE, Me.FECHA_MOD_DATE, Me.CVE_USUARIO_ALTA_VAR, Me.CVE_USUARIO_MOD_VAR, Me.ACTIVO_BIT})
+        Me.DGVColores.DataSource = Me.ColoresBL.TBLCOLORES
+        Me.DGVColores.Location = New System.Drawing.Point(224, 200)
+        Me.DGVColores.Name = "DGVColores"
+        Me.DGVColores.ReadOnly = True
+        Me.DGVColores.Size = New System.Drawing.Size(543, 225)
+        Me.DGVColores.TabIndex = 9
         '
         'CVE_COLOR_INT
         '
@@ -254,6 +249,11 @@ Partial Class FrmColores
         Me.ACTIVO_BIT.HeaderText = "ACTIVO_BIT"
         Me.ACTIVO_BIT.Name = "ACTIVO_BIT"
         Me.ACTIVO_BIT.ReadOnly = True
+        '
+        'ColoresBL
+        '
+        Me.ColoresBL.DataSetName = "DsColores"
+        Me.ColoresBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'FrmColores
         '

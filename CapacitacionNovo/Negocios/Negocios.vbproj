@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Acceso\EmpleadosBL.vb" />
     <Compile Include="Acceso\RolesBL.vb" />
+    <Compile Include="Catalogos\ClientesBL.vb" />
     <Compile Include="Catalogos\ColoresBL.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

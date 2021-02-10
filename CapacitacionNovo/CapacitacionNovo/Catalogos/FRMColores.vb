@@ -236,9 +236,6 @@ Public Class FrmColores
             With VentanaColores
                 tbxCod.Text = Hex(.Color.ToArgb.ToString).Substring(2, 6)
             End With
-
-
-
         End If
     End Sub
 End Class

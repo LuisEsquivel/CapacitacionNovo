@@ -70,6 +70,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DsClientes.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Acceso\DsClientes.vb">
+      <DependentUpon>DsClientes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Acceso\DsEmpleados.Designer.vb">
       <DependentUpon>DsEmpleados.xsd</DependentUpon>
       <AutoGen>True</AutoGen>

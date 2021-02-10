@@ -31,6 +31,7 @@ Partial Class FRMMenu
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CatalogosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AlmacénToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CentroDeCostosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -92,7 +93,7 @@ Partial Class FRMMenu
         '
         'CatalogosToolStripMenuItem
         '
-        Me.CatalogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ColoresToolStripMenuItem})
+        Me.CatalogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ColoresToolStripMenuItem, Me.ClientesToolStripMenuItem})
         Me.CatalogosToolStripMenuItem.Name = "CatalogosToolStripMenuItem"
         Me.CatalogosToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
         Me.CatalogosToolStripMenuItem.Text = "Catálogos"
@@ -102,6 +103,12 @@ Partial Class FRMMenu
         Me.ColoresToolStripMenuItem.Name = "ColoresToolStripMenuItem"
         Me.ColoresToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ColoresToolStripMenuItem.Text = "Colores"
+        '
+        'ClientesToolStripMenuItem
+        '
+        Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'ReportesToolStripMenuItem
         '
@@ -192,4 +199,5 @@ Partial Class FRMMenu
     Friend WithEvents ReporteEventosPortalToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReporteInventarioHHToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ColoresToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
 End Class
