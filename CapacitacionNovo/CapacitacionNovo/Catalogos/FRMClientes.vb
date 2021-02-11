@@ -117,13 +117,13 @@
 
             If v_estadobotones = BtoModificar.Name Then
                 YaExiste = (From e As Negocios.ClientesBL.TBLCLIENTESRow In Me.ClientesBL.TBLCLIENTES.Rows
-                            Where e.NOMBRE_VAR = tbxNombre.Text And e.CVE_USUARIO_ALTA_VAR <> tbxNombre.Text
+                            Where e.NOMBRE_VAR = tbxClave.Text And e.CVE_USUARIO_ALTA_VAR <> tbxClave.Text
                             Select e
                            ).Count
             End If
 
             If YaExiste > 0 Then
-                v_error = "Ya existe el Color : " & tbxNombre.Text & vbNewLine & "Verifique"
+                v_error = "Ya existe el Nombre : " & tbxNombre.Text & vbNewLine & "Verifique"
                 Return True
             End If
 

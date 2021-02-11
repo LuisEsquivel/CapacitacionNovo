@@ -40,6 +40,7 @@ Partial Class FRMClientes
         Me.ACTIVO_BIT = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.CVE_CLIENTE_INT = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClientesBL = New Negocios.ClientesBL()
+        Me.BtnBuscar = New System.Windows.Forms.Button()
         CType(Me.DgvCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -47,7 +48,7 @@ Partial Class FRMClientes
         'LblClave
         '
         Me.LblClave.AutoSize = True
-        Me.LblClave.Location = New System.Drawing.Point(295, 140)
+        Me.LblClave.Location = New System.Drawing.Point(477, 149)
         Me.LblClave.Name = "LblClave"
         Me.LblClave.Size = New System.Drawing.Size(34, 13)
         Me.LblClave.TabIndex = 0
@@ -56,7 +57,7 @@ Partial Class FRMClientes
         'LblNombre
         '
         Me.LblNombre.AutoSize = True
-        Me.LblNombre.Location = New System.Drawing.Point(503, 140)
+        Me.LblNombre.Location = New System.Drawing.Point(685, 149)
         Me.LblNombre.Name = "LblNombre"
         Me.LblNombre.Size = New System.Drawing.Size(44, 13)
         Me.LblNombre.TabIndex = 1
@@ -64,7 +65,7 @@ Partial Class FRMClientes
         '
         'BtoNuevo
         '
-        Me.BtoNuevo.Location = New System.Drawing.Point(173, 11)
+        Me.BtoNuevo.Location = New System.Drawing.Point(55, 11)
         Me.BtoNuevo.Name = "BtoNuevo"
         Me.BtoNuevo.Size = New System.Drawing.Size(119, 89)
         Me.BtoNuevo.TabIndex = 2
@@ -73,7 +74,7 @@ Partial Class FRMClientes
         '
         'BtoModificar
         '
-        Me.BtoModificar.Location = New System.Drawing.Point(298, 12)
+        Me.BtoModificar.Location = New System.Drawing.Point(180, 12)
         Me.BtoModificar.Name = "BtoModificar"
         Me.BtoModificar.Size = New System.Drawing.Size(119, 88)
         Me.BtoModificar.TabIndex = 3
@@ -82,7 +83,7 @@ Partial Class FRMClientes
         '
         'BtoGuardar
         '
-        Me.BtoGuardar.Location = New System.Drawing.Point(423, 12)
+        Me.BtoGuardar.Location = New System.Drawing.Point(305, 12)
         Me.BtoGuardar.Name = "BtoGuardar"
         Me.BtoGuardar.Size = New System.Drawing.Size(119, 88)
         Me.BtoGuardar.TabIndex = 4
@@ -117,14 +118,14 @@ Partial Class FRMClientes
         '
         'tbxNombre
         '
-        Me.tbxNombre.Location = New System.Drawing.Point(506, 156)
+        Me.tbxNombre.Location = New System.Drawing.Point(688, 165)
         Me.tbxNombre.Name = "tbxNombre"
         Me.tbxNombre.Size = New System.Drawing.Size(100, 20)
         Me.tbxNombre.TabIndex = 9
         '
         'tbxClave
         '
-        Me.tbxClave.Location = New System.Drawing.Point(298, 156)
+        Me.tbxClave.Location = New System.Drawing.Point(480, 165)
         Me.tbxClave.Name = "tbxClave"
         Me.tbxClave.Size = New System.Drawing.Size(100, 20)
         Me.tbxClave.TabIndex = 10
@@ -132,7 +133,7 @@ Partial Class FRMClientes
         'ChbActivo
         '
         Me.ChbActivo.AutoSize = True
-        Me.ChbActivo.Location = New System.Drawing.Point(173, 111)
+        Me.ChbActivo.Location = New System.Drawing.Point(175, 111)
         Me.ChbActivo.Name = "ChbActivo"
         Me.ChbActivo.Size = New System.Drawing.Size(56, 17)
         Me.ChbActivo.TabIndex = 11
@@ -147,11 +148,11 @@ Partial Class FRMClientes
         Me.DgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvCliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NOMBRE_VAR, Me.CVE_USUARIO_ALTA_VAR, Me.CVE_USUARIO_MOD_VAR, Me.ACTIVO_BIT, Me.CVE_CLIENTE_INT})
         Me.DgvCliente.DataSource = Me.ClientesBL.TBLCLIENTES
-        Me.DgvCliente.Location = New System.Drawing.Point(173, 182)
+        Me.DgvCliente.Location = New System.Drawing.Point(12, 191)
         Me.DgvCliente.Name = "DgvCliente"
         Me.DgvCliente.ReadOnly = True
         Me.DgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvCliente.Size = New System.Drawing.Size(615, 256)
+        Me.DgvCliente.Size = New System.Drawing.Size(776, 355)
         Me.DgvCliente.TabIndex = 12
         '
         'NOMBRE_VAR
@@ -194,11 +195,21 @@ Partial Class FRMClientes
         Me.ClientesBL.DataSetName = "DsClientes"
         Me.ClientesBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'BtnBuscar
+        '
+        Me.BtnBuscar.Location = New System.Drawing.Point(427, 12)
+        Me.BtnBuscar.Name = "BtnBuscar"
+        Me.BtnBuscar.Size = New System.Drawing.Size(119, 88)
+        Me.BtnBuscar.TabIndex = 13
+        Me.BtnBuscar.Text = "Buscar"
+        Me.BtnBuscar.UseVisualStyleBackColor = True
+        '
         'FRMClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 567)
+        Me.Controls.Add(Me.BtnBuscar)
         Me.Controls.Add(Me.DgvCliente)
         Me.Controls.Add(Me.ChbActivo)
         Me.Controls.Add(Me.tbxClave)
@@ -238,4 +249,5 @@ Partial Class FRMClientes
     Friend WithEvents CVE_USUARIO_MOD_VAR As DataGridViewTextBoxColumn
     Friend WithEvents ACTIVO_BIT As DataGridViewCheckBoxColumn
     Friend WithEvents CVE_CLIENTE_INT As DataGridViewTextBoxColumn
+    Friend WithEvents BtnBuscar As Button
 End Class
