@@ -9,6 +9,25 @@
 
 #Region "PROCEDIMIENTOS O MÉTODOS"
 
+    Sub CargarCliente(ByVal cve_cliente)
+
+        ClientesBL.TBLCLIENTES.Clear()
+        ClientesBL.Cargar(cve_cliente)
+
+        For Each row As Negocios.ClientesBL.TBLCLIENTESRow In ClientesBL.TBLCLIENTES.Rows
+
+            tbxClave.Text = row.CVE_CLIENTE_INT
+            tbxNombre.Text = row.NOMBRE_VAR
+            ChbActivo.Checked = row.ACTIVO_BIT
+
+        Next
+
+        BtoModificar.Enabled = True
+        BtoNuevo.Enabled = False
+        BtoCancelar.Enabled = True
+
+    End Sub
+
     Sub Estadobotones(ByVal estado)
 
         If estado = "Inicial" Then
@@ -179,22 +198,17 @@
         ChbActivo.Checked = True
     End Sub
 
-    Private Sub DgvClientes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvCliente.CellClick
 
-        If DgvCliente.SelectedRows.Count > 0 And v_estadobotones <> BtoNuevo.Name Then
 
-            With DgvCliente.SelectedRows(0)
-                tbxNombre.Text = .Cells("NOMBRE_VAR").Value
-                tbxClave.Text = .Cells("CVE_CLIENTE_INT").Value
-                ChbActivo.Checked = .Cells("ACTIVO_BIT").Value
-            End With
+    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
 
-            If v_estadobotones <> BtoModificar.Name Then
-                BtoModificar.Enabled = True
-                BtoCancelar.Enabled = True
-            End If
+        Dim buscar As New FRMBuscarClientes
+        buscar.ShowDialog()
 
+        If buscar.p_cve_cliente > 0 Then
+            CargarCliente(buscar.p_cve_cliente)
         End If
-    End Sub
 
+
+    End Sub
 End Class

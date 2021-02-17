@@ -33,15 +33,8 @@ Partial Class FRMClientes
         Me.tbxNombre = New System.Windows.Forms.TextBox()
         Me.tbxClave = New System.Windows.Forms.TextBox()
         Me.ChbActivo = New System.Windows.Forms.CheckBox()
-        Me.DgvCliente = New System.Windows.Forms.DataGridView()
-        Me.NOMBRE_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CVE_USUARIO_ALTA_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CVE_USUARIO_MOD_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ACTIVO_BIT = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.CVE_CLIENTE_INT = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClientesBL = New Negocios.ClientesBL()
         Me.BtnBuscar = New System.Windows.Forms.Button()
-        CType(Me.DgvCliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -140,56 +133,6 @@ Partial Class FRMClientes
         Me.ChbActivo.Text = "Activo"
         Me.ChbActivo.UseVisualStyleBackColor = True
         '
-        'DgvCliente
-        '
-        Me.DgvCliente.AllowUserToAddRows = False
-        Me.DgvCliente.AllowUserToDeleteRows = False
-        Me.DgvCliente.AutoGenerateColumns = False
-        Me.DgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvCliente.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NOMBRE_VAR, Me.CVE_USUARIO_ALTA_VAR, Me.CVE_USUARIO_MOD_VAR, Me.ACTIVO_BIT, Me.CVE_CLIENTE_INT})
-        Me.DgvCliente.DataSource = Me.ClientesBL.TBLCLIENTES
-        Me.DgvCliente.Location = New System.Drawing.Point(12, 191)
-        Me.DgvCliente.Name = "DgvCliente"
-        Me.DgvCliente.ReadOnly = True
-        Me.DgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgvCliente.Size = New System.Drawing.Size(776, 355)
-        Me.DgvCliente.TabIndex = 12
-        '
-        'NOMBRE_VAR
-        '
-        Me.NOMBRE_VAR.DataPropertyName = "NOMBRE_VAR"
-        Me.NOMBRE_VAR.HeaderText = "NOMBRE_VAR"
-        Me.NOMBRE_VAR.Name = "NOMBRE_VAR"
-        Me.NOMBRE_VAR.ReadOnly = True
-        '
-        'CVE_USUARIO_ALTA_VAR
-        '
-        Me.CVE_USUARIO_ALTA_VAR.DataPropertyName = "CVE_USUARIO_ALTA_VAR"
-        Me.CVE_USUARIO_ALTA_VAR.HeaderText = "CVE_USUARIO_ALTA_VAR"
-        Me.CVE_USUARIO_ALTA_VAR.Name = "CVE_USUARIO_ALTA_VAR"
-        Me.CVE_USUARIO_ALTA_VAR.ReadOnly = True
-        '
-        'CVE_USUARIO_MOD_VAR
-        '
-        Me.CVE_USUARIO_MOD_VAR.DataPropertyName = "CVE_USUARIO_MOD_VAR"
-        Me.CVE_USUARIO_MOD_VAR.HeaderText = "CVE_USUARIO_MOD_VAR"
-        Me.CVE_USUARIO_MOD_VAR.Name = "CVE_USUARIO_MOD_VAR"
-        Me.CVE_USUARIO_MOD_VAR.ReadOnly = True
-        '
-        'ACTIVO_BIT
-        '
-        Me.ACTIVO_BIT.DataPropertyName = "ACTIVO_BIT"
-        Me.ACTIVO_BIT.HeaderText = "ACTIVO_BIT"
-        Me.ACTIVO_BIT.Name = "ACTIVO_BIT"
-        Me.ACTIVO_BIT.ReadOnly = True
-        '
-        'CVE_CLIENTE_INT
-        '
-        Me.CVE_CLIENTE_INT.DataPropertyName = "CVE_CLIENTE_INT"
-        Me.CVE_CLIENTE_INT.HeaderText = "CVE_CLIENTE_INT"
-        Me.CVE_CLIENTE_INT.Name = "CVE_CLIENTE_INT"
-        Me.CVE_CLIENTE_INT.ReadOnly = True
-        '
         'ClientesBL
         '
         Me.ClientesBL.DataSetName = "DsClientes"
@@ -208,9 +151,8 @@ Partial Class FRMClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 567)
+        Me.ClientSize = New System.Drawing.Size(800, 206)
         Me.Controls.Add(Me.BtnBuscar)
-        Me.Controls.Add(Me.DgvCliente)
         Me.Controls.Add(Me.ChbActivo)
         Me.Controls.Add(Me.tbxClave)
         Me.Controls.Add(Me.tbxNombre)
@@ -224,7 +166,6 @@ Partial Class FRMClientes
         Me.Controls.Add(Me.LblClave)
         Me.Name = "FRMClientes"
         Me.Text = "FRMClientes"
-        CType(Me.DgvCliente, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBL, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -243,11 +184,5 @@ Partial Class FRMClientes
     Friend WithEvents tbxClave As TextBox
     Friend WithEvents ChbActivo As CheckBox
     Friend WithEvents ClientesBL As Negocios.ClientesBL
-    Friend WithEvents DgvCliente As DataGridView
-    Friend WithEvents NOMBRE_VAR As DataGridViewTextBoxColumn
-    Friend WithEvents CVE_USUARIO_ALTA_VAR As DataGridViewTextBoxColumn
-    Friend WithEvents CVE_USUARIO_MOD_VAR As DataGridViewTextBoxColumn
-    Friend WithEvents ACTIVO_BIT As DataGridViewCheckBoxColumn
-    Friend WithEvents CVE_CLIENTE_INT As DataGridViewTextBoxColumn
     Friend WithEvents BtnBuscar As Button
 End Class
