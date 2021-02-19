@@ -297,4 +297,34 @@
     Private Sub DgvEmpleados_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvEmpleados.CellContentClick
 
     End Sub
+
+    Private Sub BtoBuscar_Click(sender As Object, e As EventArgs) Handles BtoBuscar.Click
+
+        Dim Buscar As New FRMBuscarClientes
+        Buscar.ShowDialog()
+
+        If Buscar.p_cve_cliente > 0 Then
+            CargarCliente(Buscar.p_cve_cliente)
+        End If
+
+    End Sub
+
+    Sub CargarCliente(ByVal cve_Empleados)
+
+        EmpleadosBL.TBLEMPLEADOS.Clear()
+        EmpleadosBL.Cargar(cve_Empleados)
+
+        For Each row As Negocios.EmpleadosBL.TBLEMPLEADOSRow In EmpleadosBL.TBLEMPLEADOS.Rows
+
+            TxtClave Clave.Text = row.CVE_EMPLEADOS_VAR
+            TxtNombre.Text = row.NOMBRE_VAR
+            ChkActivo.Checked = row.ACTIVO_BIT
+
+        Next
+
+        BtnModificar.Enabled = True
+        BtnNuevo.Enabled = False
+        BtnCancelar.Enabled = True
+    End Sub
+
 End Class

@@ -55,6 +55,7 @@ Partial Class FRMEmpleados
         Me.CVE_EMPLEADO_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PASSWORD_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmpleadosBL = New Negocios.EmpleadosBL()
+        Me.BtoBuscar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ColoresBL, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolesBL1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -346,11 +347,21 @@ Partial Class FRMEmpleados
         Me.EmpleadosBL.DataSetName = "DsEmpleados"
         Me.EmpleadosBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'BtoBuscar
+        '
+        Me.BtoBuscar.Location = New System.Drawing.Point(138, 12)
+        Me.BtoBuscar.Name = "BtoBuscar"
+        Me.BtoBuscar.Size = New System.Drawing.Size(75, 83)
+        Me.BtoBuscar.TabIndex = 19
+        Me.BtoBuscar.Text = "Buscar"
+        Me.BtoBuscar.UseVisualStyleBackColor = True
+        '
         'FRMEmpleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(616, 533)
+        Me.Controls.Add(Me.BtoBuscar)
         Me.Controls.Add(Me.ChkActivo)
         Me.Controls.Add(Me.DtpFechaAlta)
         Me.Controls.Add(Me.GroupBox1)
@@ -406,4 +417,5 @@ Partial Class FRMEmpleados
     Friend WithEvents FECHA_ALTA_DATE As DataGridViewTextBoxColumn
     Friend WithEvents CVE_EMPLEADO_VAR As DataGridViewTextBoxColumn
     Friend WithEvents PASSWORD_VAR As DataGridViewTextBoxColumn
+    Friend WithEvents BtoBuscar As Button
 End Class

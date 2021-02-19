@@ -23,10 +23,10 @@ Partial Class FRMBuscarClientes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.DgvClientes = New System.Windows.Forms.DataGridView()
-        Me.ClientesBL = New Negocios.ClientesBL()
         Me.CVE_CLIENTE_INT = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NOMBRE_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ACTIVO_BIT = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ClientesBL = New Negocios.ClientesBL()
         Me.BtnRegresar = New System.Windows.Forms.Button()
         Me.BtnBuscar = New System.Windows.Forms.Button()
         CType(Me.DgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,11 +47,6 @@ Partial Class FRMBuscarClientes
         Me.DgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvClientes.Size = New System.Drawing.Size(552, 406)
         Me.DgvClientes.TabIndex = 0
-        '
-        'ClientesBL
-        '
-        Me.ClientesBL.DataSetName = "DsClientes"
-        Me.ClientesBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'CVE_CLIENTE_INT
         '
@@ -74,6 +69,11 @@ Partial Class FRMBuscarClientes
         Me.ACTIVO_BIT.HeaderText = "ACTIVO"
         Me.ACTIVO_BIT.Name = "ACTIVO_BIT"
         Me.ACTIVO_BIT.ReadOnly = True
+        '
+        'ClientesBL
+        '
+        Me.ClientesBL.DataSetName = "DsClientes"
+        Me.ClientesBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BtnRegresar
         '

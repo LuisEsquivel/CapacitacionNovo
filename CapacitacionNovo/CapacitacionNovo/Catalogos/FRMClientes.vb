@@ -25,8 +25,8 @@
         BtoModificar.Enabled = True
         BtoNuevo.Enabled = False
         BtoCancelar.Enabled = True
-
     End Sub
+    
 
     Sub Estadobotones(ByVal estado)
 

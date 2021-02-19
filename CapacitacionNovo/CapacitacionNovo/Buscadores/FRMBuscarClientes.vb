@@ -52,6 +52,12 @@
 
     End Sub
 
+    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+        Buscar()
+    End Sub
+
+
+
 #End Region
 
 

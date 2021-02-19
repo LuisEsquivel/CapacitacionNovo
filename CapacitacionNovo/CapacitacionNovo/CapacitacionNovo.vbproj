@@ -91,6 +91,12 @@
     <Compile Include="Buscadores\FRMBuscarClientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Buscadores\FRMBuscarEmpleados.Designer.vb">
+      <DependentUpon>FRMBuscarEmpleados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Buscadores\FRMBuscarEmpleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Catalogos\FRMClientes.Designer.vb">
       <DependentUpon>FRMClientes.vb</DependentUpon>
     </Compile>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Buscadores\FRMBuscarClientes.resx">
       <DependentUpon>FRMBuscarClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buscadores\FRMBuscarEmpleados.resx">
+      <DependentUpon>FRMBuscarEmpleados.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\FRMClientes.resx">
       <DependentUpon>FRMClientes.vb</DependentUpon>
