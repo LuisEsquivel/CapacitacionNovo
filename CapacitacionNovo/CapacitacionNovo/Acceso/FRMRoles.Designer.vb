@@ -34,12 +34,12 @@ Partial Class FRMRoles
         Me.dtpRoles = New System.Windows.Forms.DateTimePicker()
         Me.ckbRoles = New System.Windows.Forms.CheckBox()
         Me.DGVRoles = New System.Windows.Forms.DataGridView()
-        Me.RolesBL = New Negocios.RolesBL()
         Me.CVE_ROL_INT = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DESC_ROL_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FECHAALTADATEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CVEUSUARIOALTAVARDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ACTIVO_BIT = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.RolesBL = New Negocios.RolesBL()
         CType(Me.DGVRoles, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolesBL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -154,11 +154,6 @@ Partial Class FRMRoles
         Me.DGVRoles.Size = New System.Drawing.Size(710, 266)
         Me.DGVRoles.TabIndex = 11
         '
-        'RolesBL
-        '
-        Me.RolesBL.DataSetName = "DsRoles"
-        Me.RolesBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'CVE_ROL_INT
         '
         Me.CVE_ROL_INT.DataPropertyName = "CVE_ROL_INT"
@@ -194,11 +189,16 @@ Partial Class FRMRoles
         Me.ACTIVO_BIT.Name = "ACTIVO_BIT"
         Me.ACTIVO_BIT.ReadOnly = True
         '
+        'RolesBL
+        '
+        Me.RolesBL.DataSetName = "DsRoles"
+        Me.RolesBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'FRMRoles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 444)
+        Me.ClientSize = New System.Drawing.Size(800, 166)
         Me.Controls.Add(Me.ckbRoles)
         Me.Controls.Add(Me.dtpRoles)
         Me.Controls.Add(Me.DGVRoles)

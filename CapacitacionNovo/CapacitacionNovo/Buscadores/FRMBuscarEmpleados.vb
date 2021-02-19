@@ -1,7 +1,7 @@
 ﻿Public Class FRMBuscarEmpleados
 
 #Region "VARIABLES"
-    Public p_cve_Empleados As Int32 = 0
+    Public p_cve_Empleados As String = ""
 #End Region
 
 
@@ -13,7 +13,7 @@
         If DGVEmpleados.SelectedRows.Count > 0 Then
 
             'valor de la clave del cliente de la fila seleccionada
-            NOMBRE_VAR = DGVEmpleados.CurrentRow.Cells("NOMBRE_VAR").Value
+            p_cve_Empleados = DGVEmpleados.CurrentRow.Cells("CVE_EMPLEADOS_VAR").Value
             Me.Hide()
 
         End If
@@ -32,13 +32,7 @@
     End Sub
     Private Sub Buscar_Click(sender As Object, e As EventArgs) Handles Buscar.Click
 
-        Dim buscar As New FRMBuscarEmpleados
-        buscar.ShowDialog()
-
-        If buscar.p_cve_Empleados > 0 Then
-            CargarEmpleado(buscar.p_cve_Empleados)
-
-        End If
+        Buscador()
 
     End Sub
 
@@ -59,10 +53,11 @@
         FilaSeleccionada()
     End Sub
 
-    Private Sub DGVEmpleados_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVEmpleados.CellContentClick
-        FilaSeleccionada()
 
+    Private Sub DGVEmpleados_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVEmpleados.CellDoubleClick
+        FilaSeleccionada()
     End Sub
+
 
 
 #End Region

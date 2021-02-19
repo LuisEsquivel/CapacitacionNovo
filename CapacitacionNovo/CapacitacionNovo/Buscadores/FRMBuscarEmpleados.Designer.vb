@@ -25,13 +25,13 @@ Partial Class FRMBuscarEmpleados
         Me.Regresar = New System.Windows.Forms.Button()
         Me.Buscar = New System.Windows.Forms.Button()
         Me.DGVEmpleados = New System.Windows.Forms.DataGridView()
-        Me.EmpleadosBL = New Negocios.EmpleadosBL()
         Me.CVE_EMPLEADOS_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NOMBRE_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ACTIVO_BIT = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.FECHA_ALTA_DATE = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CVE_ROL_INT = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PASSWORD_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmpleadosBL = New Negocios.EmpleadosBL()
         CType(Me.DGVEmpleados, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmpleadosBL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -65,13 +65,9 @@ Partial Class FRMBuscarEmpleados
         Me.DGVEmpleados.Location = New System.Drawing.Point(12, 138)
         Me.DGVEmpleados.Name = "DGVEmpleados"
         Me.DGVEmpleados.ReadOnly = True
+        Me.DGVEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGVEmpleados.Size = New System.Drawing.Size(776, 300)
         Me.DGVEmpleados.TabIndex = 2
-        '
-        'EmpleadosBL
-        '
-        Me.EmpleadosBL.DataSetName = "DsEmpleados"
-        Me.EmpleadosBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'CVE_EMPLEADOS_VAR
         '
@@ -114,6 +110,11 @@ Partial Class FRMBuscarEmpleados
         Me.PASSWORD_VAR.HeaderText = "PASSWORD_VAR"
         Me.PASSWORD_VAR.Name = "PASSWORD_VAR"
         Me.PASSWORD_VAR.ReadOnly = True
+        '
+        'EmpleadosBL
+        '
+        Me.EmpleadosBL.DataSetName = "DsEmpleados"
+        Me.EmpleadosBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'FRMBuscarEmpleados
         '
