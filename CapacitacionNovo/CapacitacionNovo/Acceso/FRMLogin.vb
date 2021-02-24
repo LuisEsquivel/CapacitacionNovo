@@ -40,6 +40,7 @@
                           Select emp.NOMBRE_VAR).FirstOrDefault
 
             MsgBox("Bienvenido " + nombre, MsgBoxStyle.Information, Generales.MENSAJE_MSGBOX)
+            Cancel = False
             Me.Close()
 
         Else
