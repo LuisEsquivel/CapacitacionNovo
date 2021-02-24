@@ -47,6 +47,7 @@
 
     Private FRMEmpleados As FRMEmpleados
     Private FRMRoles As FRMRoles
+    Private FRMTareas As FRMTareas
 
 #End Region
 
@@ -176,6 +177,22 @@
             FRMClientes = New FRMClientes
         End If
         ActivarFormulario(FRMClientes)
+    End Sub
+
+    Private Sub TareasToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TareasToolStripMenuItem1.Click
+        If Not FormularioActivo(FRMTareas) Then
+            FRMTareas = New FRMTareas
+        End If
+        ActivarFormulario(FRMTareas)
+    End Sub
+
+    Private Sub FRMMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+        Dim login As New FRMLogin
+        login.ShowDialog()
+
+
     End Sub
 
 

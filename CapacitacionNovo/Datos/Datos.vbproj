@@ -70,6 +70,7 @@
     <Compile Include="Acceso\RolesDAL.vb" />
     <Compile Include="Catalogos\ClientesDAL.vb" />
     <Compile Include="Catalogos\ColoresDAL.vb" />
+    <Compile Include="Catalogos\TareasDAL.vb" />
     <Compile Include="Globales\Globales.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

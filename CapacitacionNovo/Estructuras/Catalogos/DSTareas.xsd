@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSTareas" targetNamespace="http://tempuri.org/DSTareas.xsd" xmlns:mstns="http://tempuri.org/DSTareas.xsd" xmlns="http://tempuri.org/DSTareas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Estructuras.My.MySettings.GlobalReference.Default.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSTareas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSTareas" msprop:Generator_UserDSName="DSTareas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TBLTAREAS" msprop:Generator_TableClassName="TBLTAREASDataTable" msprop:Generator_TableVarName="tableTBLTAREAS" msprop:Generator_TablePropName="TBLTAREAS" msprop:Generator_RowDeletingName="TBLTAREASRowDeleting" msprop:Generator_RowChangingName="TBLTAREASRowChanging" msprop:Generator_RowEvHandlerName="TBLTAREASRowChangeEventHandler" msprop:Generator_RowDeletedName="TBLTAREASRowDeleted" msprop:Generator_UserTableName="TBLTAREAS" msprop:Generator_RowChangedName="TBLTAREASRowChanged" msprop:Generator_RowEvArgName="TBLTAREASRowChangeEvent" msprop:Generator_RowClassName="TBLTAREASRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CVE_TAREA_BIGINT" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCVE_TAREA_BIGINT" msprop:Generator_ColumnPropNameInRow="CVE_TAREA_BIGINT" msprop:Generator_ColumnPropNameInTable="CVE_TAREA_BIGINTColumn" msprop:Generator_UserColumnName="CVE_TAREA_BIGINT" type="xs:long" />
+              <xs:element name="DESCRIPCION_VAR" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION_VAR" msprop:Generator_ColumnPropNameInRow="DESCRIPCION_VAR" msprop:Generator_ColumnPropNameInTable="DESCRIPCION_VARColumn" msprop:Generator_UserColumnName="DESCRIPCION_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DUDAS_PRESENTADAS_VAR" msprop:Generator_ColumnVarNameInTable="columnDUDAS_PRESENTADAS_VAR" msprop:Generator_ColumnPropNameInRow="DUDAS_PRESENTADAS_VAR" msprop:Generator_ColumnPropNameInTable="DUDAS_PRESENTADAS_VARColumn" msprop:Generator_UserColumnName="DUDAS_PRESENTADAS_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RESPUESTA_A_DUDAS_VAR" msprop:Generator_ColumnVarNameInTable="columnRESPUESTA_A_DUDAS_VAR" msprop:Generator_ColumnPropNameInRow="RESPUESTA_A_DUDAS_VAR" msprop:Generator_ColumnPropNameInTable="RESPUESTA_A_DUDAS_VARColumn" msprop:Generator_UserColumnName="RESPUESTA_A_DUDAS_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHA_ALTA_DATE" msprop:Generator_ColumnVarNameInTable="columnFECHA_ALTA_DATE" msprop:Generator_ColumnPropNameInRow="FECHA_ALTA_DATE" msprop:Generator_ColumnPropNameInTable="FECHA_ALTA_DATEColumn" msprop:Generator_UserColumnName="FECHA_ALTA_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHA_MOD_DATE" msprop:Generator_ColumnVarNameInTable="columnFECHA_MOD_DATE" msprop:Generator_ColumnPropNameInRow="FECHA_MOD_DATE" msprop:Generator_ColumnPropNameInTable="FECHA_MOD_DATEColumn" msprop:Generator_UserColumnName="FECHA_MOD_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CVE_EMPLEADO_ALTA_VAR" msprop:Generator_ColumnVarNameInTable="columnCVE_EMPLEADO_ALTA_VAR" msprop:Generator_ColumnPropNameInRow="CVE_EMPLEADO_ALTA_VAR" msprop:Generator_ColumnPropNameInTable="CVE_EMPLEADO_ALTA_VARColumn" msprop:Generator_UserColumnName="CVE_EMPLEADO_ALTA_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CVE_EMPLEADO_MOD_VAR" msprop:Generator_ColumnVarNameInTable="columnCVE_EMPLEADO_MOD_VAR" msprop:Generator_ColumnPropNameInRow="CVE_EMPLEADO_MOD_VAR" msprop:Generator_ColumnPropNameInTable="CVE_EMPLEADO_MOD_VARColumn" msprop:Generator_UserColumnName="CVE_EMPLEADO_MOD_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TBLTAREAS" />
+      <xs:field xpath="mstns:CVE_TAREA_BIGINT" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

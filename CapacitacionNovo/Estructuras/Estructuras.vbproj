@@ -91,6 +91,11 @@
     <Compile Include="Catalogos\DsColores.vb">
       <DependentUpon>DsColores.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\DSTareas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSTareas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -160,6 +165,17 @@
     </None>
     <None Include="Catalogos\DsColores.xss">
       <DependentUpon>DsColores.xsd</DependentUpon>
+    </None>
+    <None Include="Catalogos\DSTareas.xsc">
+      <DependentUpon>DSTareas.xsd</DependentUpon>
+    </None>
+    <None Include="Catalogos\DSTareas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSTareas.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Catalogos\DSTareas.xss">
+      <DependentUpon>DSTareas.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

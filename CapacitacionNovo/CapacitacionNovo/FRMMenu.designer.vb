@@ -40,13 +40,15 @@ Partial Class FRMMenu
         Me.ReporteEventosPortalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteInventarioHHToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TareasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TareasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SistemaToolStripMenuItem, Me.CatalogosToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.SalirToolStripMenuItem1})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SistemaToolStripMenuItem, Me.CatalogosToolStripMenuItem, Me.TareasToolStripMenuItem, Me.ReportesToolStripMenuItem, Me.SalirToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
@@ -163,6 +165,19 @@ Partial Class FRMMenu
         Me.SalirToolStripMenuItem1.Size = New System.Drawing.Size(41, 20)
         Me.SalirToolStripMenuItem1.Text = "Salir"
         '
+        'TareasToolStripMenuItem
+        '
+        Me.TareasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TareasToolStripMenuItem1})
+        Me.TareasToolStripMenuItem.Name = "TareasToolStripMenuItem"
+        Me.TareasToolStripMenuItem.Size = New System.Drawing.Size(51, 20)
+        Me.TareasToolStripMenuItem.Text = "Tareas"
+        '
+        'TareasToolStripMenuItem1
+        '
+        Me.TareasToolStripMenuItem1.Name = "TareasToolStripMenuItem1"
+        Me.TareasToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.TareasToolStripMenuItem1.Text = "Tareas"
+        '
         'FRMMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -200,4 +215,6 @@ Partial Class FRMMenu
     Friend WithEvents ReporteInventarioHHToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ColoresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TareasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TareasToolStripMenuItem1 As ToolStripMenuItem
 End Class
