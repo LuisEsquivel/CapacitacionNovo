@@ -200,4 +200,8 @@ Public Class FRMRoles
 
         End If
     End Sub
+
+    Private Sub BtoBuscar_Click(sender As Object, e As EventArgs) Handles BtoBuscar.Click
+
+    End Sub
 End Class

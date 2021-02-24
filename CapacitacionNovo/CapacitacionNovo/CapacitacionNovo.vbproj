@@ -97,6 +97,12 @@
     <Compile Include="Buscadores\FRMBuscarEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Buscadores\FRMBuscarRoles.Designer.vb">
+      <DependentUpon>FRMBuscarRoles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Buscadores\FRMBuscarRoles.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Catalogos\FRMClientes.Designer.vb">
       <DependentUpon>FRMClientes.vb</DependentUpon>
     </Compile>
@@ -107,6 +113,12 @@
       <DependentUpon>FRMColores.vb</DependentUpon>
     </Compile>
     <Compile Include="Catalogos\FRMColores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\FRMProductos.Designer.vb">
+      <DependentUpon>FRMProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\FRMProductos.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FRMMenu.designer.vb">
@@ -145,11 +157,17 @@
     <EmbeddedResource Include="Buscadores\FRMBuscarEmpleados.resx">
       <DependentUpon>FRMBuscarEmpleados.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Buscadores\FRMBuscarRoles.resx">
+      <DependentUpon>FRMBuscarRoles.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\FRMClientes.resx">
       <DependentUpon>FRMClientes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\FRMColores.resx">
       <DependentUpon>FRMColores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\FRMProductos.resx">
+      <DependentUpon>FRMProductos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRMMenu.resx">
       <DependentUpon>FRMMenu.vb</DependentUpon>
