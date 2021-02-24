@@ -40,6 +40,7 @@ Partial Class FRMRoles
         Me.CVEUSUARIOALTAVARDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ACTIVO_BIT = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.RolesBL = New Negocios.RolesBL()
+        Me.BtoBuscar = New System.Windows.Forms.Button()
         CType(Me.DGVRoles, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolesBL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -133,7 +134,7 @@ Partial Class FRMRoles
         'ckbRoles
         '
         Me.ckbRoles.AutoSize = True
-        Me.ckbRoles.Location = New System.Drawing.Point(221, 87)
+        Me.ckbRoles.Location = New System.Drawing.Point(532, 110)
         Me.ckbRoles.Name = "ckbRoles"
         Me.ckbRoles.Size = New System.Drawing.Size(56, 17)
         Me.ckbRoles.TabIndex = 13
@@ -194,11 +195,21 @@ Partial Class FRMRoles
         Me.RolesBL.DataSetName = "DsRoles"
         Me.RolesBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'BtoBuscar
+        '
+        Me.BtoBuscar.Location = New System.Drawing.Point(177, 12)
+        Me.BtoBuscar.Name = "BtoBuscar"
+        Me.BtoBuscar.Size = New System.Drawing.Size(100, 92)
+        Me.BtoBuscar.TabIndex = 14
+        Me.BtoBuscar.Text = "Buscar"
+        Me.BtoBuscar.UseVisualStyleBackColor = True
+        '
         'FRMRoles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 166)
+        Me.Controls.Add(Me.BtoBuscar)
         Me.Controls.Add(Me.ckbRoles)
         Me.Controls.Add(Me.dtpRoles)
         Me.Controls.Add(Me.DGVRoles)
@@ -238,4 +249,5 @@ Partial Class FRMRoles
     Friend WithEvents FECHAALTADATEDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CVEUSUARIOALTAVARDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents ACTIVO_BIT As DataGridViewCheckBoxColumn
+    Friend WithEvents BtoBuscar As Button
 End Class

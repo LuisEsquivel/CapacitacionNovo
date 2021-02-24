@@ -83,6 +83,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DsRoles.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Acceso\DsRoles.vb">
+      <DependentUpon>DsRoles.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\DsColores.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
