@@ -360,7 +360,7 @@ Partial Class FRMEmpleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(616, 252)
+        Me.ClientSize = New System.Drawing.Size(616, 255)
         Me.Controls.Add(Me.BtoBuscar)
         Me.Controls.Add(Me.ChkActivo)
         Me.Controls.Add(Me.DtpFechaAlta)
