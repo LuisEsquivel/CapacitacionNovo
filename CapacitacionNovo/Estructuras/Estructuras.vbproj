@@ -94,6 +94,11 @@
     <Compile Include="Catalogos\DsColores.vb">
       <DependentUpon>DsColores.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\DSProductos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSProductos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\DSTareas.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -168,6 +173,17 @@
     </None>
     <None Include="Catalogos\DsColores.xss">
       <DependentUpon>DsColores.xsd</DependentUpon>
+    </None>
+    <None Include="Catalogos\DSProductos.xsc">
+      <DependentUpon>DSProductos.xsd</DependentUpon>
+    </None>
+    <None Include="Catalogos\DSProductos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSProductos.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Catalogos\DSProductos.xss">
+      <DependentUpon>DSProductos.xsd</DependentUpon>
     </None>
     <None Include="Catalogos\DSTareas.xsc">
       <DependentUpon>DSTareas.xsd</DependentUpon>

@@ -34,6 +34,8 @@ Partial Class FRMProductos
         Me.BttoCancelar = New System.Windows.Forms.Button()
         Me.BttoSalir = New System.Windows.Forms.Button()
         Me.DTPProductos = New System.Windows.Forms.DateTimePicker()
+        Me.ProductosBL = New Negocios.ProductosBL()
+        CType(Me.ProductosBL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Nombre
@@ -140,6 +142,11 @@ Partial Class FRMProductos
         Me.DTPProductos.Size = New System.Drawing.Size(95, 20)
         Me.DTPProductos.TabIndex = 11
         '
+        'ProductosBL
+        '
+        Me.ProductosBL.DataSetName = "DSProductos"
+        Me.ProductosBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'FRMProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -159,6 +166,7 @@ Partial Class FRMProductos
         Me.Controls.Add(Me.Nombre)
         Me.Name = "FRMProductos"
         Me.Text = "FRMProductos"
+        CType(Me.ProductosBL, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -176,4 +184,5 @@ Partial Class FRMProductos
     Friend WithEvents BttoCancelar As Button
     Friend WithEvents BttoSalir As Button
     Friend WithEvents DTPProductos As DateTimePicker
+    Friend WithEvents ProductosBL As Negocios.ProductosBL
 End Class

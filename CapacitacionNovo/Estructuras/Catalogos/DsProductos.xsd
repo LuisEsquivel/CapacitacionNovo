@@ -1,16 +1,55 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<xs:schema id="DsProductos" 
-                  targetNamespace="http://tempuri.org/DsProductos.xsd"
-                  elementFormDefault="qualified"
-                  attributeFormDefault="qualified"
-                  xmlns="http://tempuri.org/DsProductos.xsd"
-                  xmlns:mstns="http://tempuri.org/DsProductos.xsd"
-                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-                  xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
-                  xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
-    <xs:element name="DsProductos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true">
-        <xs:complexType>
-            <xs:choice minOccurs="0" maxOccurs="unbounded"></xs:choice>
-        </xs:complexType>
-    </xs:element>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSProductos" targetNamespace="http://tempuri.org/DSProductos.xsd" xmlns:mstns="http://tempuri.org/DSProductos.xsd" xmlns="http://tempuri.org/DSProductos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CapacitacionNovoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CapacitacionNovoConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Estructuras.My.MySettings.GlobalReference.Default.CapacitacionNovoConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSProductos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSProductos" msprop:Generator_UserDSName="DSProductos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TBLPRODUCTOS" msprop:Generator_TableClassName="TBLPRODUCTOSDataTable" msprop:Generator_TableVarName="tableTBLPRODUCTOS" msprop:Generator_TablePropName="TBLPRODUCTOS" msprop:Generator_RowDeletingName="TBLPRODUCTOSRowDeleting" msprop:Generator_RowChangingName="TBLPRODUCTOSRowChanging" msprop:Generator_RowEvHandlerName="TBLPRODUCTOSRowChangeEventHandler" msprop:Generator_RowDeletedName="TBLPRODUCTOSRowDeleted" msprop:Generator_UserTableName="TBLPRODUCTOS" msprop:Generator_RowChangedName="TBLPRODUCTOSRowChanged" msprop:Generator_RowEvArgName="TBLPRODUCTOSRowChangeEvent" msprop:Generator_RowClassName="TBLPRODUCTOSRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CVE_PRODUCTOS_INT" msprop:Generator_ColumnVarNameInTable="columnCVE_PRODUCTOS_INT" msprop:Generator_ColumnPropNameInRow="CVE_PRODUCTOS_INT" msprop:Generator_ColumnPropNameInTable="CVE_PRODUCTOS_INTColumn" msprop:Generator_UserColumnName="CVE_PRODUCTOS_INT" type="xs:int" />
+              <xs:element name="NOMBRE_VAR" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_VAR" msprop:Generator_ColumnPropNameInRow="NOMBRE_VAR" msprop:Generator_ColumnPropNameInTable="NOMBRE_VARColumn" msprop:Generator_UserColumnName="NOMBRE_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CVE_PRODUCTOS_ALTA_VAR" msprop:Generator_ColumnVarNameInTable="columnCVE_PRODUCTOS_ALTA_VAR" msprop:Generator_ColumnPropNameInRow="CVE_PRODUCTOS_ALTA_VAR" msprop:Generator_ColumnPropNameInTable="CVE_PRODUCTOS_ALTA_VARColumn" msprop:Generator_UserColumnName="CVE_PRODUCTOS_ALTA_VAR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CVE_PRODUCTOS_MOD_VAR" msprop:Generator_ColumnVarNameInTable="columnCVE_PRODUCTOS_MOD_VAR" msprop:Generator_ColumnPropNameInRow="CVE_PRODUCTOS_MOD_VAR" msprop:Generator_ColumnPropNameInTable="CVE_PRODUCTOS_MOD_VARColumn" msprop:Generator_UserColumnName="CVE_PRODUCTOS_MOD_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHA_ALTA_DATE" msprop:Generator_ColumnVarNameInTable="columnFECHA_ALTA_DATE" msprop:Generator_ColumnPropNameInRow="FECHA_ALTA_DATE" msprop:Generator_ColumnPropNameInTable="FECHA_ALTA_DATEColumn" msprop:Generator_UserColumnName="FECHA_ALTA_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHA_MOD_DATE" msprop:Generator_ColumnVarNameInTable="columnFECHA_MOD_DATE" msprop:Generator_ColumnPropNameInRow="FECHA_MOD_DATE" msprop:Generator_ColumnPropNameInTable="FECHA_MOD_DATEColumn" msprop:Generator_UserColumnName="FECHA_MOD_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ACTIVO_BIT" msprop:Generator_ColumnVarNameInTable="columnACTIVO_BIT" msprop:Generator_ColumnPropNameInRow="ACTIVO_BIT" msprop:Generator_ColumnPropNameInTable="ACTIVO_BITColumn" msprop:Generator_UserColumnName="ACTIVO_BIT" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TBLPRODUCTOS" />
+      <xs:field xpath="mstns:CVE_PRODUCTOS_INT" />
+    </xs:unique>
+  </xs:element>
 </xs:schema>

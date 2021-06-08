@@ -1,144 +1,148 @@
-﻿Public Class FRMProductos
+﻿'Public Class FRMProductos
 
-#Region "Variante"
-    Dim v_estadobotones As String = "Inicial"
-    Dim v_error As String = ""
+'#Region "Variante"
+'    Dim v_estadobotones As String = "Inicial"
+'    Dim v_error As String = ""
 
-#End Region
+'#End Region
 
-#Region "PROCEDIMIENTOS O MÉTODOS"
-    Sub Estadobotones(ByVal estado)
+'#Region "PROCEDIMIENTOS O MÉTODOS"
+'    Sub Estadobotones(ByVal estado)
 
-        If estado = "Inicial" Then
-            BttoNuevo.Enabled = True
-            BttoModificar.Enabled = False
-            BttoGuardar.Enabled = False
-            BttoCancelar.Enabled = False
-            BttoSalir.Enabled = True
-        End If
+'        If estado = "Inicial" Then
+'            BttoNuevo.Enabled = True
+'            BttoModificar.Enabled = False
+'            BttoGuardar.Enabled = False
+'            BttoCancelar.Enabled = False
+'            BttoSalir.Enabled = True
+'        End If
 
-        If estado = BttoNuevo.Name Or estado = BttoModificar.Name Then
-            BttoNuevo.Enabled = False
-            BttoModificar.Enabled = False
-            BttoGuardar.Enabled = True
-            BttoCancelar.Enabled = True
-            BttoSalir.Enabled = False
-        End If
-
-
-    End Sub
+'        If estado = BttoNuevo.Name Or estado = BttoModificar.Name Then
+'            BttoNuevo.Enabled = False
+'            BttoModificar.Enabled = False
+'            BttoGuardar.Enabled = True
+'            BttoCancelar.Enabled = True
+'            BttoSalir.Enabled = False
+'        End If
 
 
-
-    Sub limpiar()
-        TxtClave.Clear()
-        TxtNombre.Clear()
-        CKBActivo.Checked = False
-
-    End Sub
+'    End Sub
 
 
-    Sub Habilitar()
-        TxtNombre.Enabled = True
-        CKBActivo.Enabled = True
-    End Sub
+
+'    Sub limpiar()
+'        TxtClave.Clear()
+'        TxtNombre.Clear()
+'        CKBActivo.Checked = False
+
+'    End Sub
 
 
-    Sub DesHabilitar()
-        TxtClave.Enabled = False
-        TxtNombre.Enabled = False
-        CKBActivo.Enabled = False
-    End Sub
+'    Sub Habilitar()
+'        TxtNombre.Enabled = True
+'        CKBActivo.Enabled = True
+'    End Sub
 
 
-    Sub Guadar()
-
-        If CamposVaciosoYaExiste() = True Then
-            MsgBox(v_error, MsgBoxStyle.Information, Generales.MENSAJE_MSGBOX)
-            Exit Sub
-        End If
-
-        Dim fila As Negocios.RolesBL.TBLROLESRow
-        fila = ProductosBL.TBLROLES.NewTBLROLESRow
-
-        With fila
-            '.CVE_ROL_INT = tbxClave.Text
-            .DESC_ROL_VAR = TxtNombre.Text
-            .ACTIVO_BIT = CKBActivo.Checked
-            '.DESC_ROL_VAR = 1
+'    Sub DesHabilitar()
+'        TxtClave.Enabled = False
+'        TxtNombre.Enabled = False
+'        CKBActivo.Enabled = False
+'    End Sub
 
 
-            If v_estadobotones = BttoNuevo.Name Then
+'    Sub Guadar()
 
-                .FECHA_ALTA_DATE = DateTime.Now
-                .CVE_USUARIO_ALTA_VAR = "Uriel"
+'        If CamposVaciosoYaExiste() = True Then
+'            MsgBox(v_error, MsgBoxStyle.Information, Generales.MENSAJE_MSGBOX)
+'            Exit Sub
+'        End If
 
-                If ProductosBL.agregar(fila) Then
-                    MsgBox("Información Almacenada", MsgBoxStyle.Information, Generales.MENSAJE_MSGBOX)
-                    Cancelar_Click(Nothing, Nothing)
+'        Dim fila As Negocios.ProductosBL.TBLPRODUCTOSRow
+'        fila = ProductosBL.TBLPRODUCTOS.NewTBLPRODUCTOSRow
 
-                End If
-
-            End If
-
-            If v_estadobotones = BttoModificar.Name Then
-
-                .CVE_ROL_INT = TxtClave.Text
-                .FECHA_MOD_DATE = DateTime.Now
-                .CVE_USUARIO_MOD_VAR = "Uriel"
-
-                If ProductosBL.Modificar(fila) Then
-                    MsgBox("Información Almacenada", MsgBoxStyle.Information, Generales.MENSAJE_MSGBOX)
-                    Cancelar_Click(Nothing, Nothing)
-                End If
-            End If
+'        With fila
+'            '.CVE_ROL_INT = tbxClave.Text
+'            .NOMBRE_VAR = TxtNombre.Text
+'            .ACTIVO_BIT = CKBActivo.Checked
+'            '.DESC_ROL_VAR = 1
 
 
-        End With
+'            If v_estadobotones = BttoNuevo.Name Then
+
+'                .FECHA_ALTA_DATE = DateTime.Now
 
 
-    End Sub
-#End Region
+'                If ProductosBL.agregar(fila) Then
+'                    MsgBox("Información Almacenada", MsgBoxStyle.Information, Generales.MENSAJE_MSGBOX)
+'                    BttoCancelar_Click(Nothing, Nothing)
 
-#Region "FUNCIONES"
-    Function CamposVaciosoYaExiste()
-        v_error = ""
+'                End If
 
-        If TxtNombre.Text.Trim.Length = 0 Then
-            v_error = "Descripción"
+'            End If
 
-        Else
-            Dim YaExiste As Int32 = 0
-            If v_estadobotones = BttoNuevo.Name Then
-                YaExiste = (From e As Negocios.RolesBL.TBLROLESRow In Me.ProductosBL.TBLROLES.Rows
-                            Where e.DESC_ROL_VAR = TxtNombre.Text
-                            Select e).Count
-            End If
+'            If v_estadobotones = BttoModificar.Name Then
 
-            If v_estadobotones = BttoModificar.Name Then
-                YaExiste = (From e As Negocios.RolesBL.TBLROLESRow In Me.ProductosBL.TBLROLES.Rows
-                            Where e.DESC_ROL_VAR = TxtNombre.Text And e.CVE_ROL_INT <> TxtClave.Text
-                            Select e
-                           ).Count
-            End If
+'                .CVE_PRODUCTOS_INT = TxtClave.Text
+'                .FECHA_MOD_DATE = DateTime.Now
 
-            If YaExiste > 0 Then
-                v_error = "Ya existe la descripción : " & TxtNombre.Text & vbNewLine & "Verifique"
-                Return True
-            End If
 
-        End If
+'                If ProductosBL.Modificar(fila) Then
+'                    MsgBox("Información Almacenada", MsgBoxStyle.Information, Generales.MENSAJE_MSGBOX)
+'                    BttoCancelar_Click(Nothing, Nothing)
+'                End If
+'            End If
 
-        If v_error <> "" Then
-            v_error = "Campo Oboligatorio:" & vbNewLine & v_error
-            Return True
-        Else
-            Return False
-        End If
 
-    End Function
-#End Region
-    Private Sub FRMProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+'        End With
 
-    End Sub
-End Class
+
+'    End Sub
+'#End Region
+
+'#Region "FUNCIONES"
+'    Function CamposVaciosoYaExiste()
+'        v_error = ""
+
+'        If TxtNombre.Text.Trim.Length = 0 Then
+'            v_error = "Descripción"
+
+'        Else
+'            Dim YaExiste As Int32 = 0
+'            If v_estadobotones = BttoNuevo.Name Then
+'                YaExiste = (From e As Negocios.RolesBL.TBLROLESRow In Me.ProductosBL.TBLROLES.Rows
+'                            Where e.DESC_ROL_VAR = TxtNombre.Text
+'                            Select e).Count
+'            End If
+
+'            If v_estadobotones = BttoModificar.Name Then
+'                YaExiste = (From e As Negocios.RolesBL.TBLROLESRow In Me.ProductosBL.TBLROLES.Rows
+'                            Where e.DESC_ROL_VAR = TxtNombre.Text And e.CVE_ROL_INT <> TxtClave.Text
+'                            Select e
+'                           ).Count
+'            End If
+
+'            If YaExiste > 0 Then
+'                v_error = "Ya existe la descripción : " & TxtNombre.Text & vbNewLine & "Verifique"
+'                Return True
+'            End If
+
+'        End If
+
+'        If v_error <> "" Then
+'            v_error = "Campo Oboligatorio:" & vbNewLine & v_error
+'            Return True
+'        Else
+'            Return False
+'        End If
+
+'    End Function
+'#End Region
+'    Private Sub FRMProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+'    End Sub
+
+'    Private Sub BttoCancelar_Click(sender As Object, e As EventArgs) Handles BttoCancelar.Click
+
+'    End Sub
+'End Class
