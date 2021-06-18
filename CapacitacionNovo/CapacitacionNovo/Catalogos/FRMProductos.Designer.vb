@@ -185,4 +185,16 @@ Partial Class FRMProductos
     Friend WithEvents BttoSalir As Button
     Friend WithEvents DTPProductos As DateTimePicker
     Friend WithEvents ProductosBL As Negocios.ProductosBL
+
+    Private Sub BttoBuscar_Click(sender As Object, e As EventArgs) Handles BttoBuscar.Click
+
+    End Sub
+
+    Private Sub BttoGuardar_Click(sender As Object, e As EventArgs) Handles BttoGuardar.Click
+
+    End Sub
+
+    Private Sub FRMProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
