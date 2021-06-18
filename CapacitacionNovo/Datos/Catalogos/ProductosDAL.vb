@@ -31,7 +31,7 @@
         End Try
     End Sub
 
-    Public Function Agregar(ByRef Productos As Estructuras.DsProductos.TBLCOLORESRow) As Boolean
+    Public Function Agregar(ByRef Productos As Estructuras.DSProductos.TBLPRODUCTOSRow) As Boolean
         SQL = New SQLconn.ADONet.SQLConn(Globales.ConeccionBD)
 
         SQL.cmdType = CommandType.StoredProcedure
@@ -46,7 +46,7 @@
         SQL.cmdText = "PROC_TBLCOLORES"
 
         Try
-            dt = New Estructuras.DsProductos.TBLCOLORESDataTable
+            dt = New Estructuras.DSProductos.TBLCOLORESDataTable
             SQL.FillDt(dt)
             If dt.Rows.Count > 0 Then
                 Llenar(dt.Rows(0), Productos)
