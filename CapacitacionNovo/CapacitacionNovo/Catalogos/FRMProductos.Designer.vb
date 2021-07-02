@@ -26,7 +26,7 @@ Partial Class FRMProductos
         Me.Clave = New System.Windows.Forms.Label()
         Me.TxtClave = New System.Windows.Forms.TextBox()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
-        Me.CKBActivo = New System.Windows.Forms.CheckBox()
+        Me.ACTProductos = New System.Windows.Forms.CheckBox()
         Me.BttoBuscar = New System.Windows.Forms.Button()
         Me.BttoNuevo = New System.Windows.Forms.Button()
         Me.BttoModificar = New System.Windows.Forms.Button()
@@ -70,15 +70,15 @@ Partial Class FRMProductos
         Me.TxtNombre.Size = New System.Drawing.Size(99, 20)
         Me.TxtNombre.TabIndex = 3
         '
-        'CKBActivo
+        'ACTProductos
         '
-        Me.CKBActivo.AutoSize = True
-        Me.CKBActivo.Location = New System.Drawing.Point(173, 100)
-        Me.CKBActivo.Name = "CKBActivo"
-        Me.CKBActivo.Size = New System.Drawing.Size(56, 17)
-        Me.CKBActivo.TabIndex = 4
-        Me.CKBActivo.Text = "Activo"
-        Me.CKBActivo.UseVisualStyleBackColor = True
+        Me.ACTProductos.AutoSize = True
+        Me.ACTProductos.Location = New System.Drawing.Point(173, 100)
+        Me.ACTProductos.Name = "ACTProductos"
+        Me.ACTProductos.Size = New System.Drawing.Size(56, 17)
+        Me.ACTProductos.TabIndex = 4
+        Me.ACTProductos.Text = "Activo"
+        Me.ACTProductos.UseVisualStyleBackColor = True
         '
         'BttoBuscar
         '
@@ -159,7 +159,7 @@ Partial Class FRMProductos
         Me.Controls.Add(Me.BttoModificar)
         Me.Controls.Add(Me.BttoNuevo)
         Me.Controls.Add(Me.BttoBuscar)
-        Me.Controls.Add(Me.CKBActivo)
+        Me.Controls.Add(Me.ACTProductos)
         Me.Controls.Add(Me.TxtNombre)
         Me.Controls.Add(Me.TxtClave)
         Me.Controls.Add(Me.Clave)
@@ -176,7 +176,7 @@ Partial Class FRMProductos
     Friend WithEvents Clave As Label
     Friend WithEvents TxtClave As TextBox
     Friend WithEvents TxtNombre As TextBox
-    Friend WithEvents CKBActivo As CheckBox
+    Friend WithEvents ACTProductos As CheckBox
     Friend WithEvents BttoBuscar As Button
     Friend WithEvents BttoNuevo As Button
     Friend WithEvents BttoModificar As Button
@@ -186,15 +186,215 @@ Partial Class FRMProductos
     Friend WithEvents DTPProductos As DateTimePicker
     Friend WithEvents ProductosBL As Negocios.ProductosBL
 
+#Region "Variavles"
+
+    Dim v_estadobotones As String = "Inicial"
+    Dim v_error As String = ""
+
+#End Region
+
+#Region "PROCEDIMIENTOS O MÉTODOS"
+
+    Sub CargarProductos(ByVal cve_Productos)
+
+        ProductosBL.TBLPRODUCTOS.Clear()
+        ProductosBL.Cargar(cve_Productos)
+
+        For Each row As Negocios.ProductosBL.TBLPRODUCTOSRow In ProductosBL.TBLPRODUCTOS.Rows
+
+            TxtClave.Text = row.CVE_PRODUCTOS_INT
+            TxtNombre.Text = row.NOMBRE_VAR
+            ACTProductos.Checked = row.ACTIVO_BIT
+
+        Next
+
+        BttoModificar.Enabled = True
+        BttoNuevo.Enabled = False
+        BttoCancelar.Enabled = True
+    End Sub
+
+    Sub Estadobotones(ByVal estado)
+
+        If estado = "Inicial" Then
+            BttoNuevo.Enabled = True
+            BttoModificar.Enabled = False
+            BttoGuardar.Enabled = False
+            BttoCancelar.Enabled = False
+            BttoSalir.Enabled = True
+        End If
+
+        If estado = BttoNuevo.Name Or estado = BttoModificar.Name Then
+            BttoNuevo.Enabled = False
+            BttoModificar.Enabled = False
+            BttoGuardar.Enabled = True
+            BttoCancelar.Enabled = True
+            BttoSalir.Enabled = False
+        End If
+
+
+    End Sub
+
+    Sub limpiar()
+        TxtClave.Clear()
+        TxtNombre.Clear()
+        ACTProductos.Checked = False
+
+    End Sub
+
+    Sub Habilitar()
+        TxtNombre.Enabled = True
+        ACTProductos.Enabled = True
+    End Sub
+
+    Sub DesHabilitar()
+        TxtClave.Enabled = False
+        TxtClave.Enabled = False
+        ACTProductos.Enabled = False
+    End Sub
+
+
+    Sub Guadar()
+
+        If CamposVaciosoYaExiste() = True Then
+            MsgBox(v_error, MsgBoxStyle.Information, Generales.MENSAJE_MSGBOX)
+            Exit Sub
+        End If
+
+
+
+        Dim fila As Negocios.ProductosBL.TBLPRODUCTOSRow
+        fila = ProductosBL.TBLPRODUCTOS.NewTBLPRODUCTOSRow
+
+        With fila
+
+            .NOMBRE_VAR = TxtNombre.Text
+            .ACTIVO_BIT = ACTProductos.Checked
+
+
+
+            If v_estadobotones = BttoNuevo.Name Then
+
+
+                .CVE_PRODUCTOS_ALTA_VAR = "Uriel"
+
+                If ProductosBL.agregar(fila) Then
+                    MsgBox("Información Almacenada", MsgBoxStyle.Information, Generales.MENSAJE_MSGBOX)
+                    BttoCancelar_Click(Nothing, Nothing)
+
+
+                End If
+
+            End If
+
+            If v_estadobotones = BttoModificar.Name Then
+
+                .CVE_PRODUCTOS_INT = TxtClave.Text
+                .NOMBRE_VAR = TxtNombre.Text
+                .CVE_PRODUCTOS_MOD_VAR = "Uriel"
+
+                If ProductosBL.Modificar(fila) Then
+                    MsgBox("Información Almacenada", MsgBoxStyle.Information, Generales.MENSAJE_MSGBOX)
+                    BttoCancelar_Click(Nothing, Nothing)
+                End If
+            End If
+
+
+        End With
+
+
+    End Sub
+#End Region
+
+#Region "FUNCIONES"
+    Function CamposVaciosoYaExiste()
+        v_error = ""
+
+        If TxtNombre.Text.Trim.Length = 0 Then
+            v_error = "Nombre"
+
+        Else
+            Dim YaExiste As Int32 = 0
+            If v_estadobotones = BttoNuevo.Name Then
+                YaExiste = (From e As Negocios.ProductosBL.TBLPRODUCTOSRow In Me.ProductosBL.TBLPRODUCTOS.Rows
+                            Where e.NOMBRE_VAR = TxtNombre.Text
+                            Select e).Count
+            End If
+
+            If v_estadobotones = BttoModificar.Name Then
+                YaExiste = (From e As Negocios.ClientesBL.TBLCLIENTESRow In Me.ProductosBL.TBLPRODUCTOS.Rows
+                            Where e.NOMBRE_VAR = TxtClave.Text And e.CVE_USUARIO_ALTA_VAR <> TxtClave.Text
+                            Select e
+                           ).Count
+            End If
+
+            If YaExiste > 0 Then
+                v_error = "Ya existe el Nombre : " & TxtClave.Text & vbNewLine & "Verifique"
+                Return True
+            End If
+
+        End If
+
+        If v_error <> "" Then
+            v_error = "Campo Oboligatorio:" & vbNewLine & v_error
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
+
+#End Region
+
+
+    Private Sub FRMProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ProductosBL.Cargar()
+        Estadobotones(v_estadobotones)
+        DesHabilitar()
+    End Sub
     Private Sub BttoBuscar_Click(sender As Object, e As EventArgs) Handles BttoBuscar.Click
+
+        Dim buscar As New FRMBuscarProductos
+        buscar.ShowDialog()
+
+        If buscar.p_cve_Productos > 0 Then
+            CargarProductos(buscar.p_cve_Productos)
+        End If
 
     End Sub
 
     Private Sub BttoGuardar_Click(sender As Object, e As EventArgs) Handles BttoGuardar.Click
 
+        Guadar()
+
     End Sub
 
-    Private Sub FRMProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub BttoModificar_Click(sender As Object, e As EventArgs) Handles BttoModificar.Click
 
+        v_estadobotones = BttoModificar.Name
+        Estadobotones(v_estadobotones)
+        Habilitar()
+
+    End Sub
+
+    Private Sub BttoCancelar_Click(sender As Object, e As EventArgs) Handles BttoCancelar.Click
+        v_estadobotones = "Inicial"
+        Estadobotones(v_estadobotones)
+        limpiar()
+        DesHabilitar()
+    End Sub
+
+    Private Sub BttoNuevo_Click(sender As Object, e As EventArgs) Handles BttoNuevo.Click
+
+        v_estadobotones = BttoNuevo.Name
+        Estadobotones(v_estadobotones)
+        limpiar()
+        Habilitar()
+        TxtClave.Focus()
+        ACTProductos.Checked = True
+
+    End Sub
+
+    Private Sub BttoSalir_Click(sender As Object, e As EventArgs) Handles BttoSalir.Click
+        Me.Close()
     End Sub
 End Class

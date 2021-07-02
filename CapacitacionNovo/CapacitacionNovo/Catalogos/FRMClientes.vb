@@ -174,6 +174,7 @@
     End Sub
 
     Private Sub salir_Click(sender As Object, e As EventArgs) Handles BtoSalir.Click
+
         Me.Close()
 
     End Sub

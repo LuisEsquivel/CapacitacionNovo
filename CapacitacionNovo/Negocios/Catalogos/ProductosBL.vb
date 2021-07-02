@@ -1,4 +1,5 @@
-﻿Public Class ProductosBL : Inherits Estructuras.DsProductos
+﻿Public Class ProductosBL
+    Inherits Estructuras.DSProductos
 
 
     Dim DAL As Datos.ProductosDAL

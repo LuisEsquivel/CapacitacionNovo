@@ -22,9 +22,63 @@ Partial Class FRMBuscarProductos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.BttoBuscar = New System.Windows.Forms.Button()
+        Me.BttoRegresar = New System.Windows.Forms.Button()
+        Me.DGVProductos = New System.Windows.Forms.DataGridView()
+        Me.ProductosBL = New Negocios.ProductosBL()
+        CType(Me.DGVProductos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProductosBL, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'BttoBuscar
+        '
+        Me.BttoBuscar.Location = New System.Drawing.Point(568, 12)
+        Me.BttoBuscar.Name = "BttoBuscar"
+        Me.BttoBuscar.Size = New System.Drawing.Size(107, 93)
+        Me.BttoBuscar.TabIndex = 0
+        Me.BttoBuscar.Text = "Buscar"
+        Me.BttoBuscar.UseVisualStyleBackColor = True
+        '
+        'BttoRegresar
+        '
+        Me.BttoRegresar.Location = New System.Drawing.Point(681, 12)
+        Me.BttoRegresar.Name = "BttoRegresar"
+        Me.BttoRegresar.Size = New System.Drawing.Size(107, 93)
+        Me.BttoRegresar.TabIndex = 1
+        Me.BttoRegresar.Text = "Regresar"
+        Me.BttoRegresar.UseVisualStyleBackColor = True
+        '
+        'DGVProductos
+        '
+        Me.DGVProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVProductos.Location = New System.Drawing.Point(12, 188)
+        Me.DGVProductos.Name = "DGVProductos"
+        Me.DGVProductos.Size = New System.Drawing.Size(776, 250)
+        Me.DGVProductos.TabIndex = 2
+        '
+        'ProductosBL
+        '
+        Me.ProductosBL.DataSetName = "DSProductos"
+        Me.ProductosBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'FRMBuscarProductos
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.DGVProductos)
+        Me.Controls.Add(Me.BttoRegresar)
+        Me.Controls.Add(Me.BttoBuscar)
+        Me.Name = "FRMBuscarProductos"
         Me.Text = "FRMBuscarProductos"
+        CType(Me.DGVProductos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductosBL, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
     End Sub
+
+    Friend WithEvents BttoBuscar As Button
+    Friend WithEvents BttoRegresar As Button
+    Friend WithEvents DGVProductos As DataGridView
+    Friend WithEvents ProductosBL As Negocios.ProductosBL
 End Class
