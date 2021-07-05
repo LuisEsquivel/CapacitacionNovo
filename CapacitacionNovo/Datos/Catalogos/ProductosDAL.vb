@@ -25,14 +25,14 @@
         SQL.AddParam("@CVE_PRODUCTOS_INT", CVE_PRODUCTOS_INT, SqlDbType.Int)
         SQL.AddParam("@Accion", Accion.Consultar, SqlDbType.Int)
 
-        SQL.cmdText = "PROC_TBLCOLORES"
+        SQL.cmdText = "PROC_TBLProductos"
 
         Try
 
 
             SQL.FillDt(tabla)
         Catch ex As Exception
-            MsgBox("Erro al cargar roles" & ex.Message)
+            MsgBox("Erro al cargar productos" & ex.Message)
         End Try
     End Sub
 
@@ -47,13 +47,7 @@
 
         SQL.AddParam("@NOMBRE_VAR", Productos.NOMBRE_VAR, SqlDbType.VarChar)
         SQL.AddParam("@FECHA_ALTA_DATE", Productos.FECHA_ALTA_DATE, SqlDbType.DateTime)
-
         SQL.AddParam("@CVE_PRODUCTOS_ALTA_VAR", Productos.CVE_PRODUCTOS_ALTA_VAR, SqlDbType.VarChar)
-
-
-        SQL.AddParam("@CVE_PRODUCTOS_ALTA_VAR", Productos.CVE_PRODUCTOS_ALTA_VAR, SqlDbType.VarChar)
-        
-  
         SQL.AddParam("@ACTIVO_BIT", Productos.ACTIVO_BIT, SqlDbType.Bit)
         SQL.AddParam("@Accion", Accion.Agregar, SqlDbType.Int)
 
@@ -87,7 +81,6 @@
         SQL.AddParam("@CVE_PRODUCTOS_INT", Productos.CVE_PRODUCTOS_INT, SqlDbType.Int)
         SQL.AddParam("@NOMBRE_VAR", Productos.NOMBRE_VAR, SqlDbType.VarChar)
         SQL.AddParam("@FECHA_MOD_DATE", Productos.FECHA_MOD_DATE, SqlDbType.DateTime)
-
         SQL.AddParam("@CVE_PRODUCTOS_MOD_VAR", Productos.CVE_PRODUCTOS_MOD_VAR, SqlDbType.VarChar)
         SQL.AddParam("@ACTIVO_BIT", Productos.ACTIVO_BIT, SqlDbType.Bit)
         SQL.AddParam("@Accion", Accion.Modificar, SqlDbType.Int)
