@@ -195,10 +195,10 @@ Partial Class FRMProductos
 
 #Region "PROCEDIMIENTOS O MÉTODOS"
 
-    Sub CargarProductos(ByVal cve_Productos)
+    Sub CargarProductos(ByVal p_cve_Productos)
 
         ProductosBL.TBLPRODUCTOS.Clear()
-        ProductosBL.Cargar(cve_Productos)
+        ProductosBL.Cargar(p_cve_Productos)
 
         For Each row As Negocios.ProductosBL.TBLPRODUCTOSRow In ProductosBL.TBLPRODUCTOS.Rows
 
