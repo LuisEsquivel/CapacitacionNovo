@@ -34,7 +34,9 @@ Partial Class FRMProductos
         Me.BttoCancelar = New System.Windows.Forms.Button()
         Me.BttoSalir = New System.Windows.Forms.Button()
         Me.DTPProductos = New System.Windows.Forms.DateTimePicker()
+        Me.DGVProducto = New System.Windows.Forms.DataGridView()
         Me.ProductosBL = New Negocios.ProductosBL()
+        CType(Me.DGVProducto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductosBL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -142,6 +144,14 @@ Partial Class FRMProductos
         Me.DTPProductos.Size = New System.Drawing.Size(95, 20)
         Me.DTPProductos.TabIndex = 11
         '
+        'DGVProducto
+        '
+        Me.DGVProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVProducto.Location = New System.Drawing.Point(12, 188)
+        Me.DGVProducto.Name = "DGVProducto"
+        Me.DGVProducto.Size = New System.Drawing.Size(776, 249)
+        Me.DGVProducto.TabIndex = 12
+        '
         'ProductosBL
         '
         Me.ProductosBL.DataSetName = "DSProductos"
@@ -152,6 +162,7 @@ Partial Class FRMProductos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 449)
+        Me.Controls.Add(Me.DGVProducto)
         Me.Controls.Add(Me.DTPProductos)
         Me.Controls.Add(Me.BttoSalir)
         Me.Controls.Add(Me.BttoCancelar)
@@ -166,6 +177,7 @@ Partial Class FRMProductos
         Me.Controls.Add(Me.Nombre)
         Me.Name = "FRMProductos"
         Me.Text = "FRMProductos"
+        CType(Me.DGVProducto, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductosBL, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -184,7 +196,6 @@ Partial Class FRMProductos
     Friend WithEvents BttoCancelar As Button
     Friend WithEvents BttoSalir As Button
     Friend WithEvents DTPProductos As DateTimePicker
-    Friend WithEvents ProductosBL As Negocios.ProductosBL
 
 #Region "Variavles"
 
@@ -217,7 +228,7 @@ Partial Class FRMProductos
 
         If estado = "Inicial" Then
             BttoNuevo.Enabled = True
-            BttoModificar.Enabled = False
+            BttoModificar.Enabled = True
             BttoGuardar.Enabled = False
             BttoCancelar.Enabled = False
             BttoSalir.Enabled = True
@@ -243,6 +254,7 @@ Partial Class FRMProductos
 
     Sub Habilitar()
         TxtNombre.Enabled = True
+        TxtClave.Enabled = True
         ACTProductos.Enabled = True
     End Sub
 
@@ -268,6 +280,9 @@ Partial Class FRMProductos
         With fila
 
             .NOMBRE_VAR = TxtNombre.Text
+
+            .FECHA_ALTA_DATE = Now
+
             .ACTIVO_BIT = ACTProductos.Checked
 
 
@@ -289,7 +304,7 @@ Partial Class FRMProductos
             If v_estadobotones = BttoModificar.Name Then
 
                 .CVE_PRODUCTOS_INT = TxtClave.Text
-                .NOMBRE_VAR = TxtNombre.Text
+                .NOMBRE_VAR = TxtNombre.Text = .NOMBRE_VAR
                 .CVE_PRODUCTOS_MOD_VAR = "Uriel"
 
                 If ProductosBL.Modificar(fila) Then
@@ -321,8 +336,8 @@ Partial Class FRMProductos
             End If
 
             If v_estadobotones = BttoModificar.Name Then
-                YaExiste = (From e As Negocios.ClientesBL.TBLCLIENTESRow In Me.ProductosBL.TBLPRODUCTOS.Rows
-                            Where e.NOMBRE_VAR = TxtClave.Text And e.CVE_USUARIO_ALTA_VAR <> TxtClave.Text
+                YaExiste = (From e As Negocios.ProductosBL.TBLPRODUCTOSRow In Me.ProductosBL.TBLPRODUCTOS.Rows
+                            Where e.NOMBRE_VAR = TxtClave.Text And e.CVE_PRODUCTOS_MOD_VAR <> TxtClave.Text
                             Select e
                            ).Count
             End If
@@ -356,7 +371,7 @@ Partial Class FRMProductos
         Dim buscar As New FRMBuscarProductos
         buscar.ShowDialog()
 
-        If buscar.p_cve_Productos > 0 Then
+        If buscar.p_cve_Productos <> "" Then
             CargarProductos(buscar.p_cve_Productos)
         End If
 
@@ -397,4 +412,9 @@ Partial Class FRMProductos
     Private Sub BttoSalir_Click(sender As Object, e As EventArgs) Handles BttoSalir.Click
         Me.Close()
     End Sub
+
+    Friend WithEvents DGVProducto As DataGridView
+    Friend WithEvents ProductosBL As Negocios.ProductosBL
+
+
 End Class

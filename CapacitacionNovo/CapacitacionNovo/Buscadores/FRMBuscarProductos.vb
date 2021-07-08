@@ -56,5 +56,9 @@
         FilaSeleccionada()
     End Sub
 
+    Private Sub TxtNombre_TextChanged(sender As Object, e As EventArgs) Handles TxtNombre.TextChanged
+
+    End Sub
+
 #End Region
 End Class

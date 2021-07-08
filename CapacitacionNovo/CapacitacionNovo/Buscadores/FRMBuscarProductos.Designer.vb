@@ -30,6 +30,13 @@ Partial Class FRMBuscarProductos
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.TxtClave = New System.Windows.Forms.TextBox()
+        Me.CVE_PRODUCTOS_INT = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NOMBRE_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CVE_PRODUCTOS_ALTA_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CVE_PRODUCTOS_MOD_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FECHA_ALTA_DATE = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FECHA_MOD_DATE = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ACTIVO_BIT = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         CType(Me.DGVProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductosBL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -54,7 +61,10 @@ Partial Class FRMBuscarProductos
         '
         'DGVProductos
         '
+        Me.DGVProductos.AutoGenerateColumns = False
         Me.DGVProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGVProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CVE_PRODUCTOS_INT, Me.NOMBRE_VAR, Me.CVE_PRODUCTOS_ALTA_VAR, Me.CVE_PRODUCTOS_MOD_VAR, Me.FECHA_ALTA_DATE, Me.FECHA_MOD_DATE, Me.ACTIVO_BIT})
+        Me.DGVProductos.DataSource = Me.ProductosBL.TBLPRODUCTOS
         Me.DGVProductos.Location = New System.Drawing.Point(12, 188)
         Me.DGVProductos.Name = "DGVProductos"
         Me.DGVProductos.Size = New System.Drawing.Size(776, 250)
@@ -97,6 +107,48 @@ Partial Class FRMBuscarProductos
         Me.TxtClave.Size = New System.Drawing.Size(100, 20)
         Me.TxtClave.TabIndex = 6
         '
+        'CVE_PRODUCTOS_INT
+        '
+        Me.CVE_PRODUCTOS_INT.DataPropertyName = "CVE_PRODUCTOS_INT"
+        Me.CVE_PRODUCTOS_INT.HeaderText = "CVE_PRODUCTOS_INT"
+        Me.CVE_PRODUCTOS_INT.Name = "CVE_PRODUCTOS_INT"
+        '
+        'NOMBRE_VAR
+        '
+        Me.NOMBRE_VAR.DataPropertyName = "NOMBRE_VAR"
+        Me.NOMBRE_VAR.HeaderText = "NOMBRE_VAR"
+        Me.NOMBRE_VAR.Name = "NOMBRE_VAR"
+        '
+        'CVE_PRODUCTOS_ALTA_VAR
+        '
+        Me.CVE_PRODUCTOS_ALTA_VAR.DataPropertyName = "CVE_PRODUCTOS_ALTA_VAR"
+        Me.CVE_PRODUCTOS_ALTA_VAR.HeaderText = "CVE_PRODUCTOS_ALTA_VAR"
+        Me.CVE_PRODUCTOS_ALTA_VAR.Name = "CVE_PRODUCTOS_ALTA_VAR"
+        '
+        'CVE_PRODUCTOS_MOD_VAR
+        '
+        Me.CVE_PRODUCTOS_MOD_VAR.DataPropertyName = "CVE_PRODUCTOS_MOD_VAR"
+        Me.CVE_PRODUCTOS_MOD_VAR.HeaderText = "CVE_PRODUCTOS_MOD_VAR"
+        Me.CVE_PRODUCTOS_MOD_VAR.Name = "CVE_PRODUCTOS_MOD_VAR"
+        '
+        'FECHA_ALTA_DATE
+        '
+        Me.FECHA_ALTA_DATE.DataPropertyName = "FECHA_ALTA_DATE"
+        Me.FECHA_ALTA_DATE.HeaderText = "FECHA_ALTA_DATE"
+        Me.FECHA_ALTA_DATE.Name = "FECHA_ALTA_DATE"
+        '
+        'FECHA_MOD_DATE
+        '
+        Me.FECHA_MOD_DATE.DataPropertyName = "FECHA_MOD_DATE"
+        Me.FECHA_MOD_DATE.HeaderText = "FECHA_MOD_DATE"
+        Me.FECHA_MOD_DATE.Name = "FECHA_MOD_DATE"
+        '
+        'ACTIVO_BIT
+        '
+        Me.ACTIVO_BIT.DataPropertyName = "ACTIVO_BIT"
+        Me.ACTIVO_BIT.HeaderText = "ACTIVO_BIT"
+        Me.ACTIVO_BIT.Name = "ACTIVO_BIT"
+        '
         'FRMBuscarProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -126,4 +178,11 @@ Partial Class FRMBuscarProductos
     Friend WithEvents Label2 As Label
     Friend WithEvents TxtNombre As TextBox
     Friend WithEvents TxtClave As TextBox
+    Friend WithEvents CVE_PRODUCTOS_INT As DataGridViewTextBoxColumn
+    Friend WithEvents NOMBRE_VAR As DataGridViewTextBoxColumn
+    Friend WithEvents CVE_PRODUCTOS_ALTA_VAR As DataGridViewTextBoxColumn
+    Friend WithEvents CVE_PRODUCTOS_MOD_VAR As DataGridViewTextBoxColumn
+    Friend WithEvents FECHA_ALTA_DATE As DataGridViewTextBoxColumn
+    Friend WithEvents FECHA_MOD_DATE As DataGridViewTextBoxColumn
+    Friend WithEvents ACTIVO_BIT As DataGridViewCheckBoxColumn
 End Class

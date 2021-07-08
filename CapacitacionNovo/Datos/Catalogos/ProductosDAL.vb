@@ -25,7 +25,7 @@
         SQL.AddParam("@CVE_PRODUCTOS_INT", CVE_PRODUCTOS_INT, SqlDbType.Int)
         SQL.AddParam("@Accion", Accion.Consultar, SqlDbType.Int)
 
-        SQL.cmdText = "PROC_TBLProductos"
+        SQL.cmdText = "PROC_TBLPRODUCTOS"
 
         Try
 
