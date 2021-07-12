@@ -12,7 +12,7 @@
         If DGVProductos.SelectedRows.Count > 0 Then
 
             'valor de la clave del cliente de la fila seleccionada
-            p_cve_Productos = DGVProductos.CurrentRow.Cells("Nombre_VAR").Value
+            p_cve_Productos = DGVProductos.CurrentRow.Cells("CVE_PRODUCTOS_INT").Value
             Me.Hide()
 
         End If
