@@ -25,9 +25,14 @@ Partial Class FRMBuscarRoles
         Me.BtoRegresar = New System.Windows.Forms.Button()
         Me.BtoBuscar = New System.Windows.Forms.Button()
         Me.DGVRoles = New System.Windows.Forms.DataGridView()
+        Me.txbNombre = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.RolesBL = New Negocios.RolesBL()
+        Me.DsRoles1 = New Estructuras.DsRoles()
         CType(Me.DGVRoles, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolesBL, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DsRoles1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtoRegresar
@@ -56,16 +61,48 @@ Partial Class FRMBuscarRoles
         Me.DGVRoles.Size = New System.Drawing.Size(776, 284)
         Me.DGVRoles.TabIndex = 2
         '
+        'txbNombre
+        '
+        Me.txbNombre.Location = New System.Drawing.Point(687, 128)
+        Me.txbNombre.Name = "txbNombre"
+        Me.txbNombre.Size = New System.Drawing.Size(100, 20)
+        Me.txbNombre.TabIndex = 3
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(642, 135)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(0, 13)
+        Me.Label1.TabIndex = 4
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(637, 131)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(44, 13)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Nombre"
+        '
         'RolesBL
         '
         Me.RolesBL.DataSetName = "DsRoles"
         Me.RolesBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DsRoles1
+        '
+        Me.DsRoles1.DataSetName = "DsRoles"
+        Me.DsRoles1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'FRMBuscarRoles
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txbNombre)
         Me.Controls.Add(Me.DGVRoles)
         Me.Controls.Add(Me.BtoBuscar)
         Me.Controls.Add(Me.BtoRegresar)
@@ -73,12 +110,18 @@ Partial Class FRMBuscarRoles
         Me.Text = "FRMBuscarRoles"
         CType(Me.DGVRoles, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RolesBL, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DsRoles1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents BtoRegresar As Button
     Friend WithEvents BtoBuscar As Button
     Friend WithEvents DGVRoles As DataGridView
+    Friend WithEvents txbNombre As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
     Friend WithEvents RolesBL As Negocios.RolesBL
+    Friend WithEvents DsRoles1 As Estructuras.DsRoles
 End Class

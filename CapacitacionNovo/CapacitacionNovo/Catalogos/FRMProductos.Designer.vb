@@ -34,9 +34,7 @@ Partial Class FRMProductos
         Me.BttoCancelar = New System.Windows.Forms.Button()
         Me.BttoSalir = New System.Windows.Forms.Button()
         Me.DTPProductos = New System.Windows.Forms.DateTimePicker()
-        Me.DGVProducto = New System.Windows.Forms.DataGridView()
         Me.ProductosBL = New Negocios.ProductosBL()
-        CType(Me.DGVProducto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductosBL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -144,14 +142,6 @@ Partial Class FRMProductos
         Me.DTPProductos.Size = New System.Drawing.Size(95, 20)
         Me.DTPProductos.TabIndex = 11
         '
-        'DGVProducto
-        '
-        Me.DGVProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVProducto.Location = New System.Drawing.Point(12, 188)
-        Me.DGVProducto.Name = "DGVProducto"
-        Me.DGVProducto.Size = New System.Drawing.Size(776, 249)
-        Me.DGVProducto.TabIndex = 12
-        '
         'ProductosBL
         '
         Me.ProductosBL.DataSetName = "DSProductos"
@@ -161,8 +151,7 @@ Partial Class FRMProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 449)
-        Me.Controls.Add(Me.DGVProducto)
+        Me.ClientSize = New System.Drawing.Size(800, 198)
         Me.Controls.Add(Me.DTPProductos)
         Me.Controls.Add(Me.BttoSalir)
         Me.Controls.Add(Me.BttoCancelar)
@@ -177,7 +166,6 @@ Partial Class FRMProductos
         Me.Controls.Add(Me.Nombre)
         Me.Name = "FRMProductos"
         Me.Text = "FRMProductos"
-        CType(Me.DGVProducto, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductosBL, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -254,7 +242,7 @@ Partial Class FRMProductos
 
     Sub Habilitar()
         TxtNombre.Enabled = True
-        TxtClave.Enabled = True
+        TxtClave.Enabled = False
         ACTProductos.Enabled = True
     End Sub
 
@@ -304,7 +292,8 @@ Partial Class FRMProductos
             If v_estadobotones = BttoModificar.Name Then
 
                 .CVE_PRODUCTOS_INT = TxtClave.Text
-                .NOMBRE_VAR = TxtNombre.Text = .NOMBRE_VAR
+                .NOMBRE_VAR = TxtNombre.Text
+                .FECHA_MOD_DATE = DateTime.Now
                 .CVE_PRODUCTOS_MOD_VAR = "Uriel"
 
                 If ProductosBL.Modificar(fila) Then
@@ -412,8 +401,6 @@ Partial Class FRMProductos
     Private Sub BttoSalir_Click(sender As Object, e As EventArgs) Handles BttoSalir.Click
         Me.Close()
     End Sub
-
-    Friend WithEvents DGVProducto As DataGridView
     Friend WithEvents ProductosBL As Negocios.ProductosBL
 
 

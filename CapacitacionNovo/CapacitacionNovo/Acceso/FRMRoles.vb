@@ -9,6 +9,27 @@ Public Class FRMRoles
 #End Region
 
 #Region "PROCEDIMIENTOS O MÉTODOS"
+
+    Sub CargarRoles(ByVal p_cve_Roles)
+
+        RolesBL.TBLROLES.Clear()
+        RolesBL.Cargar(p_cve_Roles)
+
+        For Each row As Negocios.RolesBL.TBLROLESRow In RolesBL.TBLROLES.Rows
+
+            tbxClave.Text = row.CVE_ROL_INT
+            tbxDescrip.Text = row.DESC_ROL_VAR
+            ckbRoles.Checked = row.ACTIVO_BIT
+
+        Next
+
+        BtoBuscar.Enabled = True
+        nuevo.Enabled = False
+        Cancelar.Enabled = True
+    End Sub
+
+
+
     Sub Estadobotones(ByVal estado)
 
         If estado = "Inicial" Then
@@ -202,6 +223,15 @@ Public Class FRMRoles
     End Sub
 
     Private Sub BtoBuscar_Click(sender As Object, e As EventArgs) Handles BtoBuscar.Click
+        Dim buscar As New FRMBuscarRoles
+        buscar.ShowDialog()
+
+        If buscar.p_cve_Roles <> "" Then
+            CargarRoles(buscar.p_cve_Roles)
+        End If
+
 
     End Sub
+
+
 End Class

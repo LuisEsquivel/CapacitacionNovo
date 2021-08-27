@@ -25,11 +25,6 @@ Partial Class FRMBuscarProductos
         Me.BttoBuscar = New System.Windows.Forms.Button()
         Me.BttoRegresar = New System.Windows.Forms.Button()
         Me.DGVProductos = New System.Windows.Forms.DataGridView()
-        Me.ProductosBL = New Negocios.ProductosBL()
-        Me.Lbel2 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxtNombre = New System.Windows.Forms.TextBox()
-        Me.TxtClave = New System.Windows.Forms.TextBox()
         Me.CVE_PRODUCTOS_INT = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NOMBRE_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CVE_PRODUCTOS_ALTA_VAR = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -37,6 +32,9 @@ Partial Class FRMBuscarProductos
         Me.FECHA_ALTA_DATE = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FECHA_MOD_DATE = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ACTIVO_BIT = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.ProductosBL = New Negocios.ProductosBL()
+        Me.Lbel2 = New System.Windows.Forms.Label()
+        Me.TxtNombre = New System.Windows.Forms.TextBox()
         CType(Me.DGVProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductosBL, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -69,43 +67,6 @@ Partial Class FRMBuscarProductos
         Me.DGVProductos.Name = "DGVProductos"
         Me.DGVProductos.Size = New System.Drawing.Size(776, 250)
         Me.DGVProductos.TabIndex = 2
-        '
-        'ProductosBL
-        '
-        Me.ProductosBL.DataSetName = "DSProductos"
-        Me.ProductosBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Lbel2
-        '
-        Me.Lbel2.AutoSize = True
-        Me.Lbel2.Location = New System.Drawing.Point(425, 163)
-        Me.Lbel2.Name = "Lbel2"
-        Me.Lbel2.Size = New System.Drawing.Size(106, 13)
-        Me.Lbel2.TabIndex = 3
-        Me.Lbel2.Text = "Nombre del producto"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(648, 163)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(34, 13)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Clave"
-        '
-        'TxtNombre
-        '
-        Me.TxtNombre.Location = New System.Drawing.Point(537, 160)
-        Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(100, 20)
-        Me.TxtNombre.TabIndex = 5
-        '
-        'TxtClave
-        '
-        Me.TxtClave.Location = New System.Drawing.Point(688, 160)
-        Me.TxtClave.Name = "TxtClave"
-        Me.TxtClave.Size = New System.Drawing.Size(100, 20)
-        Me.TxtClave.TabIndex = 6
         '
         'CVE_PRODUCTOS_INT
         '
@@ -149,14 +110,33 @@ Partial Class FRMBuscarProductos
         Me.ACTIVO_BIT.HeaderText = "ACTIVO_BIT"
         Me.ACTIVO_BIT.Name = "ACTIVO_BIT"
         '
+        'ProductosBL
+        '
+        Me.ProductosBL.DataSetName = "DSProductos"
+        Me.ProductosBL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Lbel2
+        '
+        Me.Lbel2.AutoSize = True
+        Me.Lbel2.Location = New System.Drawing.Point(559, 160)
+        Me.Lbel2.Name = "Lbel2"
+        Me.Lbel2.Size = New System.Drawing.Size(106, 13)
+        Me.Lbel2.TabIndex = 3
+        Me.Lbel2.Text = "Nombre del producto"
+        '
+        'TxtNombre
+        '
+        Me.TxtNombre.Location = New System.Drawing.Point(671, 160)
+        Me.TxtNombre.Name = "TxtNombre"
+        Me.TxtNombre.Size = New System.Drawing.Size(100, 20)
+        Me.TxtNombre.TabIndex = 5
+        '
         'FRMBuscarProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.TxtClave)
         Me.Controls.Add(Me.TxtNombre)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Lbel2)
         Me.Controls.Add(Me.DGVProductos)
         Me.Controls.Add(Me.BttoRegresar)
@@ -175,9 +155,7 @@ Partial Class FRMBuscarProductos
     Friend WithEvents DGVProductos As DataGridView
     Friend WithEvents ProductosBL As Negocios.ProductosBL
     Friend WithEvents Lbel2 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents TxtNombre As TextBox
-    Friend WithEvents TxtClave As TextBox
     Friend WithEvents CVE_PRODUCTOS_INT As DataGridViewTextBoxColumn
     Friend WithEvents NOMBRE_VAR As DataGridViewTextBoxColumn
     Friend WithEvents CVE_PRODUCTOS_ALTA_VAR As DataGridViewTextBoxColumn

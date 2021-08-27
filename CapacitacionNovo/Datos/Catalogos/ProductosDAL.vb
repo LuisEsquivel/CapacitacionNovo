@@ -53,6 +53,10 @@
 
         SQL.cmdText = "PROC_TBLPRODUCTOS"
 
+
+
+
+
         Try
             dt = New Estructuras.DSProductos.TBLPRODUCTOSDataTable
 
@@ -90,28 +94,14 @@
         Try
             dt = New Estructuras.DSProductos.TBLPRODUCTOSDataTable
 
-            SQL.AddParam("@CVE_PRODUCTOS_MOD_VAR", Productos.CVE_PRODUCTOS_MOD_VAR, SqlDbType.VarChar)
+            SQL.FillDt(dt)
+            If dt.Rows.Count > 0 Then
+                Llenar(dt.Rows(0), Productos)
+                Return True
+            End If
+        Catch ex As Exception
 
-            SQL.AddParam("@ACTIVO_BIT", Productos.ACTIVO_BIT, SqlDbType.Bit)
-            SQL.AddParam("@Accion", Accion.Modificar, SqlDbType.Int)
-
-            SQL.cmdText = "PROC_TBLPRODUCTOS"
-
-        Finally
-
-        End Try
-
-        Try
-                dt = New Estructuras.DSProductos.TBLPRODUCTOSDataTable
-
-                SQL.FillDt(dt)
-                If dt.Rows.Count > 0 Then
-                    Llenar(dt.Rows(0), Productos)
-                    Return True
-                End If
-            Catch ex As Exception
-
-                MsgBox("Error al modificar Productos" + ex.ToString)
+            MsgBox("Error al modificar Productos" + ex.ToString)
 
 
 
