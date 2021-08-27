@@ -164,8 +164,6 @@ Partial Class FRMEmpleados
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.CmbColores)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.CmbRol)
         Me.GroupBox1.Controls.Add(Me.TxtPassword)
@@ -183,7 +181,7 @@ Partial Class FRMEmpleados
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(220, 61)
+        Me.Label2.Location = New System.Drawing.Point(755, 133)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(31, 13)
         Me.Label2.TabIndex = 22
@@ -195,7 +193,7 @@ Partial Class FRMEmpleados
         Me.CmbColores.DisplayMember = "TBLCOLORES.NOMBRE_VAR"
         Me.CmbColores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CmbColores.FormattingEnabled = True
-        Me.CmbColores.Location = New System.Drawing.Point(219, 80)
+        Me.CmbColores.Location = New System.Drawing.Point(754, 152)
         Me.CmbColores.Name = "CmbColores"
         Me.CmbColores.Size = New System.Drawing.Size(134, 21)
         Me.CmbColores.TabIndex = 21
@@ -360,8 +358,10 @@ Partial Class FRMEmpleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(616, 255)
+        Me.ClientSize = New System.Drawing.Size(613, 255)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.BtoBuscar)
+        Me.Controls.Add(Me.CmbColores)
         Me.Controls.Add(Me.ChkActivo)
         Me.Controls.Add(Me.DtpFechaAlta)
         Me.Controls.Add(Me.GroupBox1)

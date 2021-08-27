@@ -12,7 +12,7 @@
         For Each row As DataGridViewRow In DgvEmpleados.Rows
 
             With row
-                .Cells("NOMBRE_COLOR_VAR").Value = ColoresBL.TBLCOLORES.FindByCVE_COLOR_INT(.Cells("CVE_COLOR_INT").Value).NOMBRE_VAR
+                '.Cells("NOMBRE_COLOR_VAR").Value = ColoresBL.TBLCOLORES.FindByCVE_COLOR_INT(.Cells("CVE_COLOR_INT").Value).NOMBRE_VAR
                 .Cells("DESC_ROL_VAR").Value = RolesBL1.TBLROLES.FindByCVE_ROL_INT(.Cells("CVE_ROL_INT").Value).DESC_ROL_VAR
                 .Cells("COLOR_REAL").Style.BackColor = Color.Green
             End With
@@ -25,7 +25,7 @@
     Sub LlenarCombos()
 
         RolesBL1.Cargar()
-        ColoresBL.Cargar()
+        'ColoresBL.Cargar()
 
         Dim row As Negocios.RolesBL.TBLROLESRow
         row = RolesBL1.TBLROLES.NewTBLROLESRow
@@ -210,9 +210,9 @@
             v_error = v_error + vbNewLine + "Rol"
         End If
 
-        If CmbColores.SelectedValue = 0 Then
-            v_error = v_error + vbNewLine + "color"
-        End If
+        'If CmbColores.SelectedValue = 0 Then
+        '    v_error = v_error + vbNewLine + "color"
+        'End If
 
         If v_error <> "" Then
             v_error = "Campos Obligatorios:" & vbNewLine & v_error
