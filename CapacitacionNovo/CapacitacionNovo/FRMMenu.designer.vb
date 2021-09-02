@@ -32,6 +32,8 @@ Partial Class FRMMenu
         Me.CatalogosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TareasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TareasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AlmacénToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CentroDeCostosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -40,8 +42,7 @@ Partial Class FRMMenu
         Me.ReporteEventosPortalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteInventarioHHToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TareasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TareasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProvedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -95,7 +96,7 @@ Partial Class FRMMenu
         '
         'CatalogosToolStripMenuItem
         '
-        Me.CatalogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ColoresToolStripMenuItem, Me.ClientesToolStripMenuItem})
+        Me.CatalogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ColoresToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.ProvedoresToolStripMenuItem})
         Me.CatalogosToolStripMenuItem.Name = "CatalogosToolStripMenuItem"
         Me.CatalogosToolStripMenuItem.Size = New System.Drawing.Size(72, 20)
         Me.CatalogosToolStripMenuItem.Text = "Catálogos"
@@ -111,6 +112,19 @@ Partial Class FRMMenu
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
         Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
+        '
+        'TareasToolStripMenuItem
+        '
+        Me.TareasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TareasToolStripMenuItem1})
+        Me.TareasToolStripMenuItem.Name = "TareasToolStripMenuItem"
+        Me.TareasToolStripMenuItem.Size = New System.Drawing.Size(51, 20)
+        Me.TareasToolStripMenuItem.Text = "Tareas"
+        '
+        'TareasToolStripMenuItem1
+        '
+        Me.TareasToolStripMenuItem1.Name = "TareasToolStripMenuItem1"
+        Me.TareasToolStripMenuItem1.Size = New System.Drawing.Size(106, 22)
+        Me.TareasToolStripMenuItem1.Text = "Tareas"
         '
         'ReportesToolStripMenuItem
         '
@@ -165,18 +179,11 @@ Partial Class FRMMenu
         Me.SalirToolStripMenuItem1.Size = New System.Drawing.Size(41, 20)
         Me.SalirToolStripMenuItem1.Text = "Salir"
         '
-        'TareasToolStripMenuItem
+        'ProvedoresToolStripMenuItem
         '
-        Me.TareasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TareasToolStripMenuItem1})
-        Me.TareasToolStripMenuItem.Name = "TareasToolStripMenuItem"
-        Me.TareasToolStripMenuItem.Size = New System.Drawing.Size(51, 20)
-        Me.TareasToolStripMenuItem.Text = "Tareas"
-        '
-        'TareasToolStripMenuItem1
-        '
-        Me.TareasToolStripMenuItem1.Name = "TareasToolStripMenuItem1"
-        Me.TareasToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
-        Me.TareasToolStripMenuItem1.Text = "Tareas"
+        Me.ProvedoresToolStripMenuItem.Name = "ProvedoresToolStripMenuItem"
+        Me.ProvedoresToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ProvedoresToolStripMenuItem.Text = "Provedores"
         '
         'FRMMenu
         '
@@ -217,4 +224,5 @@ Partial Class FRMMenu
     Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TareasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TareasToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ProvedoresToolStripMenuItem As ToolStripMenuItem
 End Class

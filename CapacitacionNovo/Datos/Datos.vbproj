@@ -67,10 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acceso\EmpleadosDAL.vb" />
+    <Compile Include="Acceso\Mantenimiento de provedores.vb" />
     <Compile Include="Acceso\RolesDAL.vb" />
     <Compile Include="Catalogos\ClientesDAL.vb" />
     <Compile Include="Catalogos\ColoresDAL.vb" />
     <Compile Include="Catalogos\ProductosDAL.vb" />
+    <Compile Include="Catalogos\ProveedoresDAL.vb" />
     <Compile Include="Catalogos\TareasDAL.vb" />
     <Compile Include="Globales\Globales.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

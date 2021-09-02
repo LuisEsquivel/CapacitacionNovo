@@ -102,6 +102,14 @@
     <Compile Include="Catalogos\DSProductos.vb">
       <DependentUpon>DSProductos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Catalogos\DSProveedores.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSProveedores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\DSProveedores.vb">
+      <DependentUpon>DSProveedores.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\DSTareas.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -187,6 +195,17 @@
     </None>
     <None Include="Catalogos\DSProductos.xss">
       <DependentUpon>DSProductos.xsd</DependentUpon>
+    </None>
+    <None Include="Catalogos\DSProveedores.xsc">
+      <DependentUpon>DSProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="Catalogos\DSProveedores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSProveedores.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Catalogos\DSProveedores.xss">
+      <DependentUpon>DSProveedores.xsd</DependentUpon>
     </None>
     <None Include="Catalogos\DSTareas.xsc">
       <DependentUpon>DSTareas.xsd</DependentUpon>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSProveedores" targetNamespace="http://tempuri.org/DSProveedores.xsd" xmlns:mstns="http://tempuri.org/DSProveedores.xsd" xmlns="http://tempuri.org/DSProveedores.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CapacitacionNovoConnectionString1" IsAppSettingsProperty="true" Modifier="Assembly" Name="CapacitacionNovoConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Estructuras.My.MySettings.GlobalReference.Default.CapacitacionNovoConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSProveedores" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSProveedores" msprop:Generator_UserDSName="DSProveedores">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TBLPROVEEDORES" msprop:Generator_TableClassName="TBLPROVEEDORESDataTable" msprop:Generator_TableVarName="tableTBLPROVEEDORES" msprop:Generator_TablePropName="TBLPROVEEDORES" msprop:Generator_RowDeletingName="TBLPROVEEDORESRowDeleting" msprop:Generator_RowChangingName="TBLPROVEEDORESRowChanging" msprop:Generator_RowEvHandlerName="TBLPROVEEDORESRowChangeEventHandler" msprop:Generator_RowDeletedName="TBLPROVEEDORESRowDeleted" msprop:Generator_UserTableName="TBLPROVEEDORES" msprop:Generator_RowChangedName="TBLPROVEEDORESRowChanged" msprop:Generator_RowEvArgName="TBLPROVEEDORESRowChangeEvent" msprop:Generator_RowClassName="TBLPROVEEDORESRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CVE_PROVEEDOR_INT" msprop:Generator_ColumnVarNameInTable="columnCVE_PROVEEDOR_INT" msprop:Generator_ColumnPropNameInRow="CVE_PROVEEDOR_INT" msprop:Generator_ColumnPropNameInTable="CVE_PROVEEDOR_INTColumn" msprop:Generator_UserColumnName="CVE_PROVEEDOR_INT" type="xs:int" />
+              <xs:element name="NOMBRE_VAR" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_VAR" msprop:Generator_ColumnPropNameInRow="NOMBRE_VAR" msprop:Generator_ColumnPropNameInTable="NOMBRE_VARColumn" msprop:Generator_UserColumnName="NOMBRE_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RAZON_SOCIAL_VAR" msprop:Generator_ColumnVarNameInTable="columnRAZON_SOCIAL_VAR" msprop:Generator_ColumnPropNameInRow="RAZON_SOCIAL_VAR" msprop:Generator_ColumnPropNameInTable="RAZON_SOCIAL_VARColumn" msprop:Generator_UserColumnName="RAZON_SOCIAL_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RFC_VAR" msprop:Generator_ColumnVarNameInTable="columnRFC_VAR" msprop:Generator_ColumnPropNameInRow="RFC_VAR" msprop:Generator_ColumnPropNameInTable="RFC_VARColumn" msprop:Generator_UserColumnName="RFC_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DIRECCION_VAR" msprop:Generator_ColumnVarNameInTable="columnDIRECCION_VAR" msprop:Generator_ColumnPropNameInRow="DIRECCION_VAR" msprop:Generator_ColumnPropNameInTable="DIRECCION_VARColumn" msprop:Generator_UserColumnName="DIRECCION_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CORREO_ELECTRONICO_VAR" msprop:Generator_ColumnVarNameInTable="columnCORREO_ELECTRONICO_VAR" msprop:Generator_ColumnPropNameInRow="CORREO_ELECTRONICO_VAR" msprop:Generator_ColumnPropNameInTable="CORREO_ELECTRONICO_VARColumn" msprop:Generator_UserColumnName="CORREO_ELECTRONICO_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TELEFONO_VAR" msprop:Generator_ColumnVarNameInTable="columnTELEFONO_VAR" msprop:Generator_ColumnPropNameInRow="TELEFONO_VAR" msprop:Generator_ColumnPropNameInTable="TELEFONO_VARColumn" msprop:Generator_UserColumnName="TELEFONO_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CVE_EMPLEADO_ALTA_VAR" msprop:Generator_ColumnVarNameInTable="columnCVE_EMPLEADO_ALTA_VAR" msprop:Generator_ColumnPropNameInRow="CVE_EMPLEADO_ALTA_VAR" msprop:Generator_ColumnPropNameInTable="CVE_EMPLEADO_ALTA_VARColumn" msprop:Generator_UserColumnName="CVE_EMPLEADO_ALTA_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CVE_EMPLEADO_MOD_VAR" msprop:Generator_ColumnVarNameInTable="columnCVE_EMPLEADO_MOD_VAR" msprop:Generator_ColumnPropNameInRow="CVE_EMPLEADO_MOD_VAR" msprop:Generator_ColumnPropNameInTable="CVE_EMPLEADO_MOD_VARColumn" msprop:Generator_UserColumnName="CVE_EMPLEADO_MOD_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHA_ALTA_DATE" msprop:Generator_ColumnVarNameInTable="columnFECHA_ALTA_DATE" msprop:Generator_ColumnPropNameInRow="FECHA_ALTA_DATE" msprop:Generator_ColumnPropNameInTable="FECHA_ALTA_DATEColumn" msprop:Generator_UserColumnName="FECHA_ALTA_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FECHA_MOD_DATE" msprop:Generator_ColumnVarNameInTable="columnFECHA_MOD_DATE" msprop:Generator_ColumnPropNameInRow="FECHA_MOD_DATE" msprop:Generator_ColumnPropNameInTable="FECHA_MOD_DATEColumn" msprop:Generator_UserColumnName="FECHA_MOD_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ACTIVO_BIT" msprop:Generator_ColumnVarNameInTable="columnACTIVO_BIT" msprop:Generator_ColumnPropNameInRow="ACTIVO_BIT" msprop:Generator_ColumnPropNameInTable="ACTIVO_BITColumn" msprop:Generator_UserColumnName="ACTIVO_BIT" type="xs:boolean" minOccurs="0" />
+              <xs:element name="NOMBRE_PROVEEDOR_VAR" msprop:Generator_ColumnVarNameInTable="columnNOMBRE_PROVEEDOR_VAR" msprop:Generator_ColumnPropNameInRow="NOMBRE_PROVEEDOR_VAR" msprop:Generator_ColumnPropNameInTable="NOMBRE_PROVEEDOR_VARColumn" msprop:Generator_UserColumnName="NOMBRE_PROVEEDOR_VAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TBLPROVEEDORES" />
+      <xs:field xpath="mstns:CVE_PROVEEDOR_INT" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

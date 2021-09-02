@@ -69,6 +69,7 @@
     <Compile Include="Catalogos\ClientesBL.vb" />
     <Compile Include="Catalogos\ColoresBL.vb" />
     <Compile Include="Catalogos\ProductosBL.vb" />
+    <Compile Include="Catalogos\ProveedoresBL.vb" />
     <Compile Include="Catalogos\TareasBL.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

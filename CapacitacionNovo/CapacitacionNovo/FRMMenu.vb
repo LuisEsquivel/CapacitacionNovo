@@ -48,7 +48,7 @@
     Private FRMEmpleados As FRMEmpleados
     Private FRMRoles As FRMRoles
     Private FRMTareas As FRMTareas
-
+    Private FRMProvedores As FRMMantenimiento_de_provedrores
 #End Region
 
 #Region "Permisos"
@@ -193,6 +193,13 @@
         login.ShowDialog()
 
 
+    End Sub
+
+    Private Sub ProvedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProvedoresToolStripMenuItem.Click
+        If Not FormularioActivo(FRMProvedores) Then
+            FRMProvedores = New FRMMantenimiento_de_provedrores
+        End If
+        ActivarFormulario(FRMProvedores)
     End Sub
 
 
